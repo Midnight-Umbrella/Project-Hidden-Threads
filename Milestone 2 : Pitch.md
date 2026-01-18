@@ -1,7 +1,7 @@
 # Hidden Threads
 **Team:** Midnight Umbrella  
 **Course:** CMPUT 250  
-**Milestone:** Pitch + Design Board
+**Milestone 2:** Pitch + Design Board
 
 ## Pitch Slides
 - Google Slides: https://docs.google.com/presentation/d/1uiaHQJHImGvRQK5JI2zT7GJvT2LJCYacHPyOwbbwS54/edit?usp=sharing
