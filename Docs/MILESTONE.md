@@ -10,9 +10,9 @@
 | 4 | Player Combat |
 | 5 | Building |
 | 6 | Structures |
-| 7 | Enemy Chase |
+| 7 | Interaction |
 | 8 | SearchLite |
-| 9 | AttackStructure |
+| 9 | Structure |
 | 10 | Revealer |
 | 11 | Director |
 | 12 | Starting Fort |
