@@ -1,0 +1,26 @@
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+"@ | Out-File -Encoding utf8 .gitignore
+
+
+ Assets/_Recovery/
+# Local recovery files
+Assets/_Recovery/
+# Local notes
+Docs/LOCAL_NOTES.md
+# Local recovery files
+Assets/_Recovery.meta
