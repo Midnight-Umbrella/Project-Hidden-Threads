@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2679764089
+    locked: 0
+  - name: Floor
+    uniqueID: 380155341
+    locked: 0
+  - name: Environment
+    uniqueID: 806239857
+    locked: 0
+  - name: Room Obscure
+    uniqueID: 2219226769
+    locked: 0
+  - name: Player
+    uniqueID: 3183858443
+    locked: 0
