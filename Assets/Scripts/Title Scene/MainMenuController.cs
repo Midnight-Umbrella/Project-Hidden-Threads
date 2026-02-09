@@ -23,7 +23,7 @@ public class MainMenuController : MonoBehaviour
     // Called by PLAY button
     public void OnPlayPressed()
     {
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene("OpenCutscene");
     }
 
     // Called by SETTINGS button
