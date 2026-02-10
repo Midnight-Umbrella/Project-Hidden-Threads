@@ -12,6 +12,7 @@ public class CluePickup : MonoBehaviour
 
     private bool _inRange;
     private bool _picked;
+    public Inventory inventory;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -59,6 +60,7 @@ public class CluePickup : MonoBehaviour
         bool added = journal.AddClue(clue);
         if (added)
         {
+            inventory.AddClue(clue);
             _picked = true;
             CluePromptUI.Instance?.Show($"Collected: {clue.title}");
             Invoke(nameof(HidePrompt), 0.8f);

@@ -39,7 +39,7 @@ public class ClueJournal : MonoBehaviour
         }
 
         if (!_ids.Add(clue.id)) return false;
-
+        
         _collected.Add(clue);
         OnChanged?.Invoke();
         return true;
