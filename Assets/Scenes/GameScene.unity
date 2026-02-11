@@ -786,9 +786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05272b0af20cc34f92bf5ed882d5249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockable: 0
-  clue: {fileID: 0}
-  inventory: {fileID: 0}
+  lockable: 1
+  clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
+  inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!1 &309378295
 GameObject:
   m_ObjectHideFlags: 0
