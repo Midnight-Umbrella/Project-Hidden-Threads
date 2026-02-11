@@ -6,7 +6,7 @@ public class VolumeWidget : MonoBehaviour
 {
     [Header("UI Refs")]
     [SerializeField] private Slider slider;
-    [SerializeField] private TMP_Text valueText; // 可空
+    [SerializeField] private TMP_Text valueText; 
 
     private bool _ignore;
 
@@ -20,7 +20,6 @@ public class VolumeWidget : MonoBehaviour
         // Initialize UI Display 
         SetUI(VolumeBus.Get());
 
-        // 监听UI变化 -> 写入全局
         if (slider != null)
             slider.onValueChanged.AddListener(OnSliderChanged);
 

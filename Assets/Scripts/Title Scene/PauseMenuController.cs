@@ -45,7 +45,7 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // 给 Slider 直接绑：OnValueChanged(float) -> SetVolume
+    // Slider：OnValueChanged(float) -> SetVolume
     public void SetVolume(float v)
     {
         v = Mathf.Clamp01(v);
