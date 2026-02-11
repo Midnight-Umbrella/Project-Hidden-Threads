@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
             if (footstepTimer <= 0f)
             {
                 //PlayOneShot(playerFootstep) is better than Play()
+                //In case we want more player noises (e.g. gasp, speak, etc.)
                 playerSound.PlayOneShot(playerFootstep);
                 footstepTimer = footstepInterval;
             }
