@@ -1,4 +1,4 @@
-@"
+# Unity generated folders
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -8,9 +8,21 @@
 [Uu]ser[Ss]ettings/
 [Mm]emoryCaptures/
 [Rr]ecordings/
-Assets/_Recovery/
-[Rr]ecordings/
 
+# Unity recovery files
+Assets/_Recovery/
+Assets/_Recovery.meta
+
+# IDE / Editor files
+.vs/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Visual Studio / Mono files
 *.csproj
 *.sln
 *.user
@@ -23,17 +35,5 @@ Assets/_Recovery/
 *.opendb
 *.VC.db
 
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-"@ | Out-File -Encoding utf8 .gitignore
-
-
- Assets/_Recovery/
-# Local recovery files
-Assets/_Recovery/
-# Local notes
+# Local-only notes
 Docs/LOCAL_NOTES.md
-# Local recovery files
-Assets/_Recovery.meta
