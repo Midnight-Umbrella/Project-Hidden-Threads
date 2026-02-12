@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClueJournal : MonoBehaviour
 {
@@ -56,5 +57,20 @@ public class ClueJournal : MonoBehaviour
         _ids.Clear();
         _collected.Clear();
         OnChanged?.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ClearAll();
     }
 }
