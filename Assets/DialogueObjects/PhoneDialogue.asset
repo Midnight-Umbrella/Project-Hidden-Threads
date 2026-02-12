@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb94c8035900c477a960f0bf9ca17557, type: 3}
-  m_Name: TestDialogue
+  m_Name: PhoneDialogue
   m_EditorClassIdentifier: 
   lines:
-  - '"Hmm, Vera''s room key"'
+  - '"Vera''s phone!"'
+  - '"I wonder if It can tell me where she is?" (Press P to open phone)'
