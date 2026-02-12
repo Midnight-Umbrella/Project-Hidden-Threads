@@ -14,11 +14,19 @@ public class MainMenuController : MonoBehaviour
     [Header("Transitions")]
     [SerializeField] private float transitionTime = 0.25f;
 
+    [Header("Music")]
+    [SerializeField] private AudioClip mainMenuMusic;
+
     
 
     void Start()
     {
         ShowMainMenuInstant();
+
+        if (AudioController.Instance != null && mainMenuMusic != null)
+        {
+            AudioController.Instance.PlayMusic(mainMenuMusic, true);
+        }
     }
     // Called by PLAY button
     public void OnPlayPressed()
@@ -31,7 +39,6 @@ public class MainMenuController : MonoBehaviour
     {
         StartCoroutine(Transition(mainMenuPanel, settingsPanel));
     }
-
     // Called by BACK button (inside settings)
     public void OnBackPressed()
     {
