@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 0f42d1da79e0e3c4197c9fcd69dd86a0, type: 2}
+  dialogue: {fileID: 0}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!1 &309378295
 GameObject:
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 542b7b8fd9c338e43a224d857cecd88f, type: 2}
+  dialogue: {fileID: 0}
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
