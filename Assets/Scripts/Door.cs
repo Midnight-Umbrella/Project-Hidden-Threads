@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     private Collider2D cd;
     public bool lockable;
     [SerializeField] private ClueDefinition clue;
+    [SerializeField] private DialogueData dialogue;
     public Inventory inventory;
     
     // Start is called before the first frame update
@@ -28,6 +29,10 @@ public class Door : MonoBehaviour
         {
             sr.enabled = false;
             cd.enabled = false;
+        }
+        else if (lockable && !inventory.Contains(clue) && dialogue)
+        {
+            DialogueManager.Instance.StartDialogue(dialogue);
         }
     }
 }
