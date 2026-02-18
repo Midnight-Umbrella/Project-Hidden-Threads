@@ -24,6 +24,8 @@ It is also important to note that the reflections above are written from my pers
 
 For the next phase of development, I intend to strengthen our risk management planning. This includes identifying high-risk systems earlier, allocating buffer time for integration and polish, and setting clearer internal deadlines before official milestone submissions. Reducing last-minute implementation will allow us to focus not just on functionality, but on quality.
 
- 
+Ultimately, good games require time to iterate and refine. Moving forward, my priority as Producer is to create a development structure that allows the team the space and stability needed to polish the experience properly, rather than rushing to meet minimum functional requirements.   
 
-Ultimately, good games require time to iterate and refine. Moving forward, my priority as Producer is to create a development structure that allows the team the space and stability needed to polish the experience properly, rather than rushing to meet minimum functional requirements.
+---
+ Alan Yu                                                                                                                                                      
+ On behalf of Group Midnight Umbrella                                                                                                                                           
