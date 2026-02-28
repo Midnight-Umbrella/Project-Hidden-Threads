@@ -39,7 +39,7 @@ public class CluePickup : MonoBehaviour
         if (!_inRange) return;
 
         if (Input.GetKeyDown(interactKey))
-        {
+        {Debug.Log("Pressed");
             TryPickup();
         }
     }
