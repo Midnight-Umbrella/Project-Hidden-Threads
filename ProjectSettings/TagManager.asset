@@ -53,6 +53,9 @@ TagManager:
   - name: Room Obscure
     uniqueID: 2219226769
     locked: 0
+  - name: Doors
+    uniqueID: 2844096597
+    locked: 0
   - name: Player
     uniqueID: 3183858443
     locked: 0
