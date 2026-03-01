@@ -6,12 +6,14 @@ public class Door : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Collider2D cd;
+
     public bool lockable;
+
     [SerializeField] private ClueDefinition clue;
-    [SerializeField] private DialogueData dialogue;
+    [SerializeField] private string dialogueId;   // CSV dialogue id
+
     public Inventory inventory;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -20,19 +22,33 @@ public class Door : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !lockable)
+        if (!collision.gameObject.CompareTag("Player"))
+            return;
+
+        // Door not lockable → open
+        if (!lockable)
         {
-            sr.enabled = false;
-            cd.enabled = false;
+            OpenDoor();
+            return;
         }
-        else if (collision.gameObject.CompareTag("Player") && inventory.Contains(clue))
+
+        // Has required clue → open
+        if (inventory != null && clue != null && inventory.Contains(clue))
         {
-            sr.enabled = false;
-            cd.enabled = false;
+            OpenDoor();
+            return;
         }
-        else if (lockable && !inventory.Contains(clue) && dialogue)
+
+        // Locked + missing clue → show dialogue
+        if (!string.IsNullOrEmpty(dialogueId))
         {
-            DialogueManager.Instance.StartDialogue(dialogue);
+            DialogueManager.Instance.StartDialogue(dialogueId);
         }
+    }
+
+    private void OpenDoor()
+    {
+        if (sr != null) sr.enabled = false;
+        if (cd != null) cd.enabled = false;
     }
 }

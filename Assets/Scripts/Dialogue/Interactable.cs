@@ -1,21 +1,20 @@
-/*using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public DialogueTrigger dialogueTrigger; // drag the object with DialogueTrigger in Inspector
+    [Header("Dialogue (CSV id)")]
+    [SerializeField] private string dialogueId;
 
-    // This triggers when you click the object in the game
-    void OnMouseDown()
+    // 给 PlayerInteract 调用
+    public void Interact()
     {
-        if (dialogueTrigger != null)
+        if (!string.IsNullOrEmpty(dialogueId))
         {
-            dialogueTrigger.TriggerDialogue();
+            DialogueManager.Instance.StartDialogue(dialogueId);
         }
         else
         {
-            Debug.LogWarning("DialogueTrigger reference is not set on " + gameObject.name);
+            Debug.LogWarning($"Interactable '{name}' has no dialogueId set.");
         }
     }
-}*/
+}

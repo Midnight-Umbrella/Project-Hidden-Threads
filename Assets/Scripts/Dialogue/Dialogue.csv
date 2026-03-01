@@ -1,0 +1,5 @@
+dialogueId,lineIndex,speaker,text
+door_locked,0,Harper,Huh... she must have locked her door.
+door_locked,1,Harper,I need to find a key somewhere.
+intro_cutscene,0,Narrator,Two weeks earlier...
+intro_cutscene,1,Harper,Why does this feel so familiar?

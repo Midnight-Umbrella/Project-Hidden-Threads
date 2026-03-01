@@ -1,26 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance {get; private set; }
+    public static DialogueManager Instance { get; private set; }
 
     [SerializeField] private DialogueUI dialogueUI;
 
-    private string[] currentLines;
+    private IReadOnlyList<DialogueLine> currentLines;
     private int currentIndex;
+
     public bool IsDialogueActive { get; private set; }
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
 
-        dialogueUI.Hide();
+        if (dialogueUI != null) dialogueUI.Hide();
     }
 
     public void RegisterUI(DialogueUI ui)
@@ -28,8 +26,7 @@ public class DialogueManager : MonoBehaviour
         dialogueUI = ui;
     }
 
-
-    void Update()
+    private void Update()
     {
         if (!IsDialogueActive) return;
 
@@ -39,37 +36,44 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartDialogue(DialogueData data)
+    public void StartDialogue(string dialogueId)
     {
         if (IsDialogueActive) return;
-        if (data == null || data.lines.Length == 0) return;
+        if (DialogueDatabase.Instance == null)
+        {
+            Debug.LogError("DialogueDatabase.Instance is null. Make sure DialogueDatabase exists in the scene.");
+            return;
+        }
 
-        currentLines = data.lines;
+        var lines = DialogueDatabase.Instance.GetDialogue(dialogueId);
+        if (lines == null || lines.Count == 0) return;
+
+        currentLines = lines;
         currentIndex = 0;
         IsDialogueActive = true;
 
         dialogueUI.Show();
-        dialogueUI.SetText(currentLines[currentIndex]);
+        dialogueUI.SetText(currentLines[currentIndex].text);
     }
 
-    void AdvanceDialogue()
+    private void AdvanceDialogue()
     {
         currentIndex++;
 
-        if (currentIndex >= currentLines.Length)
+        if (currentLines == null || currentIndex >= currentLines.Count)
         {
             EndDialogue();
+            return;
         }
-        else
-        {
-            dialogueUI.SetText(currentLines[currentIndex]);
-        }
+
+        dialogueUI.SetText(currentLines[currentIndex].text);
     }
 
-    void EndDialogue()
+    private void EndDialogue()
     {
         IsDialogueActive = false;
-        dialogueUI.Hide();
         currentLines = null;
+
+        dialogueUI.Hide();
     }
 }

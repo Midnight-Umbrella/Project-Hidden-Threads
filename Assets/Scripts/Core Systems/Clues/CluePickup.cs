@@ -4,8 +4,9 @@ public class CluePickup : MonoBehaviour
 {
     [Header("Clue")]
     [SerializeField] private ClueDefinition clue;
-    [SerializeField] private DialogueData dialogue;
-    
+
+    [Header("Optional Dialogue (CSV dialogueId)")]
+    [SerializeField] private string dialogueId; 
 
     [Header("Interaction")]
     [SerializeField] private KeyCode interactKey = KeyCode.F;
@@ -14,6 +15,7 @@ public class CluePickup : MonoBehaviour
 
     private bool _inRange;
     private bool _picked;
+
     public Inventory inventory;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -62,14 +64,18 @@ public class CluePickup : MonoBehaviour
         bool added = journal.AddClue(clue);
         if (added)
         {
-            inventory.AddClue(clue);
+            if (inventory != null)
+                inventory.AddClue(clue);
+
             _picked = true;
+
             CluePromptUI.Instance?.Show($"Collected: {clue.title}");
             Invoke(nameof(HidePrompt), 0.8f);
 
-            if(dialogue) 
+            // play dialogue (CSV id)
+            if (!string.IsNullOrEmpty(dialogueId))
             {
-                DialogueManager.Instance.StartDialogue(dialogue);
+                DialogueManager.Instance.StartDialogue(dialogueId);
             }
 
             if (destroyOnPickup) Destroy(gameObject);

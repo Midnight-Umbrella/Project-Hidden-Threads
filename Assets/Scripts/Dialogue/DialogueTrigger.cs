@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    [SerializeField] private string dialogueId;
 
-    public void TriggerDialogue(DialogueData dialogue)
+    public void TriggerDialogue()
     {
-        DialogueManager.Instance.StartDialogue(dialogue);
+        DialogueManager.Instance.StartDialogue(dialogueId);
     }
 }
