@@ -601,7 +601,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -689,7 +689,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1111108853
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eb7a83ad1c9bd6d428c2d7825a9535af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -733,6 +733,19 @@ MonoBehaviour:
   playerSound: {fileID: 69254447}
   playerFootstep: {fileID: 8300000, guid: e2a7d3156a773904b960a3d54c02fe0b, type: 3}
   footstepInterval: 0.4
+  sr: {fileID: 69254442}
+  walkRight:
+  - {fileID: -594112197, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: -2119231892, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 440772665, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 1994391544, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  walkLeft:
+  - {fileID: 771283410, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: -319886203, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 1826744714, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 1830308663, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  animFps: 12
+  moveEps: 0.01
 --- !u!114 &69254445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneUI: {fileID: 116948549}
-  clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
+  clue1: {fileID: 0}
+  clue2: {fileID: 0}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!1 &341536993
 GameObject:
@@ -1900,8 +1914,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 0}
   dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!50 &366826679
 Rigidbody2D:
   serializedVersion: 4
@@ -2986,8 +3004,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 610241669}
   dialogue: {fileID: 0}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!1001 &720194855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5076,8 +5098,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 788849218}
   dialogue: {fileID: 0}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!50 &1166495064
 Rigidbody2D:
   serializedVersion: 4
@@ -5651,8 +5677,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 0}
   dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!50 &1322490061
 Rigidbody2D:
   serializedVersion: 4
@@ -5824,8 +5854,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 0}
   dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!50 &1427697589
 Rigidbody2D:
   serializedVersion: 4
@@ -7527,8 +7561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousClue: {fileID: 0}
+  inventory: {fileID: 0}
   clue: {fileID: 0}
   dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!50 &2112727947
 Rigidbody2D:
   serializedVersion: 4
