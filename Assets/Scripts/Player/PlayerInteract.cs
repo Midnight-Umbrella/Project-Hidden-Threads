@@ -23,7 +23,7 @@ public class PlayerInteract : MonoBehaviour
             interactRange,
             interactLayer
         );
-
+        
         if (hit != null)
         {
             Interactable interactable = hit.GetComponent<Interactable>();

@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private ClueDefinition previousClue;
+    [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject clue;
     [SerializeField] private DialogueData dialogue;
+    [SerializeField] private bool isNotPhysicalClue;
+    [SerializeField] private ClueDefinition nonPhysicalClue;
     private Collider2D col;
     private SpriteRenderer sr;
 
     void Awake()
     {
-        if (clue) 
+        if (clue && !isNotPhysicalClue) 
         {
             col = clue.GetComponent<Collider2D>();
             sr = clue.GetComponent<SpriteRenderer>();
@@ -20,19 +24,26 @@ public class Interactable : MonoBehaviour
     
     public void Interact()
     {
-        if (col)
+        if (isNotPhysicalClue)
         {
-            col.enabled = true;
+            inventory.AddClue(nonPhysicalClue);
         }
-
-        if (sr)
+        else if (!previousClue || inventory.Contains(previousClue)) 
         {
-            sr.enabled = true;
-        }
+            if (col)
+            {
+                col.enabled = true;
+            }
 
-        if (dialogue)
-        {
-            DialogueManager.Instance.StartDialogue(dialogue);
+            if (sr)
+            {
+                sr.enabled = true;
+            }
+
+            if (dialogue)
+            {
+                DialogueManager.Instance.StartDialogue(dialogue);
+            }
         }
     }
 }
