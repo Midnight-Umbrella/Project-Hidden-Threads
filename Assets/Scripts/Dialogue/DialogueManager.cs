@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     public void RegisterUI(DialogueUI ui)
     {
         dialogueUI = ui;
+        if (dialogueUI != null) dialogueUI.Hide();
     }
 
     private void Update()
@@ -39,21 +40,32 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string dialogueId)
     {
         if (IsDialogueActive) return;
+
+        if (dialogueUI == null)
+        {
+            Debug.LogError("[DialogueManager] dialogueUI is null. Make sure DialogueUI registers itself.");
+            return;
+        }
+
         if (DialogueDatabase.Instance == null)
         {
-            Debug.LogError("DialogueDatabase.Instance is null. Make sure DialogueDatabase exists in the scene.");
+            Debug.LogError("[DialogueManager] DialogueDatabase.Instance is null. Make sure DialogueDatabase exists in the scene.");
             return;
         }
 
         var lines = DialogueDatabase.Instance.GetDialogue(dialogueId);
-        if (lines == null || lines.Count == 0) return;
+        if (lines == null || lines.Count == 0)
+        {
+            Debug.LogWarning($"[DialogueManager] No dialogue found for id: {dialogueId}");
+            return;
+        }
 
         currentLines = lines;
         currentIndex = 0;
         IsDialogueActive = true;
 
         dialogueUI.Show();
-        dialogueUI.SetText(currentLines[currentIndex].text);
+        dialogueUI.SetText(currentLines[currentIndex].Text);
     }
 
     private void AdvanceDialogue()
@@ -66,7 +78,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        dialogueUI.SetText(currentLines[currentIndex].text);
+        dialogueUI.SetText(currentLines[currentIndex].Text);
     }
 
     private void EndDialogue()
@@ -74,6 +86,6 @@ public class DialogueManager : MonoBehaviour
         IsDialogueActive = false;
         currentLines = null;
 
-        dialogueUI.Hide();
+        if (dialogueUI != null) dialogueUI.Hide();
     }
 }

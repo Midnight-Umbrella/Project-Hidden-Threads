@@ -1,0 +1,24 @@
+﻿ID,Character,Type,Text,Object
+INTRO_01,Harper,internal,"It’s super  late, where’s Vera?", 
+INTRO_02,Harper,internal,She left all my messages on read. That’s not normal for her., 
+INTRO_03,Harper,internal,"Vera hasn’t posted on social media in 2 days, something just isn’t right.", 
+INTRO_04,Harper,aloud,"Vera’s jacket is still on the coat rack, that means she didn’t even leave properly.",Coat Rack
+INTRO_05,Harper,internal,"Her bag is still here,  her bed’s made,  she probably didn’t plan to be gone this long.",Apartment
+,,,,
+STAGE1_01,Harper,internal,Empty… Vera always tossed her keys in here. That’s not like her.,Keybowl
+STAGE1_02,Harper,internal,Locked… that means she left. But why would she leave without her phone?,Vera's Door
+STAGE1_03,Harper,internal,Wait! This has to be it!  Please let this be her room key.,Key
+STAGE1_04,Harper,internal,Nothing useful here… I need to focus.,Empty Searchable Objects
+STAGE1_05,Harper,internal,That looks out of place… why would she throw this away?,Garbage Can
+STAGE1_06,Harper,internal,Her birthday’s circled. She never makes a big deal about it… Why mark it this time?,Calendar
+STAGE1_07,Harper,internal,Of course. Vera and her obsession with strawberry pop tarts… she would devour an entire pack at once.,TartPops
+STAGE1_08,Harper,internal,I can’t leave yet. Not until I figure out what happened.,Door to leave apartment
+STAGE1_09,Harper,internal,Her birthday is circled on the calendar… and she loves TartPops. That has to be the password.,Sticky Note
+STAGE1_10,Harper,internal,Yes! It worked. Let’s see what she’s been up to.,Vera’s Phone
+STAGE1_11,Harper,internal,"Something isn’t right. I have to follow this. First, the bar.",Vera’s Phone
+STAGE1_12,Harper,aloud,Let’s go. I need to find Vera and figure out what happened.,Vera’s Phone
+,,,,
+CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
+CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
+CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
+CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera’s.,Sticky Note

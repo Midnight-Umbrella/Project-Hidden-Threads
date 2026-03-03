@@ -758,10 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97f050d5e7a1664788d2c90797795d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRange: 0.35
-  interactLayer:
-    serializedVersion: 2
-    m_Bits: 8
+  interactKey: 102
 --- !u!82 &69254447
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1188,6 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253140100}
   - component: {fileID: 253140099}
+  - component: {fileID: 253140101}
   m_Layer: 0
   m_Name: cumputer
   m_TagString: Untagged
@@ -1262,6 +1260,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0.502, y: 8.361, z: -3.41}
+--- !u!114 &253140101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253140098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueId: 
 --- !u!1 &298772082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 0f42d1da79e0e3c4197c9fcd69dd86a0, type: 2}
+  dialogueId: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!1 &309378295
 GameObject:
@@ -1897,11 +1908,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 366826677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueId: 
 --- !u!50 &366826679
 Rigidbody2D:
   serializedVersion: 4
@@ -2207,7 +2217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 542b7b8fd9c338e43a224d857cecd88f, type: 2}
+  dialogueId: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -2640,6 +2650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628057747}
   - component: {fileID: 628057746}
+  - component: {fileID: 628057748}
   m_Layer: 0
   m_Name: Carpet
   m_TagString: Untagged
@@ -2714,6 +2725,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628057748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628057745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueId: CLUE_KEY_01
 --- !u!1 &636193855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,11 +3007,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 711856369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 610241669}
-  dialogue: {fileID: 0}
+  dialogueId: 
 --- !u!1001 &720194855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3284,7 +3307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
-  dialogue: {fileID: 11400000, guid: c7188b4a635d2164a82331029fdac53d, type: 2}
+  dialogueId: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &763366942
 BoxCollider2D:
@@ -3457,7 +3480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
-  dialogue: {fileID: 11400000, guid: 5f8d6e907ccfbdf41a50a4d64a5fd4b1, type: 2}
+  dialogueId: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -3583,6 +3606,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883453066}
+  - component: {fileID: 883453067}
+  - component: {fileID: 883453068}
   m_Layer: 0
   m_Name: DialogueDB
   m_TagString: Untagged
@@ -3605,6 +3630,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &883453067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883453065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288619a508b699f4d86086d999eef710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCsv: {fileID: 4900000, guid: c14f3cbda87faaf4eb778ea5f817cdb0, type: 3}
+--- !u!114 &883453068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883453065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9870a64a055b8274288e06749664f3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &925140551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5104,11 +5154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1166495062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 788849218}
-  dialogue: {fileID: 0}
+  dialogueId: 
 --- !u!50 &1166495064
 Rigidbody2D:
   serializedVersion: 4
@@ -5679,11 +5728,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322490059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueId: 
 --- !u!50 &1322490061
 Rigidbody2D:
   serializedVersion: 4
@@ -5852,11 +5900,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1427697587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueId: 
 --- !u!50 &1427697589
 Rigidbody2D:
   serializedVersion: 4
@@ -7555,11 +7602,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2112727945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Script: {fileID: 11500000, guid: afd83ae9abdcf495c8a5c8fdae204fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueId: 
 --- !u!50 &2112727947
 Rigidbody2D:
   serializedVersion: 4

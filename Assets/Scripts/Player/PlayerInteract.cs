@@ -1,36 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public float interactRange;
-    public LayerMask interactLayer;
+    [SerializeField] private KeyCode interactKey = KeyCode.F;
 
-    // Update is called once per frame
-    void Update()
+    private Interactable current;
+
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(interactKey))
         {
-            TryInteract();
+            Debug.Log($"[PlayerInteract] F pressed. current={(current != null ? current.name : "null")}");
+
+            if (current == null) return;
+
+            if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive) return;
+
+            current.Interact();
         }
     }
 
-    void TryInteract()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Collider2D hit = Physics2D.OverlapCircle(
-            transform.position,
-            interactRange,
-            interactLayer
-        );
+        var interactable = other.GetComponent<Interactable>() ?? other.GetComponentInParent<Interactable>();
+        if (interactable == null) return;
 
-        if (hit != null)
+        current = interactable;
+        Debug.Log($"[PlayerInteract] Enter range: {current.name}");
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        var interactable = other.GetComponent<Interactable>() ?? other.GetComponentInParent<Interactable>();
+        if (interactable == null) return;
+
+        if (current == interactable)
         {
-            Interactable interactable = hit.GetComponent<Interactable>();
-            if (interactable != null)
-            {
-                interactable.Interact();
-            }
+            Debug.Log($"[PlayerInteract] Exit range: {current.name}");
+            current = null;
         }
     }
 }
