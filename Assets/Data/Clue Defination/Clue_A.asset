@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Clue_A
   m_EditorClassIdentifier: 
   id: clue_a
-  title: Clue A
-  description: PLACE HOLDER TEST 1
-  icon: {fileID: 0}
+  title: Vera's Room Key
+  description: "A small brass golden key with faded enamel paint on the handle. The
+    tag attached to it reads \u201CV\u201D in messy handwriting. It looks worn from
+    daily use."
+  icon: {fileID: 21300000, guid: ffaf58704e6ab944aa5b3a44e87fc993, type: 3}
   category: 
