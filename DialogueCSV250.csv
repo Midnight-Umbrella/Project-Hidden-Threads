@@ -17,6 +17,16 @@ STAGE1_09,Harper,internal,Her birthday is circled on the calendar… and she lov
 STAGE1_10,Harper,internal,Yes! It worked. Let’s see what she’s been up to.,Vera’s Phone
 STAGE1_11,Harper,internal,"Something isn’t right. I have to follow this. First, the bar.",Vera’s Phone
 STAGE1_12,Harper,aloud,Let’s go. I need to find Vera and figure out what happened.,Vera’s Phone
+STAGE1_13,Harper,internal,Nothing inside the cupboard… just the usual dishes.,Cupboard
+STAGE1_14,Harper,internal,Looks like the garbage can has already been taken out.,garbage can
+STAGE1_15,Harper,internal,The counter is clear… maybe Vera left something behind?,Counter
+STAGE1_16,Harper,internal,The lamp is on… odd that it's still lit.,lamp
+STAGE1_17,Harper,internal,Her desk is a mess  but I don't see anything useful right now.,Desk
+STAGE1_18,Harper,internal,The shelf holds some books… nothing that seems important.,Shelf
+STAGE1_19,Harper,internal,The exit door is locked… I can't go through here yet.,Door2
+STAGE1_20,Harper,internal,There's a framed photo on the wall… Vera looks happy in this.,frame
+STAGE1_21,Harper,internal,Vera's computer is still on… maybe I can find a clue there.,Vera's Computer
+STAGE1_22,Harper,internal,The carpet is clean… nothing unusual to notice here.,carpet
 ,,,,
 CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
