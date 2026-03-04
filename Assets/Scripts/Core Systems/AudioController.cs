@@ -47,6 +47,23 @@ public class AudioController : MonoBehaviour
         sfxSource.PlayOneShot(clip, masterVolume);
     }
 
+    public void PlaySFX_2(AudioClip clip, Transform spawnTransform, float volume)
+    {
+        // Spawns in gameObject
+        AudioSource audioSource = Instantiate(sfxSource, spawnTransform.position, Quaternion.identity);
+        // Assigns audioClip
+        audioSource.clip = clip;
+        // Assigns volume
+        audioSource.volume = volume;
+        // Plays sound
+        audioSource.Play();
+        // Gets length of clip
+        float clipLength = audioSource.clip.length;
+        // Destroys gameObject
+        Destroy(audioSource.gameObject, clipLength);
+
+    }
+
     // Convenience for UI buttons
     public void PlayUIClick()
     {
