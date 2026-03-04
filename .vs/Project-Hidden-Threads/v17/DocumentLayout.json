@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Assets\\Scripts\\Dialogue\\DialogueData.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Dialogue\\DialogueData.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Assets\\Scripts\\Title Scene\\MainMenuController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Title Scene\\MainMenuController.cs||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -23,6 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DialogueData.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Assets\\Scripts\\Dialogue\\DialogueData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Dialogue\\DialogueData.cs",
+              "ToolTip": "C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Assets\\Scripts\\Dialogue\\DialogueData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Dialogue\\DialogueData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:06:48.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainMenuController.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Assets\\Scripts\\Title Scene\\MainMenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Title Scene\\MainMenuController.cs",
@@ -34,12 +55,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaseInput.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\Documents\\CMPUT250\\test\\Project-Hidden-Threads\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
@@ -47,8 +64,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T21:12:22.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-12T21:12:22.927Z"
             }
           ]
         }
