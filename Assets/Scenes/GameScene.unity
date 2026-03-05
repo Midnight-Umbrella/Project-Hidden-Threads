@@ -263,10 +263,12 @@ MonoBehaviour:
   - {fileID: -2119231892, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   - {fileID: 440772665, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   - {fileID: 1994391544, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 1994391544, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   walkLeft:
   - {fileID: 771283410, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   - {fileID: -319886203, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   - {fileID: 1826744714, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
+  - {fileID: 1830308663, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   - {fileID: 1830308663, guid: d6f1028ffb0f9f941b5daa2595fd3b55, type: 3}
   animFps: 10
   moveEps: 0.01
