@@ -12,7 +12,7 @@ public class ClueBootstrap : MonoBehaviour
             return;
         }
 
-        Journal = new ClueJournal();
+        Journal = gameObject.AddComponent<ClueJournal>();
         DontDestroyOnLoad(gameObject);
     }
 }
