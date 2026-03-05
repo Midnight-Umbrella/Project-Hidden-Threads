@@ -32,6 +32,8 @@ wallNote,0,Harper,internal,"Some notes about passwords or something"
 wallNote,1,Harper,internal,"Hmm... 'password idea: birthday + fav food'"
 verasTable,0,Harper,internal,"Vera's plants haven't been watered"|"I'm starting to get worried"
 kitchenTable,0,Harper,internal,"Looks like she left some food out"
+exitDoor,0,Harper,internal,"I can't leave yet"|"I'd have no idea where to go"
+exitDoor,1,Harper,internal,"I'm coming to find you Vera!"
 CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
 CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
