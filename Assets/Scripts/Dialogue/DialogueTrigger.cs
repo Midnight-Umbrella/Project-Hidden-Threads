@@ -5,8 +5,8 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
 
-    public void TriggerDialogue(DialogueData dialogue)
+    public void TriggerDialogue(string objID, string dialogueNum)
     {
-        DialogueManager.Instance.StartDialogue(dialogue);
+        DialogueManager.Instance.StartDialogue(objID, dialogueNum);
     }
 }

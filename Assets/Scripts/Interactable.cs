@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private string objID; 
     [SerializeField] private ClueDefinition previousClue;
+    [SerializeField] private string preDialogueNum;
     [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject clue;
-    [SerializeField] private DialogueData dialogue;
+    [SerializeField] private string dialogueNum;
     [SerializeField] private bool isNotPhysicalClue;
     [SerializeField] private ClueDefinition nonPhysicalClue;
     private Collider2D col;
@@ -23,10 +25,23 @@ public class Interactable : MonoBehaviour
     }
     
     public void Interact()
-    {
+    {Debug.Log(objID);
         if (isNotPhysicalClue)
         {
-            inventory.AddClue(nonPhysicalClue);
+            if (!previousClue || inventory.Contains(previousClue)) 
+            {
+                inventory.AddClue(nonPhysicalClue);
+
+                if (dialogueNum != null)
+                {
+                    DialogueManager.Instance.StartDialogue(objID,dialogueNum);
+                }
+            }
+            else if(preDialogueNum != null)
+            {
+                DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
+            }
+                
         }
         else if (!previousClue || inventory.Contains(previousClue)) 
         {
@@ -40,10 +55,14 @@ public class Interactable : MonoBehaviour
                 sr.enabled = true;
             }
 
-            if (dialogue)
+            if (dialogueNum != null)
             {
-                DialogueManager.Instance.StartDialogue(dialogue);
+                DialogueManager.Instance.StartDialogue(objID,dialogueNum);
             }
+        }
+        else if(preDialogueNum != null)
+        {
+            DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
         }
     }
 }

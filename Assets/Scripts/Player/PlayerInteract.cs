@@ -28,7 +28,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Interactable interactable = hit.GetComponent<Interactable>();
             if (interactable != null)
-            {
+            {Debug.Log("Interacting");
                 interactable.Interact();
             }
         }

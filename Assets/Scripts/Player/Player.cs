@@ -44,12 +44,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
-        rb.velocity = new Vector2(speedX, speedY);
+        if (!DialogueManager.Instance.IsDialogueActive)
+        {
+            speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+            speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
+            rb.velocity = new Vector2(speedX, speedY);
 
-        HandleSpriteAnimation();
-        HandleFootsteps();
+            HandleSpriteAnimation();
+            HandleFootsteps();
+        }
     }
 
     void HandleSpriteAnimation()

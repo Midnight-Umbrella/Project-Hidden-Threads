@@ -9,7 +9,9 @@ public class Door : MonoBehaviour
     private AudioSource doorAudioSource;
     public bool lockable;
     [SerializeField] private ClueDefinition clue;
-    [SerializeField] private DialogueData dialogue;
+    [SerializeField] private string objID;
+    [SerializeField] private string lockedDialogueNum;
+    [SerializeField] private string unlockedDialogueNum;
     public Inventory inventory;
 
     [Header("Audio")]
@@ -38,7 +40,12 @@ public class Door : MonoBehaviour
                 AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
         }
         else if (collision.gameObject.CompareTag("Player") && inventory.Contains(clue))
-        {
+        {   
+            if (unlockedDialogueNum != null)
+            {
+                DialogueManager.Instance.StartDialogue(objID, unlockedDialogueNum);
+            }
+
             sr.enabled = false;
             cd.enabled = false;
             // Play door opening sound from door's AudioSource
@@ -47,14 +54,9 @@ public class Door : MonoBehaviour
             else
                 AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
         }
-        else if (lockable && !inventory.Contains(clue) && dialogue)
+        else if (lockable && !inventory.Contains(clue) && (lockedDialogueNum != null))
         {
-            // Play door locked sound from door's AudioSource
-            if (doorAudioSource != null)
-                AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorLockedClip, sfxVolume);
-            else
-                AudioController.Instance.PlaySFXAtPosition(doorLockedClip, transform.position, sfxVolume);
-            DialogueManager.Instance.StartDialogue(dialogue);
+            DialogueManager.Instance.StartDialogue(objID, lockedDialogueNum);
         }
     }
 }

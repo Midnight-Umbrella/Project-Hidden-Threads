@@ -4,7 +4,8 @@ public class CluePickup : MonoBehaviour
 {
     [Header("Clue")]
     [SerializeField] private ClueDefinition clue;
-    [SerializeField] private DialogueData dialogue;
+    [SerializeField] private string objID;
+    [SerializeField] private string dialogueNum;
     
 
     [Header("Interaction")]
@@ -67,9 +68,9 @@ public class CluePickup : MonoBehaviour
             CluePromptUI.Instance?.Show($"Collected: {clue.title}");
             Invoke(nameof(HidePrompt), 0.8f);
 
-            if(dialogue) 
+            if(!string.IsNullOrEmpty(dialogueNum)) 
             {
-                DialogueManager.Instance.StartDialogue(dialogue);
+                DialogueManager.Instance.StartDialogue(objID, dialogueNum);
             }
 
             if (destroyOnPickup) Destroy(gameObject);
