@@ -8,7 +8,9 @@ public class Door : MonoBehaviour
     private Collider2D cd;
     public bool lockable;
     [SerializeField] private ClueDefinition clue;
-    [SerializeField] private DialogueData dialogue;
+    [SerializeField] private string objID;
+    [SerializeField] private string lockedDialogueNum;
+    [SerializeField] private string unlockedDialogueNum;
     public Inventory inventory;
     
     // Start is called before the first frame update
@@ -26,13 +28,18 @@ public class Door : MonoBehaviour
             cd.enabled = false;
         }
         else if (collision.gameObject.CompareTag("Player") && inventory.Contains(clue))
-        {
+        {   
+            if (unlockedDialogueNum != null)
+            {
+                DialogueManager.Instance.StartDialogue(objID, unlockedDialogueNum);
+            }
+
             sr.enabled = false;
             cd.enabled = false;
         }
-        else if (lockable && !inventory.Contains(clue) && dialogue)
+        else if (lockable && !inventory.Contains(clue) && (lockedDialogueNum != null))
         {
-            DialogueManager.Instance.StartDialogue(dialogue);
+            DialogueManager.Instance.StartDialogue(objID, lockedDialogueNum);
         }
     }
 }

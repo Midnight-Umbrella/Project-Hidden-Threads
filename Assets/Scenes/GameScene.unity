@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 221926888}
   - component: {fileID: 221926887}
   - component: {fileID: 221926886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planets 3_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,10 +1335,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &221926887
@@ -1493,7 +1495,7 @@ GameObject:
   - component: {fileID: 253846792}
   - component: {fileID: 253846791}
   - component: {fileID: 253846790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,10 +1514,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &253846791
@@ -1831,7 +1835,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 0}
+  objID: verasDoor
+  lockedDialogueNum: 0
+  unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!114 &298772088
 MonoBehaviour:
@@ -2057,7 +2063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 0bdc3ad9e248c58418539d32443a44b4, type: 2}
-  dialogue: {fileID: 0}
+  objID: crumpledNote
+  dialogueNum: 0
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -2168,7 +2175,7 @@ Transform:
   m_GameObject: {fileID: 447798296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.7, y: 8.22, z: 0}
+  m_LocalPosition: {x: 26.95, y: -1.68, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2626,7 +2633,7 @@ GameObject:
   - component: {fileID: 600708755}
   - component: {fileID: 600708754}
   - component: {fileID: 600708753}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinet 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2645,10 +2652,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: cupboard
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &600708754
@@ -2704,7 +2713,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600708752}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2822,7 +2831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 0}
+  objID: 
+  dialogueNum: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -3095,7 +3105,8 @@ GameObject:
   - component: {fileID: 620665250}
   - component: {fileID: 620665249}
   - component: {fileID: 620665248}
-  m_Layer: 0
+  - component: {fileID: 620665252}
+  m_Layer: 3
   m_Name: table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3241,6 +3252,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620665252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620665247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objID: kitchenTable
+  previousClue: {fileID: 0}
+  preDialogueNum: 
+  inventory: {fileID: 0}
+  clue: {fileID: 0}
+  dialogueNum: 0
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!1 &623537086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,7 +3285,7 @@ GameObject:
   - component: {fileID: 623537089}
   - component: {fileID: 623537088}
   - component: {fileID: 623537087}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: toliet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3273,10 +3304,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &623537088
@@ -3430,6 +3463,8 @@ GameObject:
   - component: {fileID: 636193858}
   - component: {fileID: 636193857}
   - component: {fileID: 636193859}
+  - component: {fileID: 636193861}
+  - component: {fileID: 636193860}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -3490,6 +3525,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859bd176dbad7a2439830d58dc0f6aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &636193860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636193855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e55f3c4b5b774a4f93e271664c2f946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 636193861}
+  dialogueCSV: {fileID: 4900000, guid: 12d35cf18df00bb47901fd99bced32af, type: 3}
+--- !u!114 &636193861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636193855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8469d613b6e3c489cae308a9cedc0ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1815930391}
+  dialogueText: {fileID: 716451301}
 --- !u!1 &703978166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,7 +3566,7 @@ GameObject:
   - component: {fileID: 703978169}
   - component: {fileID: 703978168}
   - component: {fileID: 703978167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planets 3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3522,10 +3585,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &703978168
@@ -3833,7 +3898,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 69772183809708744a6fb62ba369a0fa, type: 2}
-  dialogue: {fileID: 0}
+  objID: 
+  dialogueNum: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -3944,7 +4010,7 @@ Transform:
   m_GameObject: {fileID: 726163927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.22, y: 7.93, z: 0}
+  m_LocalPosition: {x: 33.87, y: 8.24, z: 0}
   m_LocalScale: {x: 0.25, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3961,7 +4027,6 @@ GameObject:
   - component: {fileID: 735730384}
   - component: {fileID: 735730383}
   - component: {fileID: 735730382}
-  - component: {fileID: 735730381}
   m_Layer: 0
   m_Name: Apples
   m_TagString: Untagged
@@ -3969,24 +4034,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &735730381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735730380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb20d751457f8945ae092f3a9824beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clue: {fileID: 11400000, guid: 64ae8f44276fae84997015522bb42501, type: 2}
-  dialogue: {fileID: 0}
-  interactKey: 102
-  playerTag: Player
-  destroyOnPickup: 1
-  inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &735730382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4131,10 +4178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 726163927}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &738234141
@@ -4308,7 +4357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
-  dialogue: {fileID: 0}
+  objID: 
+  dialogueNum: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -4438,7 +4488,7 @@ GameObject:
   - component: {fileID: 814735287}
   - component: {fileID: 814735286}
   - component: {fileID: 814735285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sink and mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4457,10 +4507,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &814735286
@@ -8815,6 +8867,151 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &935883902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935883906}
+  - component: {fileID: 935883905}
+  - component: {fileID: 935883904}
+  - component: {fileID: 935883903}
+  m_Layer: 0
+  m_Name: IntroDialogueTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &935883903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935883902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87bc86360341b4458e79158afb3f697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objID: Intro
+  dialogueNum: 0
+--- !u!61 &935883904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935883902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &935883905
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935883902}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &935883906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935883902}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.29, y: -0, z: 0}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940794103
 GameObject:
   m_ObjectHideFlags: 0
@@ -8872,7 +9069,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2033581884, guid: 3dd41bfa0a64f9b4dad094bad45a0c9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8912,7 +9109,7 @@ GameObject:
   - component: {fileID: 948814730}
   - component: {fileID: 948814729}
   - component: {fileID: 948814728}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table 5 (Different Color)_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8931,10 +9128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &948814729
@@ -9153,7 +9352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
-  dialogue: {fileID: 0}
+  objID: 
+  dialogueNum: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -9238,7 +9438,7 @@ GameObject:
   - component: {fileID: 984140895}
   - component: {fileID: 984140894}
   - component: {fileID: 984140893}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9257,10 +9457,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &984140894
@@ -9677,7 +9879,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1431089619
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 90c6c54da91a5024ba49390faf598195, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9956,7 +10158,7 @@ GameObject:
   - component: {fileID: 1084521690}
   - component: {fileID: 1084521689}
   - component: {fileID: 1084521688}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,10 +10177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &1084521689
@@ -11754,7 +11958,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1153628815}
   - component: {fileID: 1153628814}
-  m_Layer: 0
+  - component: {fileID: 1153628818}
+  - component: {fileID: 1153628817}
+  - component: {fileID: 1153628816}
+  m_Layer: 3
   m_Name: lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11828,6 +12035,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1153628816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153628813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objID: nothing
+  previousClue: {fileID: 0}
+  preDialogueNum: 
+  inventory: {fileID: 0}
+  clue: {fileID: 0}
+  dialogueNum: 0
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
+--- !u!61 &1153628817
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153628813}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.055366665, y: 0.3518151}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.92, y: 3}
+    newSize: {x: 2.92, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3853935, y: 0.727623}
+  m_EdgeRadius: 0
+--- !u!50 &1153628818
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153628813}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1208907853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11860,12 +12159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousClue: {fileID: 0}
-  inventory: {fileID: 0}
-  clue: {fileID: 971977585}
-  dialogue: {fileID: 0}
-  isNotPhysicalClue: 0
-  nonPhysicalClue: {fileID: 0}
+  objID: wallNote
+  previousClue: {fileID: 11400000, guid: 69772183809708744a6fb62ba369a0fa, type: 2}
+  preDialogueNum: 0
+  inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+  clue: {fileID: 0}
+  dialogueNum: 1
+  isNotPhysicalClue: 1
+  nonPhysicalClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
 --- !u!50 &1208907855
 Rigidbody2D:
   serializedVersion: 4
@@ -11922,10 +12223,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.47462845, y: 0.71802425}
+  m_Offset: {x: -0.47462845, y: -0.12893772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11936,7 +12237,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.803215, y: 2.4847279}
+  m_Size: {x: 1.803215, y: 4.178652}
   m_EdgeRadius: 0
 --- !u!212 &1208907857
 SpriteRenderer:
@@ -12018,7 +12319,7 @@ GameObject:
   - component: {fileID: 1232797526}
   - component: {fileID: 1232797525}
   - component: {fileID: 1232797524}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Planets 3_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12037,10 +12338,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &1232797525
@@ -12193,6 +12496,7 @@ GameObject:
   - component: {fileID: 1235055750}
   - component: {fileID: 1235055749}
   - component: {fileID: 1235055748}
+  - component: {fileID: 1235055751}
   m_Layer: 0
   m_Name: Table 2
   m_TagString: Untagged
@@ -12312,6 +12616,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1235055751
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235055747}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1418262447
 GameObject:
   m_ObjectHideFlags: 0
@@ -12529,7 +12860,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1616153448, guid: 3dd41bfa0a64f9b4dad094bad45a0c9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12569,7 +12900,7 @@ GameObject:
   - component: {fileID: 1502174493}
   - component: {fileID: 1502174492}
   - component: {fileID: 1502174491}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bathtub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12588,10 +12919,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1502174492
@@ -12746,7 +13079,7 @@ GameObject:
   - component: {fileID: 1541266476}
   - component: {fileID: 1541266475}
   - component: {fileID: 1541266474}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12765,10 +13098,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1541266475
@@ -12779,7 +13114,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541266473}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -13007,7 +13342,7 @@ GameObject:
   - component: {fileID: 1552454293}
   - component: {fileID: 1552454292}
   - component: {fileID: 1552454291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13026,10 +13361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!61 &1552454292
@@ -13085,7 +13422,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552454290}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -13142,8 +13479,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2075740527
-  m_SortingLayer: 5
+  m_SortingLayerID: 806239857
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 157c030d3d62b7b4b90afe8d7bf7b5bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13203,10 +13540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: calendar
   previousClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
+  preDialogueNum: 0
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
 --- !u!50 &1575627244
@@ -13268,7 +13607,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.578413}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13279,7 +13618,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.156826}
   m_EdgeRadius: 0
 --- !u!212 &1575627246
 SpriteRenderer:
@@ -13442,8 +13781,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1587624208}
   - component: {fileID: 1587624207}
-  - component: {fileID: 1587624206}
-  - component: {fileID: 1587624205}
   m_Layer: 0
   m_Name: Planets 3_1 (1)
   m_TagString: Untagged
@@ -13451,78 +13788,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1587624205
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587624204}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.013907291, y: -0.15299317}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.56}
-    newSize: {x: 0.44, y: 0.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.23137443, y: 0.1983797}
-  m_EdgeRadius: 0
---- !u!50 &1587624206
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587624204}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!212 &1587624207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13563,7 +13828,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -455336091, guid: ea734ed6e759fd84f892066bab9cc202, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13584,7 +13849,7 @@ Transform:
   m_GameObject: {fileID: 1587624204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.39, y: 8.79, z: 0}
+  m_LocalPosition: {x: 34.802, y: 5.869, z: 0}
   m_LocalScale: {x: 1.75, y: 1.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14006,7 +14271,6 @@ GameObject:
   - component: {fileID: 1615879870}
   - component: {fileID: 1615879869}
   - component: {fileID: 1615879868}
-  - component: {fileID: 1615879867}
   m_Layer: 0
   m_Name: Table 4
   m_TagString: Untagged
@@ -14014,24 +14278,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1615879867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615879866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousClue: {fileID: 0}
-  inventory: {fileID: 0}
-  clue: {fileID: 0}
-  dialogue: {fileID: 0}
-  isNotPhysicalClue: 0
-  nonPhysicalClue: {fileID: 0}
 --- !u!61 &1615879868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14287,10 +14533,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: verasDesk
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 726163927}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1666082241
@@ -14445,7 +14693,7 @@ GameObject:
   - component: {fileID: 1669065017}
   - component: {fileID: 1669065016}
   - component: {fileID: 1669065015}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14464,10 +14712,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: nothing
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1669065016
@@ -14775,10 +15025,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: fridge
   previousClue: {fileID: 11400000, guid: 0bdc3ad9e248c58418539d32443a44b4, type: 2}
+  preDialogueNum: 0
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
   clue: {fileID: 610241669}
-  dialogue: {fileID: 0}
+  dialogueNum: 1
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!212 &1751956045
@@ -14952,10 +15204,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: kitchenCounter
   previousClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
+  preDialogueNum: 0
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 64ae8f44276fae84997015522bb42501, type: 2}
 --- !u!61 &1782450405
@@ -15109,7 +15363,8 @@ GameObject:
   - component: {fileID: 1797328428}
   - component: {fileID: 1797328427}
   - component: {fileID: 1797328426}
-  m_Layer: 0
+  - component: {fileID: 1797328430}
+  m_Layer: 3
   m_Name: Planets 3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15255,6 +15510,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1797328430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797328425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objID: nothing
+  previousClue: {fileID: 0}
+  preDialogueNum: 
+  inventory: {fileID: 0}
+  clue: {fileID: 0}
+  dialogueNum: 0
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
 --- !u!1 &1801560979
 GameObject:
   m_ObjectHideFlags: 0
@@ -15265,7 +15540,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1801560981}
   - component: {fileID: 1801560980}
-  m_Layer: 0
+  - component: {fileID: 1801560984}
+  - component: {fileID: 1801560983}
+  - component: {fileID: 1801560982}
+  m_Layer: 3
   m_Name: Planets 3_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15339,6 +15617,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801560982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801560979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objID: nothing
+  previousClue: {fileID: 0}
+  preDialogueNum: 
+  inventory: {fileID: 0}
+  clue: {fileID: 0}
+  dialogueNum: 0
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
+--- !u!50 &1801560983
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801560979}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1801560984
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801560979}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.013325483, y: -0.10160604}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.49, y: 0.52}
+    newSize: {x: 0.49, y: 0.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25680393, y: 0.25015986}
+  m_EdgeRadius: 0
 --- !u!1 &1815930391
 GameObject:
   m_ObjectHideFlags: 0
@@ -18044,8 +18414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneUI: {fileID: 126825805}
-  clue1: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  clue2: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
+  clue1: {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
+  clue2: {fileID: 11400000, guid: 64ae8f44276fae84997015522bb42501, type: 2}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!114 &1877308982
 MonoBehaviour:
@@ -18181,10 +18551,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: harpersPlantLeft
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1967122364
@@ -18339,7 +18711,7 @@ GameObject:
   - component: {fileID: 2099068694}
   - component: {fileID: 2099068693}
   - component: {fileID: 2099068692}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Table 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18358,10 +18730,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: verasTable
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 0}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &2099068693
@@ -18535,10 +18909,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: garbageCan
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
-  clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  clue: {fileID: 447798296}
+  dialogueNum: 0
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &2104573543
@@ -18887,7 +19263,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1068087856}
   - {fileID: 69254443}
-  - {fileID: 1877308986}
   - {fileID: 93447428}
   - {fileID: 298772086}
   - {fileID: 636193856}
@@ -18945,3 +19320,5 @@ SceneRoots:
   - {fileID: 1153628815}
   - {fileID: 1587624208}
   - {fileID: 738234144}
+  - {fileID: 935883906}
+  - {fileID: 1877308986}

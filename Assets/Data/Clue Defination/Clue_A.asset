@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: Clue_A
   m_EditorClassIdentifier: 
-  id: clue_a
-  title: Clue A
-  description: PLACE HOLDER TEST 1
+  id: veras_key
+  title: Vera's Key
+  description: Vera's key to her bedroom.
   icon: {fileID: 0}
   category: 

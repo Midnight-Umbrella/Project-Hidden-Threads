@@ -1,0 +1,38 @@
+﻿ObjID,DialogueNum,Character,Type,Text
+Intro,0,Harper,internal,"It’s super  late. Where’s Vera?"|"She left all my messages on read. That’s not normal for her."|"Vera hasn’t posted on social media in 2 days. Something just isn’t right."
+verasDoor,0,Harper,internal,"Locked… that means she left. But where did she go?"
+verasDoor,1,Harper,internal,"There we go"
+verasDesk,0,Harper,internal,"Is this her phone?"|"Why would she leave without her phone?"
+STAGE1_03,Harper,internal,Wait! This has to be it!  Please let this be her room key.,Key
+nothing,0,Harper,internal,"Nothing useful here… I need to focus"
+garbageCan,0,Harper,internal,"That looks out of place… why would she throw this away?"
+calendar,0, Harper,internal,"According to my calendar"|"Vera's birthday is coming up"
+calendar,1,Harper,internal,"Her birthday’s circled! June 7th"
+kitchenCounter,0,Harper,internal,"Vera sure loves her apples"
+kitchenCounter,1,Harper,internal,"Of course. Vera and her obsession with apples"|"She would devour an entire bag in an afternoon"
+exit,0,Harper,internal,"I can’t leave yet. Not until I figure out what happened"
+STAGE1_09,Harper,internal,Her birthday is circled on the calendar… and she loves TartPops. That has to be the password.,Sticky Note
+STAGE1_10,Harper,internal,Yes! It worked. Let’s see what she’s been up to.,Vera’s Phone
+STAGE1_11,Harper,internal,"Something isn’t right. I have to follow this. First, the bar.",Vera’s Phone
+STAGE1_12,Harper,aloud,Let’s go. I need to find Vera and figure out what happened.,Vera’s Phone
+cupboard,0,Harper,internal,"Nothing inside the cupboard… just the usual dishes"
+STAGE1_14,Harper,internal,Looks like the garbage can has already been taken out.,garbage can
+STAGE1_15,Harper,internal,The counter is clear… maybe Vera left something behind?,Counter
+STAGE1_16,Harper,internal,The lamp is on… odd that it's still lit.,lamp
+STAGE1_17,Harper,internal,Her desk is a mess  but I don't see anything useful right now.,Desk
+STAGE1_18,Harper,internal,The shelf holds some books… nothing that seems important.,Shelf
+STAGE1_19,Harper,internal,The exit door is locked… I can't go through here yet.,Door2
+STAGE1_20,Harper,internal,There's a framed photo on the wall… Vera looks happy in this.,frame
+STAGE1_21,Harper,internal,Vera's computer is still on… maybe I can find a clue there.,Vera's Computer
+STAGE1_22,Harper,internal,The carpet is clean… nothing unusual to notice here.,carpet
+fridge,0,Harper,internal,"Just a fridge. Our milk is close to expiring"
+fridge,1,Harper,internal,"Here it is"|"What a weird place to hid a key"
+crumpledNote,0,Harper,internal,"Hmm... 'Secret hiding places: toilet. fridge. couch'"
+wallNote,0,Harper,internal,"Some notes about passwords or something"
+wallNote,1,Harper,internal,"Hmm... 'password idea: birthday + fav food'"
+verasTable,0,Harper,internal,"Vera's plants haven't been watered"|"I'm starting to get worried"
+kitchenTable,0,Harper,internal,"Looks like she left some food out"
+CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
+CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
+CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
+CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera’s.,Sticky Note
