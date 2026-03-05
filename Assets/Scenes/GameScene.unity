@@ -1932,6 +1932,9 @@ MonoBehaviour:
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
   dialogue: {fileID: 0}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+  doorOpenClip: {fileID: 0}
+  doorLockedClip: {fileID: 0}
+  sfxVolume: 1
 --- !u!114 &298772088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9711,7 +9714,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -137622803, guid: ea734ed6e759fd84f892066bab9cc202, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13031,7 +13034,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541266473}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

@@ -1027,9 +1027,9 @@ MonoBehaviour:
   - sceneName: TitleScreen
     musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
   - sceneName: OpenCutscene
-    musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
   - sceneName: GameScene
-    musicClip: {fileID: 0}
+    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
 --- !u!4 &619784098
 Transform:
   m_ObjectHideFlags: 0

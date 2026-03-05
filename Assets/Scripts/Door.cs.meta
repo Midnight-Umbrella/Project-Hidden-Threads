@@ -3,7 +3,12 @@ guid: b05272b0af20cc34f92bf5ed882d5249
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - clue: {instanceID: 0}
+  - dialogue: {instanceID: 0}
+  - inventory: {instanceID: 0}
+  - doorOpenClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
+  - doorLockedClip: {fileID: 8300000, guid: 45b8b6175c3d8c145b931fa5d6e71ffb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
