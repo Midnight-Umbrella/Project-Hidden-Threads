@@ -5,7 +5,22 @@ using UnityEngine.Audio;
 
 public class SoundMixerManager : MonoBehaviour
 {
+    private static SoundMixerManager _instance;
+    public static SoundMixerManager Instance { get { return _instance; } }
+
     [SerializeField] private AudioMixer audioMixer;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        _instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void SetMasterVolume(float value)
     {
@@ -19,5 +34,4 @@ public class SoundMixerManager : MonoBehaviour
     {
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(value) * 20);
     }
-
 }

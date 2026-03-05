@@ -822,12 +822,12 @@ AudioSource:
   m_GameObject: {fileID: 619784095}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -921,9 +921,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bc63e3427c01e48bb6cc13a1cb551c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 619784096}
   sfxSource: {fileID: 0}
+  musicGroup: {fileID: 0}
+  sfxGroup: {fileID: 0}
   uiClickClip: {fileID: 0}
+  sceneMusics:
+  - sceneName: TitleScreen
+    musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+  - sceneName: OpenCutscene
+    musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+  - sceneName: GameScene
+    musicClip: {fileID: 0}
 --- !u!4 &619784098
 Transform:
   m_ObjectHideFlags: 0
@@ -955,7 +964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &651806415
 AudioSource:
   m_ObjectHideFlags: 0
