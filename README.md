@@ -2,6 +2,7 @@
 > ⚠️ Everything is under development and subject to change.
 
 Project Hidden Threads by Midnight Umbrella
+CMPUT 250 - University of Alberta
 # Hidden Threads
 **Team:** Midnight Umbrella
 **Platform:** Unity (WebGL) • Short-session narrative mystery
