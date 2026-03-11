@@ -1,8 +1,23 @@
-> **Last updated:** Jan 24, 2026  
+
+# Team Midnight Umbrella
+
+## Team Members
+| Student Name | CCID      | Github User |
+| ------------ | --------- |------------ |
+| `Alan Yu` | `ayu8` | `itsraindi` |
+| `Divine Akata` | `divinewi` | `divine-akata` |
+| `Jenny Zhu` | `jiaton10` | `Wulimoka0816` |
+| `Mashhood Rafeh` | `rafeh` | `mrafeh624` |
+| `Nate Kulak` | `nkulak` | `Cade-Erickson` |
+| `Thomas Gibson` | `tcgibson` | `IAmPatch01` |
+
+
+
+> **Last updated:** Mar 11, 2026  
 > ⚠️ Everything is under development and subject to change.
 
 Project Hidden Threads by Midnight Umbrella
-CMPUT 250 - University of Alberta
+- CMPUT 250 - University of Alberta
 # Hidden Threads
 **Team:** Midnight Umbrella
 **Platform:** Unity (WebGL) • Short-session narrative mystery
