@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: LastKnownLocation
   m_EditorClassIdentifier: 
-  id: 
-  title: 
-  description: 
+  id: last_known_location
+  title: Vera's Last Known Location
+  description: The message said she was at the Bar not too long ago. I need to investigate.
   icon: {fileID: 0}
   category: 

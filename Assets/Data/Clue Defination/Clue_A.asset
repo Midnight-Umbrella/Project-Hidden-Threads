@@ -15,5 +15,5 @@ MonoBehaviour:
   id: veras_key
   title: Vera's Key
   description: Vera's key to her bedroom.
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ffaf58704e6ab944aa5b3a44e87fc993, type: 3}
   category: 

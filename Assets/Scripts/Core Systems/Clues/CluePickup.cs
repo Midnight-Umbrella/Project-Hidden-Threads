@@ -5,7 +5,6 @@ public class CluePickup : MonoBehaviour
     [Header("Clue")]
     [SerializeField] private ClueDefinition clue;
     [SerializeField] private string objID;
-    [SerializeField] private string dialogueNum;
     
 
     [Header("Interaction")]
@@ -39,7 +38,7 @@ public class CluePickup : MonoBehaviour
         if (_picked) return;
         if (!_inRange) return;
 
-        if (Input.GetKeyDown(interactKey))
+        if (Input.GetKeyUp(interactKey))
         {Debug.Log("Pressed");
             TryPickup();
         }
@@ -53,34 +52,18 @@ public class CluePickup : MonoBehaviour
             return;
         }
 
-        var journal = ClueJournal.Instance;
-        if (journal == null)
-        {
-            Debug.LogError("No ClueJournal in scene. Create a CoreSystems object with ClueJournal.");
-            return;
-        }
+        
+        inventory.AddClue(clue);
+        _picked = true;
+        CluePromptUI.Instance?.Show($"Collected: {clue.title}");
+        Invoke(nameof(HidePrompt), 0.8f);
 
-        bool added = journal.AddClue(clue);
-        if (added)
-        {
-            inventory.AddClue(clue);
-            _picked = true;
-            CluePromptUI.Instance?.Show($"Collected: {clue.title}");
-            Invoke(nameof(HidePrompt), 0.8f);
 
-            if(!string.IsNullOrEmpty(dialogueNum)) 
-            {
-                DialogueManager.Instance.StartDialogue(objID, dialogueNum);
-            }
-
-            if (destroyOnPickup) Destroy(gameObject);
-            else gameObject.SetActive(false);
-        }
-        else
-        {
-            CluePromptUI.Instance?.Show($"Already collected: {clue.title}");
-            Invoke(nameof(HidePrompt), 0.8f);
-        }
+        if (destroyOnPickup) Destroy(gameObject);
+        else gameObject.SetActive(false);
+    
+        
+        
     }
 
     private void HidePrompt()

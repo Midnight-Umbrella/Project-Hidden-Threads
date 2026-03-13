@@ -25,7 +25,7 @@ public class Interactable : MonoBehaviour
     }
     
     public void Interact()
-    {Debug.Log(objID);
+    {
         if (isNotPhysicalClue)
         {
             if (!previousClue || inventory.Contains(previousClue)) 

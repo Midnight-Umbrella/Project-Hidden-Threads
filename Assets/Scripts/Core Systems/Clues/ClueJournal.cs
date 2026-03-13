@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class ClueJournal : MonoBehaviour
 {
@@ -17,8 +19,21 @@ public class ClueJournal : MonoBehaviour
 
     public IReadOnlyList<ClueDefinition> All => _collected;
 
+    [SerializeField] private GameObject cluePopUpPanel;
+    [SerializeField] private Image popUpImage;
+    [SerializeField] private TMP_Text popUpTitle;
+    [SerializeField] private TMP_Text popUpDesc;
+    [SerializeField] private KeyCode closeKey = KeyCode.F;
+
+    public bool popUpActive = false;
+
     private void Awake()
     {
+        if (cluePopUpPanel != null)
+        {
+            cluePopUpPanel.SetActive(false);
+        }
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -27,8 +42,19 @@ public class ClueJournal : MonoBehaviour
 
         Instance = this;
 
+
         // DontDestroyOnLoad(gameObject);
     }
+
+private void Update()
+    {
+        if (popUpActive && Input.GetKeyDown(closeKey))
+        {
+            cluePopUpPanel.SetActive(false);
+            popUpActive = false;
+        }
+    }
+
     public bool AddClue(ClueDefinition clue)
     {
         if (clue == null) return false;
@@ -40,9 +66,25 @@ public class ClueJournal : MonoBehaviour
         }
 
         if (!_ids.Add(clue.id)) return false;
+
+
         
         _collected.Add(clue);
         OnChanged?.Invoke();
+
+        if (cluePopUpPanel != null)
+        {Debug.Log("popUpNotNull");
+            popUpTitle.text = clue.title;
+            popUpDesc.text = clue.description;
+            
+            if (popUpImage != null && clue.icon != null)
+                popUpImage.sprite = clue.icon;
+            
+            cluePopUpPanel.SetActive(true);
+            popUpActive = true;
+            Debug.Log("Active");
+        }
+
         return true;
     }
 

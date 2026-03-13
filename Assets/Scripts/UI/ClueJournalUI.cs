@@ -1,12 +1,13 @@
-using System.Text;
-using TMPro;                 // 如果你用的是 TextMeshPro
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ClueJournalUI : MonoBehaviour
 {
     [Header("UI Refs")]
-    [SerializeField] private GameObject panel;   
-    [SerializeField] private TMP_Text listText;  
+    [SerializeField] private GameObject panel;
+    [SerializeField] private Transform contentParent; 
+    [SerializeField] private GameObject clueItemPrefab; 
 
     [Header("Optional")]
     [SerializeField] private KeyCode toggleKey = KeyCode.J;
@@ -37,10 +38,8 @@ public class ClueJournalUI : MonoBehaviour
     public void Toggle()
     {
         if (panel == null) return;
-
         bool next = !panel.activeSelf;
         panel.SetActive(next);
-
         if (next) Refresh();
     }
 
@@ -51,27 +50,34 @@ public class ClueJournalUI : MonoBehaviour
 
     private void Refresh()
     {
+        if (contentParent == null || clueItemPrefab == null) return;
+
+        // Clear existing items
+        foreach (Transform child in contentParent)
+            Destroy(child.gameObject);
+
         var j = ClueJournal.Instance;
-        if (j == null || listText == null) return;
+        if (j == null) return;
 
         if (j.Collected == null || j.Collected.Count == 0)
         {
-            listText.text = "(no clues collected)";
+            // Spawn a single "empty" item
+            GameObject empty = Instantiate(clueItemPrefab, contentParent);
+            empty.GetComponentInChildren<TMP_Text>().text = "No clues collected yet.";
             return;
         }
 
-        var sb = new StringBuilder();
-        for (int i = 0; i < j.Collected.Count; i++)
+        foreach (var clue in j.Collected)
         {
-            var c = j.Collected[i];
-            sb.AppendLine($"{i + 1}. {c.title}");
+            GameObject item = Instantiate(clueItemPrefab, contentParent);
+            TMP_Text[] texts = item.GetComponentsInChildren<TMP_Text>();
+            texts[0].text = clue.title;
+            if (texts.Length > 1)
+                texts[1].text = clue.description;
 
-            if (!string.IsNullOrWhiteSpace(c.description))
-                sb.AppendLine($"   {c.description}");
-
-            sb.AppendLine();
+            Image img = item.transform.Find("ClueImage").GetComponent<Image>();
+            if (img != null && clue.icon != null)
+                img.sprite = clue.icon;
         }
-
-        listText.text = sb.ToString();
     }
 }
