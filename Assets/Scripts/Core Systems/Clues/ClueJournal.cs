@@ -29,6 +29,11 @@ public class ClueJournal : MonoBehaviour
 
     private void Awake()
     {
+        if (cluePopUpPanel != null)
+        {
+            cluePopUpPanel.SetActive(false);
+        }
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -37,8 +42,6 @@ public class ClueJournal : MonoBehaviour
 
         Instance = this;
 
-        if (cluePopUpPanel != null)
-            cluePopUpPanel.SetActive(false);
 
         // DontDestroyOnLoad(gameObject);
     }
@@ -70,7 +73,7 @@ private void Update()
         OnChanged?.Invoke();
 
         if (cluePopUpPanel != null)
-        {
+        {Debug.Log("popUpNotNull");
             popUpTitle.text = clue.title;
             popUpDesc.text = clue.description;
             
@@ -79,6 +82,7 @@ private void Update()
             
             cluePopUpPanel.SetActive(true);
             popUpActive = true;
+            Debug.Log("Active");
         }
 
         return true;

@@ -16,12 +16,38 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
+        Debug.Log("Awake");
+        if (Instance != null && Instance != this)
+        {
             Destroy(gameObject);
+            return;
+        }
 
-        dialogueUI.Hide();
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        if (dialogueUI != null)
+            dialogueUI.Hide();
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("DialogueManager OnEnable");
+    }
+
+    void Start()
+    {
+        Debug.Log("DialogueManager Start");
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("DialogueManager OnDisable");
+    }
+
+    void OnDestroy()
+    {
+        Debug.Log("DialogueManager destroyed");
     }
 
     public void RegisterUI(DialogueUI ui)
@@ -34,7 +60,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!IsDialogueActive) return;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
             AdvanceDialogue();
         }
@@ -42,9 +68,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string objID, string dialogueNum)
     {
-    Debug.Log(objID);
-    Debug.Log(dialogueNum);
         if (IsDialogueActive) return;
+        
         string[] lines = dialogueCSV.text.Split('\n');
         dialogue = null;
         currentLine = 0;
