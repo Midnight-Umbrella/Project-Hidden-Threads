@@ -9,6 +9,8 @@ public class Inventory : ScriptableObject
     public void AddClue(ClueDefinition clue)
     {
         clues.Add(clue);
+        var journal = ClueJournal.Instance;
+        journal.AddClue(clue);
     }
 
     public bool Contains(ClueDefinition clue)

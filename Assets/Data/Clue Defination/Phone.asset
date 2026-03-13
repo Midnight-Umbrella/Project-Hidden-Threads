@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: veras_phone
   title: Vera's Phone
-  description: 
+  description: She must have left it behind. The screen lights up but requires a
+    password. Several unread notifications are visible.
   icon: {fileID: 0}
   category: 
