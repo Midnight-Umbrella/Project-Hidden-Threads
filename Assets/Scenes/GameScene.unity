@@ -7487,6 +7487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClueInventory
       objectReference: {fileID: 0}
+    - target: {fileID: 414831948704557134, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1426388450382818128, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_Enabled
       value: 0
