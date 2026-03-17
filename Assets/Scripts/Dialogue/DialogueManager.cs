@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private TextAsset dialogueCSV;
     private string[] dialogue = new string [0];
+    private string[] dialogueLine = new string [0];
     private string[] currentLines;
     private int currentLine = 0;
     public bool IsDialogueActive { get; private set; }
@@ -71,7 +72,8 @@ public class DialogueManager : MonoBehaviour
         if (IsDialogueActive) return;
         
         string[] lines = dialogueCSV.text.Split('\n');
-        dialogue = null;
+        dialogueLine = new string [0];
+        dialogue = new string [0];
         currentLine = 0;
         
         for (int i = 0; i < lines.Length; i++)
@@ -81,15 +83,26 @@ public class DialogueManager : MonoBehaviour
             if (objID == line[0] && dialogueNum == line[1])
             {
                 dialogue = line[4].Split("|");
+                dialogueLine = line;
             }
         }
 
         IsDialogueActive = true;
 
-        if (dialogue.Length > 0) 
+        if (dialogue.Length > 0 && dialogueLine.Length > 0) 
         {
-            dialogueUI.Show();
-            dialogueUI.SetText(dialogue[currentLine]);
+            if (dialogueLine[3] == "internal")
+            {
+                dialogueUI.Show();
+                dialogueUI.SetText(dialogue[currentLine]);
+                dialogueUI.SetName(dialogueLine[2]);
+            }
+            else if (dialogueLine[3] == "conversation")
+            {
+                dialogueUI.Show();
+                dialogueUI.SetText(dialogue[currentLine].Split(":")[1]);
+                dialogueUI.SetName(dialogue[currentLine].Split(":")[0]);
+            }
         }
     }
 
@@ -101,9 +114,16 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
         }
-        else
+        else if (dialogueLine[3] == "internal")
         {
             dialogueUI.SetText(dialogue[currentLine]);
+        }
+        else if (dialogueLine[3] == "conversation")
+        {
+            string[] nameAndLine = dialogue[currentLine].Split(":");
+            dialogueUI.SetText(nameAndLine[1]);
+            dialogueUI.SetName(nameAndLine[0]);
+            
         }
     }
 

@@ -11,7 +11,7 @@ public class PhoneUIController : MonoBehaviour
     void Update()
     {
         // Press 'P' to toggle phone
-        if (Input.GetKeyDown(KeyCode.P) && inventory.Contains(clue1) && inventory.Contains(clue2))
+        if (Input.GetKeyDown(KeyCode.P) /*&& inventory.Contains(clue1) && inventory.Contains(clue2)*/)
         {
             Debug.Log("P pressed");
             TogglePhone();
