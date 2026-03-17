@@ -1,4 +1,4 @@
-﻿ObjID,DialogueNum,Character,Type,Text
+﻿ObjID,DialogueNum,Character(s),Type,Text
 Intro,0,Harper,internal,"It’s super  late. Where’s Vera?"|"She left all my messages on read. That’s not normal for her."|"Vera hasn’t posted on social media in 2 days. Something just isn’t right."
 verasDoor,0,Harper,internal,"Locked… that means she left. But where did she go?"
 verasDoor,1,Harper,internal,"There we go"
@@ -38,3 +38,10 @@ CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the ha
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
 CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
 CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera’s.,Sticky Note
+npc1,0,Harper/Bargoer,conversation,Harper:"(have you seen my friend?)"|Bargoer:"(no)"
+npc2,0,Harper/Bargoer,conversation,Harper:"(have you seen my friend?)"|Bargoer:"(no)"
+bartender,0,Harper/Bartender,conversation,Harper:"(have you seen my friend?)"|Bartender:"(yes with tall suit man. they left early. they might have left something in the lost and found)"
+lost_and_found,0,Harper,internal,"(people lose a lot of stuff here)"
+lost_and_found,1,Harper,internal,"(looks like veras jacket. theres a note inside)"
+gps_guy,0,Harper/Alley Man,conversation,Harper:"(have you seen my friend)"|Alley Man:"(no have you tried gps)"|Harper:"(no whats that)"|Alley Man:"(ill show you)"
+louise,0,Harper/Louise,conversation,(conversation here)
