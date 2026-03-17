@@ -6,15 +6,16 @@ public class ClueJournalUI : MonoBehaviour
 {
     [Header("UI Refs")]
     [SerializeField] private GameObject panel;
-    [SerializeField] private Transform contentParent; 
-    [SerializeField] private GameObject clueItemPrefab; 
+    [SerializeField] private Transform contentParent;
+    [SerializeField] private GameObject clueItemPrefab;
 
     [Header("Optional")]
     [SerializeField] private KeyCode toggleKey = KeyCode.J;
 
     private void Awake()
     {
-        if (panel != null) panel.SetActive(false);
+        if (panel != null)
+            panel.SetActive(false);
     }
 
     private void OnEnable()
@@ -38,46 +39,90 @@ public class ClueJournalUI : MonoBehaviour
     public void Toggle()
     {
         if (panel == null) return;
+
         bool next = !panel.activeSelf;
         panel.SetActive(next);
-        if (next) Refresh();
+
+        if (next)
+            Refresh();
     }
 
     public void Close()
     {
-        if (panel != null) panel.SetActive(false);
+        if (panel != null)
+            panel.SetActive(false);
     }
 
     private void Refresh()
     {
-        if (contentParent == null || clueItemPrefab == null) return;
+        if (contentParent == null || clueItemPrefab == null)
+            return;
 
-        // Clear existing items
         foreach (Transform child in contentParent)
             Destroy(child.gameObject);
 
-        var j = ClueJournal.Instance;
-        if (j == null) return;
+        ClueJournal j = ClueJournal.Instance;
+        if (j == null)
+            return;
 
         if (j.Collected == null || j.Collected.Count == 0)
         {
-            // Spawn a single "empty" item
             GameObject empty = Instantiate(clueItemPrefab, contentParent);
-            empty.GetComponentInChildren<TMP_Text>().text = "No clues collected yet.";
+
+            TMP_Text[] emptyTexts = empty.GetComponentsInChildren<TMP_Text>();
+            if (emptyTexts.Length > 0)
+                emptyTexts[0].text = "No clues collected yet.";
+            if (emptyTexts.Length > 1)
+                emptyTexts[1].text = "";
+
+            Button emptyButton = empty.GetComponent<Button>();
+            if (emptyButton != null)
+                emptyButton.interactable = false;
+
+            ClueJournalEntryButton emptyClicker = empty.GetComponent<ClueJournalEntryButton>();
+            if (emptyClicker != null)
+                emptyClicker.enabled = false;
+
+            Transform emptyImageTf = empty.transform.Find("ClueImage");
+            if (emptyImageTf != null)
+            {
+                Image emptyImg = emptyImageTf.GetComponent<Image>();
+                if (emptyImg != null)
+                    emptyImg.enabled = false;
+            }
+
             return;
         }
 
-        foreach (var clue in j.Collected)
+        foreach (ClueDefinition clue in j.Collected)
         {
             GameObject item = Instantiate(clueItemPrefab, contentParent);
+
             TMP_Text[] texts = item.GetComponentsInChildren<TMP_Text>();
-            texts[0].text = clue.title;
+            if (texts.Length > 0)
+                texts[0].text = clue.title;
             if (texts.Length > 1)
                 texts[1].text = clue.description;
 
-            Image img = item.transform.Find("ClueImage").GetComponent<Image>();
-            if (img != null && clue.icon != null)
-                img.sprite = clue.icon;
+            Transform imageTf = item.transform.Find("ClueImage");
+            if (imageTf != null)
+            {
+                Image img = imageTf.GetComponent<Image>();
+                if (img != null)
+                {
+                    img.sprite = clue.icon;
+                    img.enabled = clue.icon != null;
+                }
+            }
+
+            ClueJournalEntryButton clicker = item.GetComponent<ClueJournalEntryButton>();
+            if (clicker == null)
+                clicker = item.GetComponentInChildren<ClueJournalEntryButton>();
+
+            if (clicker != null)
+                clicker.SetClue(clue);
+            else
+                Debug.LogWarning("Clue item prefab is missing ClueJournalEntryButton.");
         }
     }
 }
