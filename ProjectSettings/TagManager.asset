@@ -62,3 +62,12 @@ TagManager:
   - name: Player
     uniqueID: 3183858443
     locked: 0
+  - name: Foreground
+    uniqueID: 2542606091
+    locked: 0
+  - name: Filter
+    uniqueID: 1406984945
+    locked: 0
+  - name: Lighting
+    uniqueID: 477015863
+    locked: 0
