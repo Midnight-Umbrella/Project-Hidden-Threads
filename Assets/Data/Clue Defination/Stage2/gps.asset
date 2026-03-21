@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: gps
   m_EditorClassIdentifier: 
-  id: 
-  title: 
-  description: 
+  id: gps
+  title: GPS Tracking
+  description: (she has a tag in her purse, maybe I can track her)
   icon: {fileID: 0}
   category: 
