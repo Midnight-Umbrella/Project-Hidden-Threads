@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: warehouseLocation
   m_EditorClassIdentifier: 
-  id: crocker_dms
-  title: Secret Messages
-  description: (
+  id: warehouse_locations
+  title: Mentions of a Warehous
+  description: (vera might be at a warehouse, doesn't say which one)
   icon: {fileID: 0}
   category: 

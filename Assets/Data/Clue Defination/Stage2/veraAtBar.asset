@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: veraAtBar
   m_EditorClassIdentifier: 
-  id: 
-  title: 
-  description: 
+  id: vera_at_bar
+  title: Vera was here
+  description: (bartender saw vera, might be soemthing in the lost and found)
   icon: {fileID: 0}
   category: 
