@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance {get; private set; }
+    public static DialogueManager Instance { get; private set; }
 
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private TextAsset dialogueCSV;
-    private string[] dialogue = new string [0];
-    private string[] dialogueLine = new string [0];
-    private string[] currentLines;
+
+    private string[] dialogue = new string[0];
+    private string[] dialogueLine = new string[0];
     private int currentLine = 0;
+
     public bool IsDialogueActive { get; private set; }
 
-    void Awake()
+    private void Awake()
     {
-        Debug.Log("Awake");
+        Debug.Log("DialogueManager Awake");
+
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -31,22 +33,22 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.Hide();
     }
 
-    void OnEnable()
+    private void OnEnable()
     {
         Debug.Log("DialogueManager OnEnable");
     }
 
-    void Start()
+    private void Start()
     {
         Debug.Log("DialogueManager Start");
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
         Debug.Log("DialogueManager OnDisable");
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
         Debug.Log("DialogueManager destroyed");
     }
@@ -56,81 +58,138 @@ public class DialogueManager : MonoBehaviour
         dialogueUI = ui;
     }
 
-
-    void Update()
+    private void Update()
     {
         if (!IsDialogueActive) return;
+        if (dialogueUI == null) return;
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
-            AdvanceDialogue();
+            // If the current line is still typing, finish it instantly first.
+            if (dialogueUI.IsTyping)
+            {
+                dialogueUI.FinishTypingInstantly();
+            }
+            else
+            {
+                AdvanceDialogue();
+            }
         }
     }
 
     public void StartDialogue(string objID, string dialogueNum)
     {
         if (IsDialogueActive) return;
-        
+
+        if (dialogueCSV == null)
+        {
+            Debug.LogError("DialogueManager: dialogueCSV is not assigned!");
+            return;
+        }
+
+        if (dialogueUI == null)
+        {
+            Debug.LogError("DialogueManager: dialogueUI is not assigned!");
+            return;
+        }
+
         string[] lines = dialogueCSV.text.Split('\n');
-        dialogueLine = new string [0];
-        dialogue = new string [0];
+        dialogueLine = new string[0];
+        dialogue = new string[0];
         currentLine = 0;
-        
+
         for (int i = 0; i < lines.Length; i++)
         {
             string[] line = lines[i].Split(',');
+
             if (line.Length < 5) continue;
-            if (objID == line[0] && dialogueNum == line[1])
+
+            string csvObjID = line[0].Trim();
+            string csvDialogueNum = line[1].Trim();
+
+            if (objID == csvObjID && dialogueNum == csvDialogueNum)
             {
-                dialogue = line[4].Split("|");
+                dialogue = line[4].Trim().Split('|');
                 dialogueLine = line;
+                break;
             }
+        }
+
+        if (dialogue.Length == 0 || dialogueLine.Length == 0)
+        {
+            Debug.LogWarning($"DialogueManager: No dialogue found for objID={objID}, dialogueNum={dialogueNum}");
+            return;
         }
 
         IsDialogueActive = true;
-
-        if (dialogue.Length > 0 && dialogueLine.Length > 0) 
-        {
-            if (dialogueLine[3] == "internal")
-            {
-                dialogueUI.Show();
-                dialogueUI.SetText(dialogue[currentLine]);
-                dialogueUI.SetName(dialogueLine[2]);
-            }
-            else if (dialogueLine[3] == "conversation")
-            {
-                dialogueUI.Show();
-                dialogueUI.SetText(dialogue[currentLine].Split(":")[1]);
-                dialogueUI.SetName(dialogue[currentLine].Split(":")[0]);
-            }
-        }
+        dialogueUI.Show();
+        DisplayCurrentLine();
     }
 
-    void AdvanceDialogue()
+    private void AdvanceDialogue()
     {
         currentLine++;
 
         if (currentLine >= dialogue.Length)
         {
             EndDialogue();
+            return;
         }
-        else if (dialogueLine[3] == "internal")
+
+        DisplayCurrentLine();
+    }
+
+    private void DisplayCurrentLine()
+    {
+        if (dialogueUI == null) return;
+        if (dialogue.Length == 0 || currentLine < 0 || currentLine >= dialogue.Length) return;
+        if (dialogueLine.Length < 4) return;
+
+        string dialogueType = dialogueLine[3].Trim();
+        string currentText = dialogue[currentLine].Trim();
+
+        if (dialogueType == "internal")
         {
-            dialogueUI.SetText(dialogue[currentLine]);
+            dialogueUI.SetName(dialogueLine[2].Trim());
+            dialogueUI.SetText(currentText);
         }
-        else if (dialogueLine[3] == "conversation")
+        else if (dialogueType == "conversation")
         {
-            string[] nameAndLine = dialogue[currentLine].Split(":");
-            dialogueUI.SetText(nameAndLine[1]);
-            dialogueUI.SetName(nameAndLine[0]);
-            
+            // Split only on the first colon, so extra colons in dialogue won't break it.
+            int colonIndex = currentText.IndexOf(':');
+
+            if (colonIndex >= 0)
+            {
+                string speaker = currentText.Substring(0, colonIndex).Trim();
+                string lineText = currentText.Substring(colonIndex + 1).Trim();
+
+                dialogueUI.SetName(speaker);
+                dialogueUI.SetText(lineText);
+            }
+            else
+            {
+                // Fallback if no colon exists
+                dialogueUI.SetName(dialogueLine[2].Trim());
+                dialogueUI.SetText(currentText);
+            }
+        }
+        else
+        {
+            // Fallback for unknown dialogue type
+            dialogueUI.SetName(dialogueLine[2].Trim());
+            dialogueUI.SetText(currentText);
         }
     }
 
-    void EndDialogue()
+    private void EndDialogue()
     {
         IsDialogueActive = false;
-        dialogueUI.Hide();
-        currentLines = null;
+
+        if (dialogueUI != null)
+            dialogueUI.Hide();
+
+        dialogue = new string[0];
+        dialogueLine = new string[0];
+        currentLine = 0;
     }
 }
