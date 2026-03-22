@@ -7,6 +7,7 @@ public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text speakerName;
 
     void Awake()
     {
@@ -30,5 +31,10 @@ public class DialogueUI : MonoBehaviour
     public void SetText(string text)
     {
         dialogueText.text = text;
+    }
+
+    public void SetName(string name)
+    {
+        speakerName.text = name + ":";
     }
 }
