@@ -1,23 +1,21 @@
-﻿ID,Character,Type,Text,Object
-INTRO_01,Harper,internal,"It’s super  late, where’s Vera?", 
-INTRO_02,Harper,internal,She left all my messages on read. That’s not normal for her., 
-INTRO_03,Harper,internal,"Vera hasn’t posted on social media in 2 days, something just isn’t right.", 
-INTRO_04,Harper,aloud,"Vera’s jacket is still on the coat rack, that means she didn’t even leave properly.",Coat Rack
-INTRO_05,Harper,internal,"Her bag is still here,  her bed’s made,  she probably didn’t plan to be gone this long.",Apartment
-,,,,
-STAGE1_01,Harper,internal,Empty… Vera always tossed her keys in here. That’s not like her.,Keybowl
-STAGE1_02,Harper,internal,Locked… that means she left. But why would she leave without her phone?,Vera's Door
+﻿ObjID,DialogueNum,Character(s),Type,Text
+Intro,0,Harper,internal,"It’s super  late. Where’s Vera?|""She left all my messages on read. That’s not normal for her.""|""Vera hasn’t posted on social media in 2 days. Something just isn’t right."""
+verasDoor,0,Harper,internal,Locked… that means she left. But where did she go?
+verasDoor,1,Harper,internal,There we go
+verasDesk,0,Harper,internal,"Is this her phone?|""Why would she leave without her phone?"""
 STAGE1_03,Harper,internal,Wait! This has to be it!  Please let this be her room key.,Key
-STAGE1_04,Harper,internal,Nothing useful here… I need to focus.,Empty Searchable Objects
-STAGE1_05,Harper,internal,That looks out of place… why would she throw this away?,Garbage Can
-STAGE1_06,Harper,internal,Her birthday’s circled. She never makes a big deal about it… Why mark it this time?,Calendar
-STAGE1_07,Harper,internal,Of course. Vera and her obsession with strawberry pop tarts… she would devour an entire pack at once.,TartPops
-STAGE1_08,Harper,internal,I can’t leave yet. Not until I figure out what happened.,Door to leave apartment
-STAGE1_09,Harper,internal,Her birthday is circled on the calendar… and she loves TartPops. That has to be the password.,Sticky Note
+nothing,0,Harper,internal,Nothing useful here… I need to focus
+garbageCan,0,Harper,internal,That looks out of place ... why would she throw this away?
+calendar,0, Harper,internal,"According to my calendar|""Vera's birthday is coming up"""
+calendar,1,Harper,internal,Her birthday’s circled! June 7th
+kitchenCounter,0,Harper,internal,Vera sure loves her Poptarts!
+kitchenCounter,1,Harper,internal,"Of course. Vera and her obsession with PopTarts|""She would devour an entire box in an afternoon"""
+exit,0,Harper,internal,I can’t leave yet. Not until I figure out what happened
+STAGE1_09,Harper,internal,Her birthday is circled on the calendar… and she loves Poptarts. That has to be the password.,Sticky Note
 STAGE1_10,Harper,internal,Yes! It worked. Let’s see what she’s been up to.,Vera’s Phone
 STAGE1_11,Harper,internal,"Something isn’t right. I have to follow this. First, the bar.",Vera’s Phone
 STAGE1_12,Harper,aloud,Let’s go. I need to find Vera and figure out what happened.,Vera’s Phone
-STAGE1_13,Harper,internal,Nothing inside the cupboard… just the usual dishes.,Cupboard
+cupboard,0,Harper,internal,Nothing inside the cupboard… just the usual dishes
 STAGE1_14,Harper,internal,Looks like the garbage can has already been taken out.,garbage can
 STAGE1_15,Harper,internal,The counter is clear… maybe Vera left something behind?,Counter
 STAGE1_16,Harper,internal,The lamp is on… odd that it's still lit.,lamp
@@ -27,8 +25,53 @@ STAGE1_19,Harper,internal,The exit door is locked… I can't go through here yet
 STAGE1_20,Harper,internal,There's a framed photo on the wall… Vera looks happy in this.,frame
 STAGE1_21,Harper,internal,Vera's computer is still on… maybe I can find a clue there.,Vera's Computer
 STAGE1_22,Harper,internal,The carpet is clean… nothing unusual to notice here.,carpet
-,,,,
+fridge,0,Harper,internal,Just a fridge. Our milk is close to expiring
+fridge,1,Harper,internal,"Here it is|""What a weird place to hid a key"""
+crumpledNote,0,Harper,internal,Hmm... 'Secret hiding places: toilet. fridge. couch'
+wallNote,0,Harper,internal,Some notes about passwords or something
+wallNote,1,Harper,internal,Hmm... 'password idea: birthday + fav food'
+verasTable,0,Harper,internal,"Vera's plants haven't been watered|""I'm starting to get worried"""
+kitchenTable,0,Harper,internal,Looks like she left some food out
+exitDoor,0,Harper,internal,"I can't leave yet|""I'd have no idea where to go"""
+exitDoor,1,Harper,internal,I'm coming to find you Vera!
 CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
-CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
+CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 5 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
 CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera’s.,Sticky Note
+npc1,0,Harper/Bargoer,conversation,"Harper:""(have you seen my friend?)""|Bargoer:""(no)"""
+npc2,0,Harper/Bargoer,conversation,"Harper:""(have you seen my friend?)""|Bargoer:""(no)"""
+lost_and_found,0,Harper,internal,(people lose a lot of stuff here)
+lost_and_found,1,Harper,internal,(looks like veras jacket. theres a note inside)
+gps_guy,0,Harper/Alley Man,conversation,"Harper:""(have you seen my friend)""|Alley Man:""(no have you tried gps)""|Harper:""(no whats that)""|Alley Man:""(ill show you)"""
+louise,0,Harper/Louise,conversation,"Harper:""Louise… Vera is missing.""|Louise:""Missing? That’s not possible since we were just talking.""|Harper:""Do you know anything?""|Louise:""No,  but I might be able to help."""
+bar,0,Harper,internal,This must be the bar Vera mentioned… she was here that night.
+bartender,0,Harper/Bartender,conversation,"Harper:""(have you seen my friend?)""|Bartender:""(yes with tall suit man. they left early. they might have left something in the lost and found)"""
+bartender,1,Bartender,aloud,She kept checking her phone. Like she was waiting for someone.
+bartender,2,Bartender,aloud,Met with a tall guy. Suit. Didn’t recognize him.
+bar,1,Harper,internal,"A tall man in a suit, that matches the contact on her phone."
+bar,2,Harper,internal,I should check her phone again.
+bar,3,Harper,internal,Wait… there’s a message here… 'Meet me at the abandoned warehouse.'
+bar,4,Harper,internal,Mr. Crocker… this has to be him.
+,,,,
+louise,1,Harper,internal,Can I trust him?
+,,,,
+alley,0,Harper,internal,This alley matches the GPS range from her phone.
+alley,1,Harper,internal,It’s too quiet…
+alley,2,Harper,internal,Wait… that’s her purse.
+alley,3,Harper,internal,Vera would never just drop this.
+alley,4,Harper,internal,There’s a note inside- 'Meet me at the abandoned warehouse.'
+alley,5,Harper,internal,The same message…
+alley,6,Harper,internal,"There’s blood here, OMG! something definitely happened!!"
+alley,7,Harper,internal,"She was here, and she was in trouble."
+alley,8,Harper,internal,"What’s this, a burner phone?"
+alley,9,Harper,internal,Messages huh? She was talking about exposing something.
+alley,10,Harper,internal,"This is much bigger than I thought, how did Vera get involved in all this?"
+,,,,
+stage2_end,0,Harper,internal,Everything points to one place now… the abandoned warehouse.
+stage2_end,1,Harper,aloud,"I’m coming, Vera."
+,,,,
+CLUE_PURSE_01,System,ClueDescription,A worn leather purse belonging to Vera. It looks like it was dropped in a hurry.,Vera’s Purse
+CLUE_NOTE_02,System,ClueDescription,A folded note that reads: 'Meet me at the abandoned warehouse.' The writing looks rushed.,Note
+CLUE_BLOOD_01,System,ClueDescription,Dried blood stains on the ground. It suggests someone was hurt here.,Blood Stain
+CLUE_BURNER_01,System,ClueDescription,A cheap disposable phone containing cryptic messages about exposing something.,Burner Phone
+CLUE_CROCKER_01,System,ClueDescription,A contact named 'Mr. Crocker' linked to suspicious messages about a meeting.,Mr Crocker
