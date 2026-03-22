@@ -4291,6 +4291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1815930391}
   dialogueText: {fileID: 716451301}
+  speakerName: {fileID: 0}
+  typingSpeed: 0.03
 --- !u!1 &703978166
 GameObject:
   m_ObjectHideFlags: 0
@@ -15973,6 +15975,7 @@ GameObject:
   - component: {fileID: 2080494063}
   - component: {fileID: 2080494062}
   - component: {fileID: 2080494061}
+  - component: {fileID: 2080494067}
   m_Layer: 0
   m_Name: Door1 (1)
   m_TagString: Untagged
@@ -16043,7 +16046,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.74408686, y: 0.7633357}
@@ -16153,6 +16156,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2080494067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080494060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ec1deeaa242747800106a33b4e2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  nextSceneName: S2GameScene
+  transitionSceneName: TransitionScene
 --- !u!1 &2099068691
 GameObject:
   m_ObjectHideFlags: 0
