@@ -28,6 +28,7 @@ STAGE1_22,Harper,internal,The carpet is clean… nothing unusual to notice here.
 fridge,0,Harper,internal,"Just a fridge. Our milk is close to expiring"
 fridge,1,Harper,internal,"Here it is"|"What a weird place to hid a key"
 crumpledNote,0,Harper,internal,"Hmm... 'Secret hiding places: toilet. fridge. couch'"
+phone,1,Harper,internal,"I can't open Vera's phone without her password"
 wallNote,0,Harper,internal,"Some notes about passwords or something"
 wallNote,1,Harper,internal,"Hmm... 'password idea: birthday + fav food'"
 verasTable,0,Harper,internal,"Vera's plants haven't been watered"|"I'm starting to get worried"

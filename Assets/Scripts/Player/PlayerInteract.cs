@@ -9,10 +9,24 @@ public class PlayerInteract : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if (Input.GetKeyUp(KeyCode.F))
         {
+            if (DialogueManager.Instance.ignoreNextKeyPress)
+            {
+                DialogueManager.Instance.ignoreNextKeyPress = false;
+                return;
+            }
+            Debug.Log("Trying Interact");
             TryInteract();
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            if (DialogueManager.Instance.ignoreNextKeyPress)
+            {
+                DialogueManager.Instance.ignoreNextKeyPress = false;
+                return;
+            }
         }
     }
 

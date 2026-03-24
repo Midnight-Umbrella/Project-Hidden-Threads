@@ -15,6 +15,10 @@ public class DialogueManager : MonoBehaviour
     private int currentLine = 0;
 
     public bool IsDialogueActive { get; private set; }
+    public bool ignoreNextKeyPress = false;
+    public bool isDialogueWaiting;
+    private string waitingID;
+    private string waitingNum;
 
     private void Awake()
     {
@@ -62,6 +66,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (!IsDialogueActive) return;
         if (dialogueUI == null) return;
+        if (!isDialogueWaiting && waitingID != null)
+        {
+            StartDialogue(waitingID, waitingNum);
+            waitingID = null;
+            waitingNum = null;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
@@ -78,8 +88,16 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(string objID, string dialogueNum)
-    {
+    {   
         if (IsDialogueActive) return;
+
+        if (isDialogueWaiting)
+        {
+            IsDialogueActive = true;
+            waitingID = objID;
+            waitingNum = dialogueNum;
+            return;
+        }
 
         if (dialogueCSV == null)
         {
@@ -184,6 +202,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         IsDialogueActive = false;
+        ignoreNextKeyPress = true;
 
         if (dialogueUI != null)
             dialogueUI.Hide();

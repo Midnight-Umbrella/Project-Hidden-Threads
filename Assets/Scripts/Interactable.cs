@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    [Header("System:")]
     [SerializeField] private string objID; 
+    [SerializeField] private Inventory inventory;
+    [Header("Required Clue (if applicable):")]
     [SerializeField] private ClueDefinition previousClue;
     [SerializeField] private string preDialogueNum;
-    [SerializeField] private Inventory inventory;
+    [Header("Given Clue (if applicable)")]
     [SerializeField] private GameObject clue;
     [SerializeField] private string dialogueNum;
+    [Header("Non Physical Clue (if applicable)")]
     [SerializeField] private bool isNotPhysicalClue;
     [SerializeField] private ClueDefinition nonPhysicalClue;
+    [Header("Is a clue?")]
+    [SerializeField] private bool isClue;
     private Collider2D col;
     private SpriteRenderer sr;
 
@@ -26,16 +32,19 @@ public class Interactable : MonoBehaviour
     
     public void Interact()
     {
+        if (isClue)
+        {
+            CluePickup cp = gameObject.GetComponent<CluePickup>();
+            cp.TryPickup();
+            return;
+        }
+
         if (isNotPhysicalClue)
         {
             if (!previousClue || inventory.Contains(previousClue)) 
             {
                 inventory.AddClue(nonPhysicalClue);
-
-                if (dialogueNum != null)
-                {
-                    DialogueManager.Instance.StartDialogue(objID,dialogueNum);
-                }
+                DialogueManager.Instance.StartDialogue(objID, dialogueNum);
             }
             else if(preDialogueNum != null)
             {

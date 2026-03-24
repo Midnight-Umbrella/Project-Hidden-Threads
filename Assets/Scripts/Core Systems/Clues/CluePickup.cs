@@ -33,18 +33,7 @@ public class CluePickup : MonoBehaviour
         CluePromptUI.Instance?.Hide();
     }
 
-    private void Update()
-    {
-        if (_picked) return;
-        if (!_inRange) return;
-
-        if (Input.GetKeyUp(interactKey))
-        {Debug.Log("Pressed");
-            TryPickup();
-        }
-    }
-
-    private void TryPickup()
+    public void TryPickup()
     {
         if (clue == null)
         {

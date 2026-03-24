@@ -54,6 +54,7 @@ public class ClueJournal : MonoBehaviour
     {
         if (popUpActive && Input.GetKeyDown(closeKey))
         {
+            DialogueManager.Instance.ignoreNextKeyPress = true;
             HidePickupPopup();
         }
 
@@ -79,6 +80,7 @@ public class ClueJournal : MonoBehaviour
         OnChanged?.Invoke();
 
         ShowPickupPopup(clue);
+
         return true;
     }
 
@@ -127,7 +129,8 @@ public class ClueJournal : MonoBehaviour
     }
 
     private void ShowPickupPopup(ClueDefinition clue)
-    {
+    {   
+        DialogueManager.Instance.isDialogueWaiting = true;
         if (cluePopUpPanel == null)
             return;
 
@@ -153,6 +156,7 @@ public class ClueJournal : MonoBehaviour
             cluePopUpPanel.SetActive(false);
 
         popUpActive = false;
+        DialogueManager.Instance.isDialogueWaiting = false;
     }
 
     public void ClearAll()
