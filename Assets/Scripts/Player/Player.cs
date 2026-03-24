@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!DialogueManager.Instance.IsDialogueActive && !ClueJournal.Instance.popUpActive)
+        if (!DialogueManager.Instance.IsDialogueActive && (ClueJournal.Instance == null || !ClueJournal.Instance.popUpActive))
         {
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;

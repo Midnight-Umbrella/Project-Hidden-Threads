@@ -689,7 +689,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1111108853
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eb7a83ad1c9bd6d428c2d7825a9535af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -972,7 +972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 64460839}
-  listText: {fileID: 1514302397}
+  contentParent: {fileID: 0}
+  clueItemPrefab: {fileID: 0}
   toggleKey: 106
 --- !u!1 &223300847
 GameObject:
@@ -1030,7 +1031,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 1b23c7a197bc4e1468e133669fd8399f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1247,7 +1248,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fba2403a4a9692e4ab21c3c7647af89f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1406,7 +1407,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fa1520e8f298f94ab7cb13852dae6c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1448,8 +1449,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 0f42d1da79e0e3c4197c9fcd69dd86a0, type: 2}
+  objID: 
+  lockedDialogueNum: 
+  unlockedDialogueNum: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+  doorOpenClip: {fileID: 0}
+  doorLockedClip: {fileID: 0}
+  sfxVolume: 1
 --- !u!1 &309378295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,7 +1727,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 1b23c7a197bc4e1468e133669fd8399f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1914,10 +1920,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &366826679
@@ -2031,7 +2039,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a220ad89d20dec45af8c1974c25d565, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2225,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  dialogue: {fileID: 11400000, guid: 542b7b8fd9c338e43a224d857cecd88f, type: 2}
+  objID: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -2314,7 +2322,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: ffaf58704e6ab944aa5b3a44e87fc993, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2593,7 +2601,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0.003921569, b: 0, a: 1}
@@ -2704,7 +2712,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b0f24ef6cb1cfc34b828c93a28b4d1ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2819,6 +2827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 636193861}
+  dialogueCSV: {fileID: 0}
 --- !u!114 &636193861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,6 +2842,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 341536993}
   dialogueText: {fileID: 997408270}
+  speakerName: {fileID: 0}
+  typingSpeed: 0.03
 --- !u!1 &711856369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +2975,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1520bfaa5cf421946a4ed37e4003e80f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3004,10 +3015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 610241669}
-  dialogue: {fileID: 0}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!1001 &720194855
@@ -3506,8 +3519,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockable: 1
   clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
-  dialogue: {fileID: 11400000, guid: c7188b4a635d2164a82331029fdac53d, type: 2}
+  objID: 
+  lockedDialogueNum: 
+  unlockedDialogueNum: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+  doorOpenClip: {fileID: 0}
+  doorLockedClip: {fileID: 0}
+  sfxVolume: 1
 --- !u!61 &763366942
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3619,7 +3637,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fa1520e8f298f94ab7cb13852dae6c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3679,7 +3697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clue: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
-  dialogue: {fileID: 11400000, guid: 5f8d6e907ccfbdf41a50a4d64a5fd4b1, type: 2}
+  objID: 
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
@@ -3768,7 +3786,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb769ac3d89601b46833938b406466ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5298,10 +5316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 788849218}
-  dialogue: {fileID: 0}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1166495064
@@ -5415,7 +5435,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80103ebd63d82864ea60aa700f9b1df4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5877,10 +5897,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1322490061
@@ -5994,7 +6016,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2075740527
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2f36ab420a970724ebb7841046eef305, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6054,10 +6076,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &1427697589
@@ -6171,7 +6195,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 80103ebd63d82864ea60aa700f9b1df4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6807,7 +6831,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -7701,7 +7725,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ad1fed75e9e62c046b2853a9de625da4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7761,10 +7785,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b77cdac03464ca48bd93d95bc63a816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objID: 
   previousClue: {fileID: 0}
+  preDialogueNum: 
   inventory: {fileID: 0}
   clue: {fileID: 0}
-  dialogue: {fileID: 11400000, guid: 4fa3cfef9e06ea3459938ee058154c1d, type: 2}
+  dialogueNum: 
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
 --- !u!50 &2112727947
@@ -7878,7 +7904,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 806239857
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 619280e5103545341b962c2553717099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

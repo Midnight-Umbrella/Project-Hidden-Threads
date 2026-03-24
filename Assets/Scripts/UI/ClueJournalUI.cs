@@ -12,6 +12,27 @@ public class ClueJournalUI : MonoBehaviour
     [Header("Optional")]
     [SerializeField] private KeyCode toggleKey = KeyCode.J;
 
+    [Header("Detail Panel")]
+    [SerializeField] private GameObject clueDetailPanel;
+    [SerializeField] private Image detailImage;
+    [SerializeField] private TMP_Text detailTitle;
+    [SerializeField] private TMP_Text detailDesc;
+
+    public void OpenDetail(ClueDefinition clue)
+    {
+        if (clueDetailPanel == null || clue == null) return;
+        if (detailTitle != null) detailTitle.text = clue.title;
+        if (detailDesc != null) detailDesc.text = clue.description;
+        if (detailImage != null) { detailImage.sprite = clue.icon; detailImage.enabled = clue.icon != null; }
+        clueDetailPanel.SetActive(true);
+    }
+
+    public void CloseDetail()
+    {
+        if (clueDetailPanel != null)
+            clueDetailPanel.SetActive(false);
+    }
+
     private void Awake()
     {
         if (panel != null)
