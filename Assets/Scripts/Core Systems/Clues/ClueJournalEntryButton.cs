@@ -25,18 +25,7 @@ public class ClueJournalEntryButton : MonoBehaviour
 
     public void OpenDetail()
     {
-        if (clue == null)
-        {
-            Debug.LogWarning($"{name}: no clue assigned.");
-            return;
-        }
-
-        if (ClueJournal.Instance == null)
-        {
-            Debug.LogWarning("ClueJournal.Instance is null.");
-            return;
-        }
-
-        ClueJournal.Instance.OpenClueDetail(clue);
+        if (clue == null) return;
+        FindObjectOfType<ClueJournalUI>()?.OpenDetail(clue);
     }
 }
