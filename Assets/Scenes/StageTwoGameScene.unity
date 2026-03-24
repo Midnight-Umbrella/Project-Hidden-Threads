@@ -15110,7 +15110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335cb92b400328c4ab1a89e9a151f82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: {x: 0, y: 0, z: 0}
+  location: {x: 24.5, y: 3, z: 0}
   camera: {fileID: 985275256}
   fader: {fileID: 198464711}
   fadeDuration: 1
