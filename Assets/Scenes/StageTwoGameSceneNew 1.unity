@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &5158457 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 141572027498024843, guid: a92ae9e056cde114f94457f893a62785, type: 3}
-  m_PrefabInstance: {fileID: 667859349}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &26554802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2373,17 +2362,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &517683951 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 814527753496406941, guid: a92ae9e056cde114f94457f893a62785, type: 3}
-  m_PrefabInstance: {fileID: 667859349}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &544634237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,17 +6159,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1501573418 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1924820504475316561, guid: a92ae9e056cde114f94457f893a62785, type: 3}
-  m_PrefabInstance: {fileID: 667859349}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1534268067
 GameObject:
   m_ObjectHideFlags: 0
@@ -7118,18 +7085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c89de0198fad904aae632371fdd9599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cluePopUpPanel: {fileID: 1055926694}
-  popUpImage: {fileID: 517683951}
-  popUpTitle: {fileID: 5158457}
-  popUpDesc: {fileID: 1501573418}
-  closeKey: 102
   popUpActive: 0
-  clueDetailPanel: {fileID: 0}
-  detailImage: {fileID: 0}
-  detailTitle: {fileID: 0}
-  detailDesc: {fileID: 0}
-  detailCloseKey: 27
-  detailActive: 0
 --- !u!114 &2053970092
 MonoBehaviour:
   m_ObjectHideFlags: 0
