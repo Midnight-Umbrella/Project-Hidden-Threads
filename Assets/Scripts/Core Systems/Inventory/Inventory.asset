@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dfa2c95bb3e3147a7da7419b59ca28, type: 3}
   m_Name: Inventory
   m_EditorClassIdentifier: 
-  clues: []
+  clues:
+  - {fileID: 11400000, guid: 0bdc3ad9e248c58418539d32443a44b4, type: 2}
+  - {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
+  - {fileID: 11400000, guid: 69772183809708744a6fb62ba369a0fa, type: 2}
+  - {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
+  - {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
+  - {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
+  - {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
+  - {fileID: 11400000, guid: 9f4597eac7cf3184bb6a16d53ddd01bb, type: 2}
