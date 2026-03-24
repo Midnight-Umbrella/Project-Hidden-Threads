@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 
 public class ClueJournal : MonoBehaviour
 {
@@ -17,36 +15,15 @@ public class ClueJournal : MonoBehaviour
     public IReadOnlyList<ClueDefinition> Collected => _collected;
     public IReadOnlyList<ClueDefinition> All => _collected;
 
-    [Header("Pickup Popup")]
-    [SerializeField] private GameObject cluePopUpPanel;
-    [SerializeField] private Image popUpImage;
-    [SerializeField] private TMP_Text popUpTitle;
-    [SerializeField] private TMP_Text popUpDesc;
-    [SerializeField] private KeyCode closeKey = KeyCode.F;
     public bool popUpActive = false;
-
-    [Header("Journal Detail Panel")]
-    [SerializeField] private GameObject clueDetailPanel;
-    [SerializeField] private Image detailImage;
-    [SerializeField] private TMP_Text detailTitle;
-    [SerializeField] private TMP_Text detailDesc;
-    [SerializeField] private KeyCode detailCloseKey = KeyCode.Escape;
-    public bool detailActive = false;
 
     private void Awake()
     {
-        if (cluePopUpPanel != null)
-            cluePopUpPanel.SetActive(false);
-
-        if (clueDetailPanel != null)
-            clueDetailPanel.SetActive(false);
-
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
     }
 
@@ -85,9 +62,7 @@ public class ClueJournal : MonoBehaviour
     }
 
     public bool Add(ClueDefinition clue) => AddClue(clue);
-
     public bool HasClue(string id) => !string.IsNullOrWhiteSpace(id) && _ids.Contains(id);
-
     public bool Has(string id) => HasClue(id);
 
     public void OpenClueDetail(ClueDefinition clue)
@@ -163,23 +138,10 @@ public class ClueJournal : MonoBehaviour
     {
         _ids.Clear();
         _collected.Clear();
-        CloseClueDetail();
-        HidePickupPopup();
         OnChanged?.Invoke();
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        ClearAll();
-    }
+    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => ClearAll();
 }

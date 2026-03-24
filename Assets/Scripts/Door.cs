@@ -29,34 +29,36 @@ public class Door : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !lockable)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            sr.enabled = false;
-            cd.enabled = false;
-            // Play door opening sound from door's AudioSource
-            if (doorAudioSource != null)
-                AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorOpenClip, sfxVolume);
-            else
-                AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
-        }
-        else if (collision.gameObject.CompareTag("Player") && inventory.Contains(clue))
-        {   
-            if (unlockedDialogueNum != null)
+            if (!lockable)
             {
-                DialogueManager.Instance.StartDialogue(objID, unlockedDialogueNum);
+                // Unlocked door, just open
+                OpenDoor();
             }
-
-            sr.enabled = false;
-            cd.enabled = false;
-            // Play door opening sound from door's AudioSource
-            if (doorAudioSource != null)
-                AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorOpenClip, sfxVolume);
+            else if (inventory.Contains(clue))
+            {
+                // Has the key, open with dialogue
+                if (unlockedDialogueNum != null)
+                    DialogueManager.Instance.StartDialogue(objID, unlockedDialogueNum);
+                OpenDoor();
+            }
             else
-                AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
+            {
+                // Locked, no key
+                if (lockedDialogueNum != null)
+                    DialogueManager.Instance.StartDialogue(objID, lockedDialogueNum);
+            }
         }
-        else if (lockable && !inventory.Contains(clue) && (lockedDialogueNum != null))
-        {
-            DialogueManager.Instance.StartDialogue(objID, lockedDialogueNum);
-        }
+    }
+
+    private void OpenDoor()
+    {
+        sr.enabled = false;
+        cd.enabled = false;
+        if (doorAudioSource != null)
+            AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorOpenClip, sfxVolume);
+        else
+            AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
     }
 }
