@@ -17,6 +17,7 @@ public class PlayerInteract : MonoBehaviour
                 DialogueManager.Instance.ignoreNextKeyPress = false;
                 return;
             }
+            if (DialogueManager.Instance.IsDialogueActive) return;
             Debug.Log("Trying Interact");
             TryInteract();
         }

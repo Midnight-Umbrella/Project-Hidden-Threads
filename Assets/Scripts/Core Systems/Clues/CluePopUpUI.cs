@@ -11,7 +11,7 @@ public class CluePopUpUI : MonoBehaviour
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image clueImage;
-    [SerializeField] private float displayDuration = 2.5f;
+    [SerializeField] private float displayDuration = 5f;
 
     private Coroutine _hideCoroutine;
 
@@ -20,6 +20,15 @@ public class CluePopUpUI : MonoBehaviour
         Instance = this;
         if (popUpPanel != null)
             popUpPanel.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (popUpPanel.activeInHierarchy && Input.GetKeyDown(KeyCode.F))
+        {
+            Hide();
+            DialogueManager.Instance.ignoreNextKeyPress = true;
+        }
     }
 
     public void Show(ClueDefinition clue)
@@ -34,15 +43,23 @@ public class CluePopUpUI : MonoBehaviour
             clueImage.enabled = clue.icon != null;
         }
 
+        DialogueManager.Instance.isDialogueWaiting = true;
+
         popUpPanel.SetActive(true);
 
         if (_hideCoroutine != null) StopCoroutine(_hideCoroutine);
         _hideCoroutine = StartCoroutine(HideAfterDelay());
     }
+    private void Hide()
+    {
+        popUpPanel.SetActive(false);
+        DialogueManager.Instance.isDialogueWaiting = false;
+    }
 
     private IEnumerator HideAfterDelay()
     {
         yield return new WaitForSeconds(displayDuration);
-        popUpPanel.SetActive(false);
+        Hide();
     }
+
 }
