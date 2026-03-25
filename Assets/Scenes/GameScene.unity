@@ -9869,7 +9869,7 @@ GameObject:
   - component: {fileID: 1111416575}
   - component: {fileID: 1111416574}
   - component: {fileID: 1111416573}
-  - component: {fileID: 1111416572}
+  - component: {fileID: 1111416578}
   m_Layer: 0
   m_Name: exit
   m_TagString: Untagged
@@ -9877,18 +9877,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1111416572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111416571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2081a791186def458c5912b16255841, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1111416573
 Rigidbody2D:
   serializedVersion: 4
@@ -10111,12 +10099,27 @@ Transform:
   m_GameObject: {fileID: 1111416571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.99, y: -6.49, z: 0}
+  m_LocalPosition: {x: 31, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1111416578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111416571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ec1deeaa242747800106a33b4e2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  nextSceneName: S2GameScene
+  transitionSceneName: TransitionScene
 --- !u!1 &1153628813
 GameObject:
   m_ObjectHideFlags: 0
@@ -15950,7 +15953,6 @@ GameObject:
   - component: {fileID: 2080494063}
   - component: {fileID: 2080494062}
   - component: {fileID: 2080494061}
-  - component: {fileID: 2080494067}
   m_Layer: 0
   m_Name: Door1 (1)
   m_TagString: Untagged
@@ -16021,7 +16023,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.74408686, y: 0.7633357}
@@ -16131,21 +16133,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2080494067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2080494060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 978ec1deeaa242747800106a33b4e2a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTag: Player
-  nextSceneName: S2GameScene
-  transitionSceneName: TransitionScene
 --- !u!1 &2099068691
 GameObject:
   m_ObjectHideFlags: 0
