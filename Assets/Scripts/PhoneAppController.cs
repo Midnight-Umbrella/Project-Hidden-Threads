@@ -14,7 +14,7 @@ public class PhoneAppController : MonoBehaviour
     }
 
     public void OpenApp(GameObject app)
-    {
+    {Debug.Log("Opened" + app.name);
         if (currentApp != null)
             currentApp.SetActive(false);
 
@@ -24,7 +24,7 @@ public class PhoneAppController : MonoBehaviour
     }
 
     public void GoHome()
-    {
+    {Debug.Log("Home");
         if (currentApp != null)
             currentApp.SetActive(false);
 
