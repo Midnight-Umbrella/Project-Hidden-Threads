@@ -16,8 +16,9 @@ public class Interactable : MonoBehaviour
     [Header("Non Physical Clue (if applicable)")]
     [SerializeField] private bool isNotPhysicalClue;
     [SerializeField] private ClueDefinition nonPhysicalClue;
-    [Header("Is a clue?")]
+    [Header("Other")]
     [SerializeField] private bool isClue;
+    [SerializeField] private bool delayCluePrompt;
     private Collider2D col;
     private SpriteRenderer sr;
 
@@ -43,6 +44,12 @@ public class Interactable : MonoBehaviour
         {
             if (!previousClue || inventory.Contains(previousClue)) 
             {
+                if (delayCluePrompt)
+                {
+                    DialogueManager.Instance.StartDialogue(objID, dialogueNum);
+                    inventory.AddClue(nonPhysicalClue);
+                    return;
+                }
                 inventory.AddClue(nonPhysicalClue);
                 DialogueManager.Instance.StartDialogue(objID, dialogueNum);
             }
