@@ -16,7 +16,6 @@ public class Teleporter : MonoBehaviour
     void Start()
     {
         cd = GetComponent<Collider2D>();
-        fader.SetActive(false);
     }
 
     public void StartFadeOut()
@@ -67,7 +66,7 @@ public class Teleporter : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !fader.activeInHierarchy)
+        if (collision.gameObject.CompareTag("Player"))
         {
             StartFadeIn(collision.gameObject);
         }
