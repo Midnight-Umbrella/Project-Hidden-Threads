@@ -38,6 +38,9 @@ public class ClueJournal : MonoBehaviour
         }
 
         if (!_ids.Add(clue.id)) return false;
+        Debug.Log("Added to journal");
+        CluePromptUI.Instance?.Hide();
+        CluePopUpUI.Instance?.Show(clue);
 
         _collected.Add(clue);
         OnChanged?.Invoke();

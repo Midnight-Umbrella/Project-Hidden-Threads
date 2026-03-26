@@ -12,18 +12,30 @@ public class CluePopUpUI : MonoBehaviour
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image clueImage;
     [SerializeField] private float displayDuration = 5f;
+    private ClueDefinition waitingClue;
 
     private Coroutine _hideCoroutine;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+
         if (popUpPanel != null)
             popUpPanel.SetActive(false);
     }
 
     void Update()
     {
+        if (waitingClue != null && !DialogueManager.Instance.IsDialogueActive)
+        {
+            Show(waitingClue);
+            waitingClue = null;
+        }
         if (popUpPanel.activeInHierarchy && Input.GetKeyDown(KeyCode.F))
         {
             Hide();
@@ -34,7 +46,12 @@ public class CluePopUpUI : MonoBehaviour
     public void Show(ClueDefinition clue)
     {
         if (clue == null || popUpPanel == null) return;
-
+        if(DialogueManager.Instance.IsDialogueActive)
+        {
+            waitingClue = clue;
+            return;
+        }
+    
         if (titleText != null) titleText.text = clue.title;
         if (descriptionText != null) descriptionText.text = clue.description;
         if (clueImage != null)
@@ -46,6 +63,7 @@ public class CluePopUpUI : MonoBehaviour
         DialogueManager.Instance.isDialogueWaiting = true;
 
         popUpPanel.SetActive(true);
+        Debug.Log("Panel Active");
 
         if (_hideCoroutine != null) StopCoroutine(_hideCoroutine);
         _hideCoroutine = StartCoroutine(HideAfterDelay());

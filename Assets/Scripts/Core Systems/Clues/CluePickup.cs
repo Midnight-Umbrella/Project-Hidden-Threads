@@ -52,8 +52,7 @@ public class CluePickup : MonoBehaviour
         ClueJournal.Instance.AddClue(clue);
         inventory.AddClue(clue);
         _picked = true;
-        CluePromptUI.Instance?.Hide();
-        CluePopUpUI.Instance?.Show(clue);
+        
 
         if (floatingFPrompt != null)
             floatingFPrompt.SetActive(false); // hide on pickup
