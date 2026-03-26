@@ -11,6 +11,13 @@ public class DialogueUI : MonoBehaviour
     [Header("Typewriter Settings")]
     [SerializeField] private float typingSpeed = 0.03f; // seconds per character
 
+    [Header("Dialogue Audio")]
+    [SerializeField] private AudioClip[] garbleClips; // multiple = variation
+    [SerializeField] private AudioSource dialogueAudioSource;
+    [SerializeField] private float garbleVolume = 0.5f;
+    [SerializeField] private float pitchVariation = 0.2f;
+    [SerializeField] private float soundFrequency = 1f; // play every X characters
+
     private Coroutine typingCoroutine;
     private string currentFullText = "";
     private bool isTyping = false;
@@ -113,10 +120,24 @@ public class DialogueUI : MonoBehaviour
         foreach (char c in fullText)
         {
             dialogueText.text += c;
+            if (dialogueAudioSource != null && garbleClips.Length > 0 && !char.IsWhiteSpace(c) && Random.value < soundFrequency * typingSpeed)
+            {
+                AudioClip clip = garbleClips[Random.Range(0, garbleClips.Length)];
+                dialogueAudioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+                dialogueAudioSource.PlayOneShot(clip, garbleVolume);
+                // Reset pitch after playing to avoid affecting future clips
+                dialogueAudioSource.pitch = 1f;
+            }
             yield return new WaitForSeconds(typingSpeed);
         }
 
         isTyping = false;
         typingCoroutine = null;
+    }
+
+    private IEnumerator ResetPitchNextFrame()
+    {
+        yield return null;
+        dialogueAudioSource.pitch = 1f;
     }
 }

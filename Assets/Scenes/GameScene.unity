@@ -4368,6 +4368,13 @@ MonoBehaviour:
   dialogueText: {fileID: 716451301}
   speakerName: {fileID: 706138817}
   typingSpeed: 0.03
+  garbleClips:
+  - {fileID: 8300000, guid: 6bdbdb1e6d49ee14cb9a75e8d2c473e9, type: 3}
+  - {fileID: 8300000, guid: d2c67c896195d154abf820f9c7104718, type: 3}
+  dialogueAudioSource: {fileID: 69254449}
+  garbleVolume: 0.5
+  pitchVariation: 0.2
+  soundFrequency: 1
 --- !u!82 &636193862
 AudioSource:
   m_ObjectHideFlags: 0
