@@ -2553,7 +2553,7 @@ MonoBehaviour:
   player: {fileID: 0}
   tracker: {fileID: 1076412822}
   promptUI: {fileID: 0}
-  promptText: {fileID: 0}
+  promptText: {fileID: 659212303}
   objectToHideAfterPickup: {fileID: 0}
 --- !u!212 &257791087
 SpriteRenderer:
@@ -7005,6 +7005,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.0004254597
       objectReference: {fileID: 0}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1037362024}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PhoneAppController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990284659216054232, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3225689204811832805, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7196,6 +7220,26 @@ PrefabInstance:
     - target: {fileID: 6439537398861377873, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529421437912415947, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1076412822}
+    - target: {fileID: 6529421437912415947, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTracking
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529421437912415947, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SignalTrackerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529421437912415947, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 257791086}
+    - target: {fileID: 6529421437912415947, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: SignalTarget, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6805151645393640806, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
       propertyPath: m_IsActive
@@ -7568,7 +7612,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8250209434739643856, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1225891403}
+    - targetCorrespondingSourceObject: {fileID: 7269399442981609895, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1037362023}
   m_SourcePrefab: {fileID: 100100000, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
 --- !u!1 &1037362020 stripped
 GameObject:
@@ -7580,6 +7630,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8160365460527233444, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
   m_PrefabInstance: {fileID: 1037362019}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1037362022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7269399442981609895, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+  m_PrefabInstance: {fileID: 1037362019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1037362023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037362022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8027b2d358f2d49b95d27d5ff21420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracker: {fileID: 0}
+  targetToTrack: {fileID: 0}
+--- !u!114 &1037362024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9212015093674074914, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+  m_PrefabInstance: {fileID: 1037362019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037362020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c72008453d3fee9408409b30398d29f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1055926694
 GameObject:
   m_ObjectHideFlags: 0
@@ -8913,6 +8993,25 @@ Transform:
   - {fileID: 198464713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1225891399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8250209434739643856, guid: 38974939fc13ee34ba0fa1e51a549e9d, type: 3}
+  m_PrefabInstance: {fileID: 1037362019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1225891403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225891399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8027b2d358f2d49b95d27d5ff21420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracker: {fileID: 1076412822}
+  targetToTrack: {fileID: 257791086}
 --- !u!1 &1235795082
 GameObject:
   m_ObjectHideFlags: 0

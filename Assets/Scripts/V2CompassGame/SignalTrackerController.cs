@@ -46,7 +46,7 @@ public class SignalTrackerController : MonoBehaviour
         if (arrowUI != null)
         {
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            arrowUI.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
+            arrowUI.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
         // Update target name
