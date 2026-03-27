@@ -7,10 +7,13 @@ public class CreditsRoll : MonoBehaviour
     [Header("References")]
     [SerializeField] private RectTransform creditsText;
     [SerializeField] private TextMeshProUGUI creditsTMP;
+    [SerializeField] private RectTransform viewport;
 
     [Header("Scroll Settings")]
     [SerializeField] private float scrollSpeed = 80f;
-    [SerializeField] private float startY = -1200f;
+    [SerializeField] private float startX = 0f;
+    [SerializeField] private float startPadding = 100f;
+    [SerializeField] private float endPadding = 100f;
 
     [Header("Scene Flow")]
     [SerializeField] private string nextSceneName = "TitleScreen";
@@ -26,15 +29,20 @@ public class CreditsRoll : MonoBehaviour
         if (creditsTMP == null)
             creditsTMP = GetComponent<TextMeshProUGUI>();
 
+        if (viewport == null)
+            viewport = creditsText.parent as RectTransform;
+
+
         creditsTMP.ForceMeshUpdate();
 
         float preferredHeight = creditsTMP.preferredHeight;
-        creditsText.sizeDelta = new Vector2(creditsText.sizeDelta.x, preferredHeight + 100f);
+        creditsText.sizeDelta = new Vector2(creditsText.sizeDelta.x, preferredHeight + 50f);
 
-        creditsText.anchoredPosition = new Vector2(0f, startY);
 
-        RectTransform viewport = creditsText.parent as RectTransform;
-        endY = viewport.rect.height + creditsText.sizeDelta.y;
+        float autoStartY = -creditsText.sizeDelta.y - startPadding;
+        creditsText.anchoredPosition = new Vector2(startX, autoStartY);
+
+        endY = viewport.rect.height + endPadding;
     }
 
     private void Update()
