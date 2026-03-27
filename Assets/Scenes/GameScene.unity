@@ -2596,6 +2596,9 @@ MonoBehaviour:
   descriptionText: {fileID: 609707640}
   clueImage: {fileID: 1803659840}
   displayDuration: 2.5
+  clueAudioClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+  clueAudioSource: {fileID: 69254449}
+  clueAudioVolume: 1
 --- !u!1 &413352376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,8 +2795,9 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
-  cluePickupClip: {fileID: 0}
+  cluePickupClip: {fileID: 8300000, guid: 1619da58e99a9464e9613b2b82c844d8, type: 3}
   sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &447798298
@@ -3581,6 +3585,7 @@ MonoBehaviour:
   destroyOnPickup: 1
   cluePickupClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
   sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &610241671
@@ -4369,8 +4374,7 @@ MonoBehaviour:
   speakerName: {fileID: 706138817}
   typingSpeed: 0.03
   garbleClips:
-  - {fileID: 8300000, guid: 6bdbdb1e6d49ee14cb9a75e8d2c473e9, type: 3}
-  - {fileID: 8300000, guid: d2c67c896195d154abf820f9c7104718, type: 3}
+  - {fileID: 8300000, guid: 0a522ecfc8697cb40992d46d02df9d9b, type: 3}
   dialogueAudioSource: {fileID: 69254449}
   garbleVolume: 0.5
   pitchVariation: 0.2
@@ -4986,6 +4990,7 @@ MonoBehaviour:
   destroyOnPickup: 1
   cluePickupClip: {fileID: 0}
   sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &726163929
@@ -5473,6 +5478,7 @@ MonoBehaviour:
   destroyOnPickup: 1
   cluePickupClip: {fileID: 0}
   sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 0}
   inventory: {fileID: 0}
 --- !u!61 &788849220
@@ -15753,7 +15759,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
-  inspectClip: {fileID: 0}
+  inspectClip: {fileID: 8300000, guid: 799239b8aa0997f4691cf3204f895386, type: 3}
   inspectVolume: 1
 --- !u!50 &2104573543
 Rigidbody2D:

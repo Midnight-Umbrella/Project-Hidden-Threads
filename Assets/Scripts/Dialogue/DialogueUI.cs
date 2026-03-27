@@ -117,17 +117,20 @@ public class DialogueUI : MonoBehaviour
         isTyping = true;
         dialogueText.text = "";
 
+        int charIndex = 0;
+
         foreach (char c in fullText)
         {
             dialogueText.text += c;
-            if (dialogueAudioSource != null && garbleClips.Length > 0 && !char.IsWhiteSpace(c) && Random.value < soundFrequency * typingSpeed)
+            if (dialogueAudioSource != null && garbleClips.Length > 0 && char.IsWhiteSpace(c) && charIndex % soundFrequency == 0) // Play sound on every 2nd whitespace character for variation
             {
                 AudioClip clip = garbleClips[Random.Range(0, garbleClips.Length)];
                 dialogueAudioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
                 dialogueAudioSource.PlayOneShot(clip, garbleVolume);
                 // Reset pitch after playing to avoid affecting future clips
-                dialogueAudioSource.pitch = 1f;
+                StartCoroutine(ResetPitchNextFrame());
             }
+            charIndex++;
             yield return new WaitForSeconds(typingSpeed);
         }
 

@@ -13,6 +13,11 @@ public class CluePopUpUI : MonoBehaviour
     [SerializeField] private Image clueImage;
     [SerializeField] private float displayDuration = 5f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip clueAudioClip;
+    [SerializeField] private AudioSource clueAudioSource;
+    [SerializeField] private float clueAudioVolume = 1f;
+
     private Coroutine _hideCoroutine;
 
     private void Awake()
@@ -47,12 +52,18 @@ public class CluePopUpUI : MonoBehaviour
 
         popUpPanel.SetActive(true);
 
+        if (clueAudioSource != null && clue.clueAudioClip != null)
+        {
+            AudioController.Instance.PlaySFXOnSource(clueAudioSource, clueAudioClip, clueAudioVolume);
+        }
+
         if (_hideCoroutine != null) StopCoroutine(_hideCoroutine);
         _hideCoroutine = StartCoroutine(HideAfterDelay());
     }
     private void Hide()
     {
         popUpPanel.SetActive(false);
+        AudioController.Instance.StopAllSFX();
         DialogueManager.Instance.isDialogueWaiting = false;
     }
 

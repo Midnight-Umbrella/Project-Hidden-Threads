@@ -13,7 +13,7 @@ public class CluePickup : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip cluePickupClip;
     [SerializeField] private float sfxVolume = 1f;
-    private AudioSource cluePickupSource;
+    [SerializeField] private AudioSource cluePickupSource;
 
     [Header("Floating Prompt")]
     [SerializeField] private GameObject floatingFPrompt;
