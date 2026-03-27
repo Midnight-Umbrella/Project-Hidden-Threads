@@ -12,17 +12,21 @@ public class CluePopUpUI : MonoBehaviour
     [SerializeField] private TMP_Text descriptionText;
     [SerializeField] private Image clueImage;
     [SerializeField] private float displayDuration = 5f;
-    private ClueDefinition waitingClue;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip clueAudioClip;
+    [SerializeField] private AudioSource clueAudioSource;
+    [SerializeField] private float clueAudioVolume = 1f;
+    private ClueDefinition waitingClue;
     private Coroutine _hideCoroutine;
 
     private void Awake()
-    {   
+    {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
-        }
+        } 
         Instance = this;
         Debug.Log("PopUp exists");
         if (popUpPanel != null)
@@ -30,7 +34,7 @@ public class CluePopUpUI : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
         if (waitingClue != null && !DialogueManager.Instance.IsDialogueActive)
         {
             Show(waitingClue);
@@ -64,12 +68,18 @@ public class CluePopUpUI : MonoBehaviour
 
         popUpPanel.SetActive(true);
 
+        if (clueAudioSource != null && clue.clueAudioClip != null)
+        {
+            AudioController.Instance.PlaySFXOnSource(clueAudioSource, clueAudioClip, clueAudioVolume);
+        }
+
         if (_hideCoroutine != null) StopCoroutine(_hideCoroutine);
         _hideCoroutine = StartCoroutine(HideAfterDelay());
     }
     private void Hide()
     {
         popUpPanel.SetActive(false);
+        AudioController.Instance.StopAllSFX();
         DialogueManager.Instance.isDialogueWaiting = false;
     }
 

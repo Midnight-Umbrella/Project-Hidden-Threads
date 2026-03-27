@@ -10,6 +10,11 @@ public class CluePickup : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private bool destroyOnPickup = true;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip cluePickupClip;
+    [SerializeField] private float sfxVolume = 1f;
+    [SerializeField] private AudioSource cluePickupSource;
+
     [Header("Floating Prompt")]
     [SerializeField] private GameObject floatingFPrompt;
 
@@ -52,10 +57,15 @@ public class CluePickup : MonoBehaviour
         ClueJournal.Instance.AddClue(clue);
         inventory.AddClue(clue);
         _picked = true;
+        CluePromptUI.Instance?.Hide();
+        CluePopUpUI.Instance?.Show(clue);
 
         if (floatingFPrompt != null)
             floatingFPrompt.SetActive(false); // hide on pickup
-
+        if (cluePickupSource != null)
+            AudioController.Instance.PlaySFXOnSource(cluePickupSource, cluePickupClip, sfxVolume);
+        else
+            AudioController.Instance.PlaySFXAtPosition(cluePickupClip, transform.position, sfxVolume);
         if (destroyOnPickup) Destroy(gameObject);
         else gameObject.SetActive(false);
     }
