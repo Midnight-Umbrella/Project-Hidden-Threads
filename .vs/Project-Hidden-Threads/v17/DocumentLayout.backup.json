@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -40,10 +36,8 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dialogue\\DialogueData.cs",
               "ToolTip": "C:\\Users\\pheon\\Documents\\CMPUT250\\HiddenThreadsMain\\Project-Hidden-Threads\\Assets\\Scripts\\Dialogue\\DialogueData.cs",
               "RelativeToolTip": "Assets\\Scripts\\Dialogue\\DialogueData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T00:06:48.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-25T00:06:48.705Z"
             },
             {
               "$type": "Document",

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.Audio;
@@ -8,6 +9,7 @@ public class AudioController : MonoBehaviour
 {
     private static AudioController _instance;
     public static AudioController Instance { get { return _instance; } }
+    private List<AudioSource> activeSFX = new List<AudioSource>();
 
     [Header("Audio Sources")]
     [SerializeField] private AudioSource musicSource;
@@ -109,13 +111,16 @@ public class AudioController : MonoBehaviour
         AudioSource tempSource = tempAudioObject.AddComponent<AudioSource>();
         tempSource.clip = clip;
         tempSource.volume = volume;
-        tempSource.spatialBlend = 1f; // 3D sound
+        tempSource.spatialBlend = 0f; // 3D sound
         if (sfxGroup != null)
             tempSource.outputAudioMixerGroup = sfxGroup;
         tempSource.Play();
 
+        // Add to active, temporary SFX
+        activeSFX.Add(tempSource);
+
         // Destroy after clip finishes
-        Destroy(tempAudioObject, clip.length);
+        StartCoroutine(CleanupSFX(tempSource, clip.length));
     }
 
     public void PlaySFX_2(AudioClip clip, Transform spawnTransform, float volume)
@@ -139,6 +144,46 @@ public class AudioController : MonoBehaviour
     public void PlayUIClick()
     {
         PlaySFX(uiClickClip);
+    }
+
+    private IEnumerator CleanupSFX(AudioSource source, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        activeSFX.Remove(source);
+        Destroy(source.gameObject);
+    }
+
+    public IEnumerator FadeOutAllSFX(float duration)
+    {
+        float elapsed = 0f;
+
+         while (elapsed < duration)
+         {
+             float fadeFactor = 1f - (elapsed / duration);
+             foreach (var sfx in activeSFX)
+             {
+                 if (sfx != null)
+                 {
+                     sfx.volume = fadeFactor; // Assuming original volume is 1f, adjust if needed
+                 }
+             }
+             elapsed += Time.deltaTime;
+             yield return null;
+         }
+         StopAllSFX();
+    }
+
+    public void StopAllSFX()
+    {
+        foreach (var sfx in activeSFX)
+        {
+            if (sfx != null)
+            {
+                sfx.Stop();
+                Destroy(sfx.gameObject);
+            }
+        }
+        activeSFX.Clear();
     }
 }
 

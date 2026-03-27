@@ -18,9 +18,16 @@ public class Interactable : MonoBehaviour
     [SerializeField] private ClueDefinition nonPhysicalClue;
     [Header("Other")]
     [SerializeField] private bool isClue;
+    [Header("Audio")]
+    [SerializeField] private AudioClip inspectClip;
+    [SerializeField] private float inspectVolume = 1f;
+    private AudioSource objectAudioSource;
+
     [SerializeField] private bool delayCluePrompt;
     private Collider2D col;
     private SpriteRenderer sr;
+
+    
 
     void Awake()
     {
@@ -73,11 +80,19 @@ public class Interactable : MonoBehaviour
 
             if (dialogueNum != null)
             {
+                if (objectAudioSource != null)
+                    AudioController.Instance.PlaySFXOnSource(objectAudioSource, inspectClip, inspectVolume);
+                else
+                    AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
                 DialogueManager.Instance.StartDialogue(objID,dialogueNum);
             }
         }
         else if(preDialogueNum != null)
         {
+            if (objectAudioSource != null)
+                    AudioController.Instance.PlaySFXOnSource(objectAudioSource, inspectClip, inspectVolume);
+                else
+                    AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
             DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
         }
     }
