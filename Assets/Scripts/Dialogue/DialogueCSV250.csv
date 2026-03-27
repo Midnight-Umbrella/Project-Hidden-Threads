@@ -44,5 +44,6 @@ npc2,0,Harper/Bargoer,conversation,Harper:"(have you seen my friend?)"|Bargoer:"
 bartender,0,Harper/Bartender,conversation,Harper:"(have you seen my friend?)"|Bartender:"(yes with tall suit man. they left early. they might have left something in the lost and found)"
 lost_and_found,0,Harper,internal,"(people lose a lot of stuff here)"
 lost_and_found,1,Harper,internal,"(looks like veras jacket. theres a note inside)"
+locked_convo,0,Harper,Internal,"(Whos this she's texting? Whats this about a warehouse?)"
 gps_guy,0,Harper/Alley Man,conversation,Harper:"(have you seen my friend)"|Alley Man:"(no have you tried gps)"|Harper:"(no whats that)"|Alley Man:"(ill show you)"
 louise,0,Harper/Louise,conversation,(conversation here)

@@ -20,10 +20,20 @@ public class MessageLoader : MonoBehaviour
             string contact = parts[0].Trim();
             string sender = parts[1].Trim();
             string message = parts[2].Trim();
+            string isLockedStr = parts[3].Trim();
 
             if (!convoDict.ContainsKey(contact))
             {
-                convoDict[contact] = new Conversation { contact = contact };
+                bool isLocked = false;
+                if (isLockedStr == "1")
+                {
+                    isLocked = true;
+                }
+                convoDict[contact] = new Conversation 
+                { 
+                    contact = contact,
+                    isLocked = isLocked
+                };
             }
 
             convoDict[contact].messages.Add(new Message
@@ -49,4 +59,5 @@ public class Conversation
 {
     public string contact;
     public List<Message> messages = new List<Message>();
+    public bool isLocked;
 }

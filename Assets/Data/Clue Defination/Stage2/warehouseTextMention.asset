@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
-  m_Name: warehouseLocation
+  m_Name: warehouseTextMention
   m_EditorClassIdentifier: 
-  id: warehouse_locations
+  id: warehouse_text_mention
   title: Mentions of a Warehous
   description: (vera might be at a warehouse, doesn't say which one)
   icon: {fileID: 0}
