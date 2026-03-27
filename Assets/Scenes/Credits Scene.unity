@@ -342,9 +342,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsText: {fileID: 1218788365}
   creditsTMP: {fileID: 1218788367}
+  viewport: {fileID: 0}
   scrollSpeed: 60
   startX: 200
-  startY: -1200
+  startPadding: 100
+  endPadding: 100
   nextSceneName: TitleScreen
   allowSkip: 1
 --- !u!114 &1218788367
@@ -368,6 +370,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '
+
 
 
 
@@ -429,21 +432,24 @@ MonoBehaviour:
     <size=44><b>Special Thanks</b></size>
 
 
-    CMPUT
-    250
+
+    University
+    of Alberta
+
+    CMPUT 250
 
     Professor Sturtevant
 
-    EP Ryan Yan and the TAs
+    EP Ryan Yan and the
+    TAs
 
-    Jeffrey Gibson,
-    in loving memory
+    Jeffrey Gibson, in loving memory
 
     Our teammates and playtesters
 
 
-    <size=82><b>THANK YOU
-    FOR PLAYING</b></size>
+    <size=82><b>THANK
+    YOU FOR PLAYING</b></size>
 
 
     <size=48><b>The End</b></size>'
