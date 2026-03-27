@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: warehouseTextMention
   m_EditorClassIdentifier: 
   id: warehouse_text_mention
-  title: Mentions of a Warehous
+  title: Mentions of a Warehouse
   description: (vera might be at a warehouse, doesn't say which one)
   icon: {fileID: 0}
   category: 

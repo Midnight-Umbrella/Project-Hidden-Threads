@@ -1,9 +1,8 @@
 ﻿ObjID,DialogueNum,Character(s),Type,Text
-Intro,0,Harper,internal,"It’s super  late. Where’s Vera?"|"She left all my messages on read. That’s not normal for her."|"Vera hasn’t posted on social media in 2 days. Something just isn’t right."
+Intro,0,Harper,internal,"Hmm... I don't think Vera came home last night"|"She left all my messages on read. That’s not normal for her."|"Im starting to get worried"
 verasDoor,0,Harper,internal,"Locked… that means she left. But where did she go?"
 verasDoor,1,Harper,internal,"There we go"
 verasDesk,0,Harper,internal,"Is this her phone?"|"Why would she leave without her phone?"
-STAGE1_03,Harper,internal,Wait! This has to be it!  Please let this be her room key.,Key
 nothing,0,Harper,internal,"Nothing useful here… I need to focus"
 garbageCan,0,Harper,internal,"That looks out of place… why would she throw this away?"
 calendar,0, Harper,internal,"According to my calendar"|"Vera's birthday is coming up"
@@ -28,6 +27,10 @@ STAGE1_22,Harper,internal,The carpet is clean… nothing unusual to notice here.
 fridge,0,Harper,internal,"Just a fridge. Our milk is close to expiring"
 fridge,1,Harper,internal,"Here it is"|"What a weird place to hid a key"
 crumpledNote,0,Harper,internal,"Hmm... 'Secret hiding places: toilet. fridge. couch'"
+toilet,0,Harper,internal,"I really should clean this thing more often"
+toilet,1,Harper,internal,"Hmm. The key isn't here"|"Must be in one of the other two places"
+couch,0,Harper,internal,"Im surprised Vera isn't on this couch right now arguing with someone online"|"This isn't like her. I'm getting worried"
+couch,1,Harper,internal,"Nothing under the cushions but crumbs"|"The key must be in one of the other two places"
 phone,1,Harper,internal,"I can't open Vera's phone without her password"
 wallNote,0,Harper,internal,"Some notes about passwords or something"
 wallNote,1,Harper,internal,"Hmm... 'password idea: birthday + fav food'"
@@ -35,6 +38,7 @@ verasTable,0,Harper,internal,"Vera's plants haven't been watered"|"I'm starting 
 kitchenTable,0,Harper,internal,"Looks like she left some food out"
 exitDoor,0,Harper,internal,"I can't leave yet"|"I'd have no idea where to go"
 exitDoor,1,Harper,internal,"I'm coming to find you Vera!"
+location,0,Harper,internal,"Huh. She went to the bar a few days ago"|"I better go over there and ask if anyones seen her"
 CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera’s Room Key
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
 CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
