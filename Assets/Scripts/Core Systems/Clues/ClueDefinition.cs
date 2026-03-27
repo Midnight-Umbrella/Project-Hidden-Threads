@@ -8,4 +8,5 @@ public class ClueDefinition : ScriptableObject
     [TextArea] public string description;
     public Sprite icon;        // optional
     public string category;    // optional
+    public AudioClip clueAudioClip; // optional
 }

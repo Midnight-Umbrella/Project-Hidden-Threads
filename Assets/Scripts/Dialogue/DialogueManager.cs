@@ -208,6 +208,10 @@ public class DialogueManager : MonoBehaviour
         ignoreNextKeyPress = true;
 
         if (dialogueUI != null)
+        {
+            dialogueUI.Hide();
+            AudioController.Instance.StopAllSFX();
+        }
             dialogueUI.Hide();
 
         dialogue = new string[0];

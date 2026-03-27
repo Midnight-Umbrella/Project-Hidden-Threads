@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 69254445}
   - component: {fileID: 69254446}
   - component: {fileID: 69254448}
+  - component: {fileID: 69254449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -374,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  playerSound: {fileID: 0}
+  playerSound: {fileID: 69254449}
   playerFootstep: {fileID: 8300000, guid: e2a7d3156a773904b960a3d54c02fe0b, type: 3}
   footstepInterval: 0.4
   sr: {fileID: 69254442}
@@ -499,6 +500,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+--- !u!82 &69254449
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69254439}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &93447426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1120,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &221926887
 Rigidbody2D:
   serializedVersion: 4
@@ -1204,7 +1306,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &253846791
 Rigidbody2D:
   serializedVersion: 4
@@ -1533,8 +1640,8 @@ MonoBehaviour:
   lockedDialogueNum: 0
   unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  doorOpenClip: {fileID: 0}
-  doorLockedClip: {fileID: 0}
+  doorOpenClip: {fileID: 8300000, guid: 45b8b6175c3d8c145b931fa5d6e71ffb, type: 3}
+  doorLockedClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
   sfxVolume: 1
 --- !u!114 &298772088
 MonoBehaviour:
@@ -1646,6 +1753,9 @@ MonoBehaviour:
   descriptionText: {fileID: 609707640}
   clueImage: {fileID: 1803659840}
   displayDuration: 2.5
+  clueAudioClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+  clueAudioSource: {fileID: 69254449}
+  clueAudioVolume: 1
 --- !u!1 &413352376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,6 +1952,9 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
+  cluePickupClip: {fileID: 8300000, guid: 1619da58e99a9464e9613b2b82c844d8, type: 3}
+  sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &447798298
@@ -1977,7 +2090,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 1
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!1 &464162082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,7 +2555,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &600708754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3296,6 +3419,9 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
+  cluePickupClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+  sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &610241671
@@ -3431,7 +3557,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 1
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!1 &616283315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,7 +3887,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!1 &623537086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,7 +3934,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &623537088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4024,6 +4165,8 @@ GameObject:
   - component: {fileID: 636193856}
   - component: {fileID: 636193861}
   - component: {fileID: 636193860}
+  - component: {fileID: 636193863}
+  - component: {fileID: 636193862}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -4078,6 +4221,134 @@ MonoBehaviour:
   dialogueText: {fileID: 716451301}
   speakerName: {fileID: 706138817}
   typingSpeed: 0.03
+  garbleClips:
+  - {fileID: 8300000, guid: 0a522ecfc8697cb40992d46d02df9d9b, type: 3}
+  dialogueAudioSource: {fileID: 69254449}
+  garbleVolume: 0.5
+  pitchVariation: 0.2
+  soundFrequency: 1
+--- !u!82 &636193862
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636193855}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &636193863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636193855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bc63e3427c01e48bb6cc13a1cb551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 636193862}
+  sfxSource: {fileID: 0}
+  musicGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  sfxGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  uiClickClip: {fileID: 0}
+  sceneMusics:
+  - sceneName: 
+    musicClip: {fileID: 0}
+  - sceneName: GameScene
+    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
+  - sceneName: S2GameScene
+    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
+  - sceneName: S2GameScene
+    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
 --- !u!1 &703978166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,7 +4390,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &703978168
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4564,6 +4840,9 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
+  cluePickupClip: {fileID: 0}
+  sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
 --- !u!61 &726163929
@@ -4699,7 +4978,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 1
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!1 &735730380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4871,7 +5155,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &738234141
 Rigidbody2D:
   serializedVersion: 4
@@ -5047,6 +5336,9 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
+  cluePickupClip: {fileID: 0}
+  sfxVolume: 1
+  cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 0}
   inventory: {fileID: 0}
 --- !u!61 &788849220
@@ -5282,7 +5574,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &814735286
 Rigidbody2D:
   serializedVersion: 4
@@ -6242,7 +6539,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &948814729
 Rigidbody2D:
   serializedVersion: 4
@@ -6423,7 +6725,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &984140894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6878,7 +7185,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &1084521689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9321,7 +9633,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &1153628817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9705,7 +10022,12 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1208907855
 Rigidbody2D:
   serializedVersion: 4
@@ -10019,7 +10341,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &1232797525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10640,7 +10967,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1502174492
 Rigidbody2D:
   serializedVersion: 4
@@ -10821,7 +11153,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1541266475
 Rigidbody2D:
   serializedVersion: 4
@@ -11086,7 +11423,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &1552454292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11267,7 +11609,12 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1575627244
 Rigidbody2D:
   serializedVersion: 4
@@ -12037,7 +12384,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1666082241
 Rigidbody2D:
   serializedVersion: 4
@@ -12218,7 +12570,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1669065016
 Rigidbody2D:
   serializedVersion: 4
@@ -12399,7 +12756,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 8300000, guid: 13bf7bd311737c44da36b5b72951d6be, type: 3}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!212 &1751956045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12580,7 +12942,12 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 64ae8f44276fae84997015522bb42501, type: 2}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &1782450405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13002,7 +13369,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!1 &1801560979
 GameObject:
   m_ObjectHideFlags: 0
@@ -13111,7 +13483,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1801560983
 Rigidbody2D:
   serializedVersion: 4
@@ -14752,7 +15129,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1967122364
 Rigidbody2D:
   serializedVersion: 4
@@ -14944,7 +15326,7 @@ MonoBehaviour:
   lockedDialogueNum: 0
   unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  doorOpenClip: {fileID: 0}
+  doorOpenClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
   doorLockedClip: {fileID: 0}
   sfxVolume: 1
 --- !u!61 &2080494063
@@ -15127,7 +15509,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 0}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &2099068693
 Rigidbody2D:
   serializedVersion: 4
@@ -15308,7 +15695,12 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+  inspectClip: {fileID: 8300000, guid: 799239b8aa0997f4691cf3204f895386, type: 3}
+  inspectVolume: 1
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &2104573543
 Rigidbody2D:
   serializedVersion: 4

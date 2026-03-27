@@ -1885,7 +1885,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &152379228
 Rigidbody2D:
   serializedVersion: 4
@@ -2667,7 +2670,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &240290403
 Rigidbody2D:
   serializedVersion: 4
@@ -2945,7 +2951,10 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: e084d989c7483b74f90ebc017b3eaa03, type: 2}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 1
+>>>>>>> origin/main
 --- !u!50 &319721178
 Rigidbody2D:
   serializedVersion: 4
@@ -3126,7 +3135,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &323479652
 Rigidbody2D:
   serializedVersion: 4
@@ -3465,7 +3477,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &456946363
 Rigidbody2D:
   serializedVersion: 4
@@ -3763,6 +3778,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
 --- !u!114 &474900409 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 141572027498024843, guid: a92ae9e056cde114f94457f893a62785, type: 3}
@@ -3815,6 +3832,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2185217275721592386, guid: a92ae9e056cde114f94457f893a62785, type: 3}
   m_PrefabInstance: {fileID: 722645095}
   m_PrefabAsset: {fileID: 0}
+>>>>>>> origin/main
 --- !u!1 &556572785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,10 +3871,16 @@ MonoBehaviour:
   preDialogueNum: 0
   clue: {fileID: 0}
   dialogueNum: 1
+<<<<<<< HEAD
+  isNotPhysicalClue: 0
+  nonPhysicalClue: {fileID: 0}
+  isClue: 0
+=======
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: c03f87cd559947744b44b9d20d1892c9, type: 2}
   isClue: 0
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!61 &556572787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5032,6 +5056,7 @@ GameObject:
   - component: {fileID: 819288680}
   - component: {fileID: 819288679}
   - component: {fileID: 819288678}
+  - component: {fileID: 819288686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5116,7 +5141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  playerSound: {fileID: 0}
+  playerSound: {fileID: 819288686}
   playerFootstep: {fileID: 8300000, guid: e2a7d3156a773904b960a3d54c02fe0b, type: 3}
   footstepInterval: 0.4
   sr: {fileID: 819288684}
@@ -5271,6 +5296,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &819288686
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819288677}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &829892515
 GameObject:
   m_ObjectHideFlags: 0
@@ -7407,7 +7528,10 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 5b9a1ac09874f9342a4f1081a8ff63c1, type: 2}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1169803445
 Rigidbody2D:
   serializedVersion: 4
@@ -7588,7 +7712,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1173109316
 Rigidbody2D:
   serializedVersion: 4
@@ -7739,6 +7866,7 @@ GameObject:
   - component: {fileID: 1184565385}
   - component: {fileID: 1184565384}
   - component: {fileID: 1184565383}
+  - component: {fileID: 1184565386}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -7793,6 +7921,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184565386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184565382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bc63e3427c01e48bb6cc13a1cb551c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 819288686}
+  sfxSource: {fileID: 0}
+  musicGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  sfxGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  uiClickClip: {fileID: 0}
+  sceneMusics: []
 --- !u!1 &1185199315
 GameObject:
   m_ObjectHideFlags: 0
@@ -8170,7 +8316,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1235795084
 Rigidbody2D:
   serializedVersion: 4
@@ -8441,7 +8590,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1275044312
 Rigidbody2D:
   serializedVersion: 4
@@ -12680,7 +12832,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1528092243
 Rigidbody2D:
   serializedVersion: 4
@@ -14683,7 +14838,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1811216030
 Rigidbody2D:
   serializedVersion: 4
@@ -15771,7 +15929,10 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   isClue: 0
+<<<<<<< HEAD
+=======
   delayCluePrompt: 0
+>>>>>>> origin/main
 --- !u!50 &1908678013
 Rigidbody2D:
   serializedVersion: 4
