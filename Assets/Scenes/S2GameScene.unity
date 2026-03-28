@@ -11316,7 +11316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hidden Key
+  m_text: Hidden Clue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19869,9 +19869,9 @@ MonoBehaviour:
   keyInputs: 3100000032000000330000003400000035000000360000003700000038000000
   closeKey: 27
   altCloseKey: 102
-  playerMovementScript: {fileID: 0}
-  useTargetMelody: 0
-  targetMelody: 
+  playerMovementScript: {fileID: 819288681}
+  useTargetMelody: 1
+  targetMelody: 0000000000000000040000000400000005000000050000000400000003000000030000000200000002000000010000000100000000000000
   onSolved:
     m_PersistentCalls:
       m_Calls:
