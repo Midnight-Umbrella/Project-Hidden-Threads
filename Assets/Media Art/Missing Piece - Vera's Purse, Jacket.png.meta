@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Missing Piece - Vera's Purse, Jacket_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 178
+        width: 101
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb21959b4da65a41b4ed46f85fac115
+      internalID: -43156717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missing Piece - Vera's Purse, Jacket_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 167
+        width: 63
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30aba29530d543e47ab3b123cc0d35cb
+      internalID: 774882843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missing Piece - Vera's Purse, Jacket_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 50
+        width: 101
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9776fe30e04c0d9479cb424e637f5766
+      internalID: 829257582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missing Piece - Vera's Purse, Jacket_3
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 63
+        width: 90
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3918e66d6292f6b499a5eb8776385cb5
+      internalID: -1815002925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Missing Piece - Vera's Purse, Jacket_0: -43156717
+      Missing Piece - Vera's Purse, Jacket_1: 774882843
+      Missing Piece - Vera's Purse, Jacket_2: 829257582
+      Missing Piece - Vera's Purse, Jacket_3: -1815002925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

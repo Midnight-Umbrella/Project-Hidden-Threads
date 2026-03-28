@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueWaiting;
     private string waitingID;
     private string waitingNum;
+    private Scene currentScene;
 
     private void Awake()
     {
@@ -31,10 +32,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         Instance = this;
+        currentScene = SceneManager.GetActiveScene();
         DontDestroyOnLoad(gameObject);
 
         if (dialogueUI != null)
             dialogueUI.Hide();
+    }
+    
+    public void Reset()
+    {
+        Instance = null;
+        Destroy(gameObject);
     }
 
     private void OnEnable()
@@ -63,7 +71,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
         if (!isDialogueWaiting && waitingID != null)
         {Debug.Log("restarting");
             Debug.Log(IsDialogueActive);

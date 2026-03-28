@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff98dc8e576c394ca97501b4e9489ba, type: 3}
   m_Name: StrangeMansPoster
   m_EditorClassIdentifier: 
-  id: 
-  title: 
-  description: 
-  icon: {fileID: 0}
+  id: strange_man_poster
+  title: Strange Man's Poster
+  description: Looks like it's for some kind of band
+  icon: {fileID: 1368782704, guid: b111763b1fee59c44ad4b51899b36648, type: 3}
   category: 
   clueAudioClip: {fileID: 0}

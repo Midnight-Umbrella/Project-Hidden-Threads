@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: veras_jacket
   title: Vera's Jacket
-  description: (veras jacket, note in the pocket that has a password)
-  icon: {fileID: 0}
+  description: "Her jacket was left behind. There\u2019s a folded note in the pocket
+    with a password. It could unlock that text conversation."
+  icon: {fileID: -43156717, guid: f5df0097275b3f44591c3af0af6b694e, type: 3}
   category: 
+  clueAudioClip: {fileID: 0}

@@ -1123,6 +1123,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &221926887
 Rigidbody2D:
   serializedVersion: 4
@@ -1306,6 +1310,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &253846791
 Rigidbody2D:
   serializedVersion: 4
@@ -2184,6 +2192,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 1
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &464162082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,6 +2658,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &600708754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3081,6 +3097,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 1
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &616283315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3408,6 +3428,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &623537086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3452,6 +3476,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &623537088
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3781,6 +3809,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &703978168
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4366,6 +4398,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 1
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &735730380
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,6 +4576,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &738234141
 Rigidbody2D:
   serializedVersion: 4
@@ -4956,6 +4996,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &814735286
 Rigidbody2D:
   serializedVersion: 4
@@ -5918,6 +5962,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &948814729
 Rigidbody2D:
   serializedVersion: 4
@@ -6101,6 +6149,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &984140894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6558,6 +6610,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1084521689
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8999,6 +9055,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1153628817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9385,6 +9445,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1208907855
 Rigidbody2D:
   serializedVersion: 4
@@ -9701,6 +9765,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1232797525
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10324,6 +10392,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1502174492
 Rigidbody2D:
   serializedVersion: 4
@@ -10507,6 +10579,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1541266475
 Rigidbody2D:
   serializedVersion: 4
@@ -10774,6 +10850,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1552454292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10957,6 +11037,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1575627244
 Rigidbody2D:
   serializedVersion: 4
@@ -11729,6 +11813,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1666082241
 Rigidbody2D:
   serializedVersion: 4
@@ -11912,6 +12000,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1669065016
 Rigidbody2D:
   serializedVersion: 4
@@ -12100,6 +12192,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1751956045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12283,6 +12379,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1782450405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12723,6 +12823,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1801560979
 GameObject:
   m_ObjectHideFlags: 0
@@ -12834,6 +12938,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1801560983
 Rigidbody2D:
   serializedVersion: 4
@@ -14478,6 +14586,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1967122364
 Rigidbody2D:
   serializedVersion: 4
@@ -14855,6 +14967,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &2099068693
 Rigidbody2D:
   serializedVersion: 4
@@ -15038,6 +15154,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &2104573543
 Rigidbody2D:
   serializedVersion: 4

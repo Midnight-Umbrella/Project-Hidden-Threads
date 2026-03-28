@@ -255,7 +255,7 @@ public class PianoMinigameUI : MonoBehaviour
         }
 
         if (playedNotes.Count == targetMelody.Length)
-        {
+        {Debug.Log("solved");
             isSolved = true;
             UpdateHint("Success!");
             Log("Melody solved.");

@@ -7,7 +7,7 @@ public class Inventory : ScriptableObject
 {
     public List<ClueDefinition> clues = new List<ClueDefinition>();
     public void AddClue(ClueDefinition clue)
-    {
+    {   
         clues.Add(clue);
         var journal = ClueJournal.Instance;
         journal.AddClue(clue);

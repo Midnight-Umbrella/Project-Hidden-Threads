@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class Interactable : MonoBehaviour
     [SerializeField] private bool delayCluePrompt;
     private Collider2D col;
     private SpriteRenderer sr;
+    [Header("Event Trigger")]
+    [SerializeField] private bool isEventTrigger;
+    [SerializeField] private UnityEvent triggeredEvent;
+    private bool isFinalDialogue = false;
 
     void Awake()
     {
@@ -35,9 +40,26 @@ public class Interactable : MonoBehaviour
             sr = clue.GetComponent<SpriteRenderer>();
         }
     }
+
+    void Update()
+    {
+        if (isFinalDialogue && !DialogueManager.Instance.IsDialogueActive)
+        {
+            triggeredEvent?.Invoke();
+            return;
+        }
+    }
     
     public void Interact()
     {
+        if (isEventTrigger)
+        {
+            DialogueManager.Instance.StartDialogue(objID, dialogueNum);
+            isFinalDialogue = true;
+            return;
+        }
+
+
         if (isClue)
         {
             CluePickup cp = gameObject.GetComponent<CluePickup>();
@@ -80,8 +102,8 @@ public class Interactable : MonoBehaviour
             {
                 if (objectAudioSource != null)
                     AudioController.Instance.PlaySFXOnSource(objectAudioSource, inspectClip, inspectVolume);
-                //else
-                    //AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
+                else
+                    AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
                 DialogueManager.Instance.StartDialogue(objID,dialogueNum);
             }
         }
@@ -93,5 +115,7 @@ public class Interactable : MonoBehaviour
                     AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
             DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
         }
+
+        
     }
 }

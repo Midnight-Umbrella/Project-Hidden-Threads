@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: warehouse_text_mention
   title: Mentions of a Warehouse
-  description: (vera might be at a warehouse, doesn't say which one)
+  description: "Hints suggest Vera might be at a warehouse, but the location isn\u2019t
+    clear."
   icon: {fileID: 0}
   category: 
+  clueAudioClip: {fileID: 0}
