@@ -18174,7 +18174,7 @@ Transform:
   m_GameObject: {fileID: 1811216028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.19, y: -0.73, z: 0}
+  m_LocalPosition: {x: 38.34, y: 0.85, z: 0}
   m_LocalScale: {x: 1.25, y: 1.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18193,7 +18193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  requiredClue: {fileID: 11400000, guid: ec87fa6ef0bcc3c40b8cb1cd9253b58f, type: 2}
+  requiredClue: {fileID: 0}
+  spriteRenderer: {fileID: 1811216032}
+  interactionCollider: {fileID: 1811216031}
 --- !u!114 &1811216035
 MonoBehaviour:
   m_ObjectHideFlags: 0

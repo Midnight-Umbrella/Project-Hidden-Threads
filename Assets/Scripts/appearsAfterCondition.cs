@@ -1,27 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class appearsAfterCondition : MonoBehaviour
 {
-    [SerializeField] Inventory inventory;
-    [SerializeField] ClueDefinition requiredClue;
-    private bool isPianoDone;
+    [Header("Requirements")]
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private ClueDefinition requiredClue;
 
-    void Awake()
+    [Header("Hide / Show")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Collider2D interactionCollider;
+
+    private bool isPianoDone;
+    private bool hasAppeared;
+
+    private void Awake()
     {
-        gameObject.SetActive(false);
+        SetVisible(false);
     }
 
     public void pianoDone()
     {
+        Debug.Log("Louise pianoDone called");
         isPianoDone = true;
+        TryAppear();
     }
-    void Update()
+
+    private void Update()
     {
-        if (inventory.Contains(requiredClue) && isPianoDone)
+        if (!hasAppeared)
         {
-            gameObject.SetActive(true);
+            TryAppear();
         }
+    }
+
+    private void TryAppear()
+    {
+        if (!isPianoDone) return;
+
+        if (requiredClue == null)
+        {
+            SetVisible(true);
+            Debug.Log("Louise appeared: piano only.");
+            return;
+        }
+
+        if (inventory != null && inventory.Contains(requiredClue))
+        {
+            SetVisible(true);
+            Debug.Log("Louise appeared: piano + required clue.");
+        }
+    }
+
+    private void SetVisible(bool visible)
+    {
+        hasAppeared = visible;
+
+        if (spriteRenderer != null)
+            spriteRenderer.enabled = visible;
+
+        if (interactionCollider != null)
+            interactionCollider.enabled = visible;
     }
 }

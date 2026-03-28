@@ -71,7 +71,7 @@ public class PianoMinigameUI : MonoBehaviour
     private void Start()
     {
         SetupButtons();
-        UpdateHint("Click the keys or press 1-8.");
+        UpdateHint("Press 1-8 to play the piano.");
         UpdatePlayedText();
         Log("Start finished. Buttons bound.");
     }
@@ -257,7 +257,7 @@ public class PianoMinigameUI : MonoBehaviour
         if (playedNotes.Count == targetMelody.Length)
         {Debug.Log("solved");
             isSolved = true;
-            UpdateHint("Success!");
+            UpdateHint("Success! Nice melody, now go talk with Louise.");
             Log("Melody solved.");
             onSolved?.Invoke();
         }
