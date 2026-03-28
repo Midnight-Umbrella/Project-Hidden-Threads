@@ -3591,6 +3591,7 @@ GameObject:
   - component: {fileID: 257791088}
   - component: {fileID: 257791087}
   - component: {fileID: 257791086}
+  - component: {fileID: 257791089}
   m_Layer: 0
   m_Name: HiddenMelodyClue
   m_TagString: Untagged
@@ -3677,6 +3678,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257791089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257791085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad95e6576281aa74db77306198417e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: HiddenMelodyClue
+  foundMessage: You found a clue with hidden numbers.
+  hiddenMelodyCode: 31562
+  interactDistance: 2
+  interactKey: 102
+  player: {fileID: 819288685}
+  tracker: {fileID: 1076412822}
+  promptUI: {fileID: 659212301}
+  promptText: {fileID: 0}
+  popupUI: {fileID: 0}
+  objectToHideAfterPickup: {fileID: 257791085}
 --- !u!1 &319721176
 GameObject:
   m_ObjectHideFlags: 0
@@ -9933,6 +9957,7 @@ GameObject:
   - component: {fileID: 1184565385}
   - component: {fileID: 1184565384}
   - component: {fileID: 1184565383}
+  - component: {fileID: 1184565386}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -9992,6 +10017,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184565386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184565382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b56eeac82143ec4faf0fd7f3004cf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185199315
 GameObject:
   m_ObjectHideFlags: 0
