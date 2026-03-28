@@ -5826,8 +5826,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5910e4c134fa3045909da342590e430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missionStarter: {fileID: 0}
-  debugForceStart: 0
+  clueJournal: {fileID: 2053970091}
+  gpsClue: {fileID: 11400000, guid: 5b9a1ac09874f9342a4f1081a8ff63c1, type: 2}
+  missionStarter: {fileID: 140509192}
+  triggerOnlyOnce: 1
+  checkInterval: 0.25
 --- !u!1 &659212301
 GameObject:
   m_ObjectHideFlags: 0
