@@ -64,19 +64,16 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!IsDialogueActive) return;
-        if (dialogueUI == null) return;
         if (!isDialogueWaiting && waitingID != null)
         {Debug.Log("restarting");
+            Debug.Log(IsDialogueActive);
             StartDialogue(waitingID, waitingNum);
             waitingID = null;
             waitingNum = null;
             return;
         }
         if (!IsDialogueActive) return;
-        Debug.Log("Not active");
         if (dialogueUI == null) return;
-        Debug.Log("not null");
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
@@ -98,7 +95,6 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Dialogue Starting");
         if (isDialogueWaiting)
         {Debug.Log("Waiting");
-            IsDialogueActive = true;
             waitingID = objID;
             waitingNum = dialogueNum;
             return;
