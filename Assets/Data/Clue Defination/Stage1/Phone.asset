@@ -16,5 +16,6 @@ MonoBehaviour:
   title: Vera's Phone
   description: She must have left it behind. The screen lights up but requires a
     password. Several unread notifications are visible.
-  icon: {fileID: 0}
+  icon: {fileID: -1674583465, guid: cc562183e9557e34385bb6c410ea4894, type: 3}
   category: 
+  clueAudioClip: {fileID: 0}
