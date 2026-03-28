@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -44,6 +45,10 @@ public class PianoMinigameUI : MonoBehaviour
     [SerializeField] private int[] targetMelody;
     [SerializeField] private UnityEvent onSolved;
 
+    [Header("Visual Feedback")]
+    [SerializeField] private float keyFlashDuration = 0.10f;
+    [SerializeField] private Vector3 pressedScale = new Vector3(0.96f, 0.96f, 1f);
+
     private readonly string[] noteNames =
     {
         "Do", "Re", "Mi", "Fa", "So", "La", "Ti", "Do"
@@ -57,57 +62,35 @@ public class PianoMinigameUI : MonoBehaviour
 
     private void Awake()
     {
-        Log("Awake() called.");
-        ValidateReferences("Awake");
-
         if (panel != null)
         {
             panel.SetActive(false);
-            Log("Panel was set inactive in Awake().");
-        }
-        else
-        {
-            LogWarning("Panel is NULL in Awake(). Piano UI cannot open.");
         }
     }
 
     private void Start()
     {
-        Log("Start() called.");
         SetupButtons();
         UpdateHint("Click the keys or press 1-8.");
         UpdatePlayedText();
-        ValidateReferences("Start");
+        Log("Start finished. Buttons bound.");
     }
 
     private void Update()
     {
         if (!isOpen) return;
 
-        if (keyInputs == null)
-        {
-            LogWarning("keyInputs is NULL.");
-            return;
-        }
-
-        if (noteClips == null)
-        {
-            LogWarning("noteClips is NULL.");
-            return;
-        }
-
         for (int i = 0; i < keyInputs.Length && i < noteClips.Length; i++)
         {
             if (Input.GetKeyDown(keyInputs[i]))
             {
-                Log($"Keyboard input detected: {keyInputs[i]} -> note index {i} ({GetNoteName(i)})");
-                PlayNote(i);
+                Log($"Keyboard pressed: {keyInputs[i]} -> {GetNoteName(i)}");
+                TriggerNote(i, true);
             }
         }
 
         if (Input.GetKeyDown(closeKey) || Input.GetKeyDown(altCloseKey))
         {
-            Log($"Close key pressed. closeKey={closeKey}, altCloseKey={altCloseKey}");
             Close();
         }
     }
@@ -116,11 +99,9 @@ public class PianoMinigameUI : MonoBehaviour
     {
         if (noteButtons == null)
         {
-            LogWarning("noteButtons array is NULL in SetupButtons().");
+            LogWarning("noteButtons is NULL.");
             return;
         }
-
-        Log($"SetupButtons() called. noteButtons length = {noteButtons.Length}");
 
         for (int i = 0; i < noteButtons.Length; i++)
         {
@@ -133,9 +114,43 @@ public class PianoMinigameUI : MonoBehaviour
             }
 
             noteButtons[i].onClick.RemoveAllListeners();
-            noteButtons[i].onClick.AddListener(() => PlayNote(index));
+            noteButtons[i].onClick.AddListener(() => OnNoteButtonClicked(index));
 
-            Log($"Bound button [{i}] '{noteButtons[i].name}' to note index {index} ({GetNoteName(index)}).");
+            Log($"Bound button [{i}] -> {GetNoteName(i)}");
+        }
+    }
+
+    private void OnNoteButtonClicked(int index)
+    {
+        Log($"Mouse clicked button index {index} ({GetNoteName(index)})");
+        TriggerNote(index, false);
+    }
+
+    private void TriggerNote(int index, bool fromKeyboard)
+    {
+        if (!isOpen)
+        {
+            LogWarning("TriggerNote ignored because piano is not open.");
+            return;
+        }
+
+        if (index < 0 || noteClips == null || index >= noteClips.Length)
+        {
+            LogError($"Invalid note index: {index}");
+            return;
+        }
+
+        PlayNote(index);
+
+        if (index >= 0 && noteButtons != null && index < noteButtons.Length && noteButtons[index] != null)
+        {
+            StartCoroutine(FlashButton(noteButtons[index]));
+        }
+
+        if (fromKeyboard && noteButtons != null && index < noteButtons.Length && noteButtons[index] != null)
+        {
+
+            noteButtons[index].Select();
         }
     }
 
@@ -150,36 +165,23 @@ public class PianoMinigameUI : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(true);
-            Log($"Panel '{panel.name}' activated successfully.");
-        }
-        else
-        {
-            LogError("Panel is NULL in Open(). Cannot show piano UI.");
         }
 
         if (playerMovementScript != null)
         {
-            Log($"Disabling player movement script: {playerMovementScript.GetType().Name}");
             playerMovementScript.enabled = false;
-        }
-        else
-        {
-            LogWarning("playerMovementScript is NULL in Open(). Player will still be able to move.");
         }
 
         if (useTargetMelody && targetMelody != null && targetMelody.Length > 0)
         {
             UpdateHint("Play the correct melody.");
-            Log($"Melody mode ON. Target melody length = {targetMelody.Length}");
         }
         else
         {
-            UpdateHint("Click the keys or press 1-8.");
-            Log("Melody mode OFF. Free play mode.");
+            UpdateHint("Press 1-8 to play the piano.");
         }
 
         UpdatePlayedText();
-        ValidateReferences("Open");
     }
 
     public void Close()
@@ -191,27 +193,16 @@ public class PianoMinigameUI : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(false);
-            Log($"Panel '{panel.name}' deactivated successfully.");
-        }
-        else
-        {
-            LogWarning("Panel is NULL in Close().");
         }
 
         if (playerMovementScript != null)
         {
             playerMovementScript.enabled = true;
-            Log($"Re-enabled player movement script: {playerMovementScript.GetType().Name}");
-        }
-        else
-        {
-            LogWarning("playerMovementScript is NULL in Close().");
         }
     }
 
     public void ClearPlayedNotes()
     {
-        Log("ClearPlayedNotes() called.");
         playedNotes.Clear();
         UpdateHint("Sequence cleared.");
         UpdatePlayedText();
@@ -219,44 +210,19 @@ public class PianoMinigameUI : MonoBehaviour
 
     private void PlayNote(int index)
     {
-        Log($"PlayNote({index}) called. isOpen={isOpen}");
+        if (!isOpen) return;
 
-        if (!isOpen)
+        if (audioSource != null && noteClips != null && index >= 0 && index < noteClips.Length && noteClips[index] != null)
         {
-            LogWarning("PlayNote() ignored because piano UI is not open.");
-            return;
-        }
-
-        if (noteClips == null)
-        {
-            LogError("noteClips array is NULL.");
-            return;
-        }
-
-        if (index < 0 || index >= noteClips.Length)
-        {
-            LogError($"PlayNote() index out of range. index={index}, noteClips.Length={noteClips.Length}");
-            return;
-        }
-
-        AudioClip clip = noteClips[index];
-
-        if (audioSource == null)
-        {
-            LogError("audioSource is NULL. No sound will play.");
-        }
-        else if (clip == null)
-        {
-            LogError($"noteClips[{index}] is NULL. No sound assigned for {GetNoteName(index)}.");
+            audioSource.PlayOneShot(noteClips[index]);
+            Log($"Played sound: {GetNoteName(index)}");
         }
         else
         {
-            audioSource.PlayOneShot(clip);
-            Log($"Played note: index={index}, name={GetNoteName(index)}, clip={clip.name}");
+            LogWarning($"Could not play sound for note index {index}. Check audioSource / noteClips.");
         }
 
         playedNotes.Add(index);
-        Log($"Current played count = {playedNotes.Count}");
         UpdatePlayedText();
 
         if (useTargetMelody)
@@ -267,33 +233,13 @@ public class PianoMinigameUI : MonoBehaviour
 
     private void CheckMelody()
     {
-        Log("CheckMelody() called.");
-
-        if (isSolved)
-        {
-            Log("Melody already solved. Check skipped.");
-            return;
-        }
-
-        if (targetMelody == null || targetMelody.Length == 0)
-        {
-            LogWarning("Target melody is NULL or empty.");
-            return;
-        }
+        if (isSolved) return;
+        if (targetMelody == null || targetMelody.Length == 0) return;
 
         int currentIndex = playedNotes.Count - 1;
 
-        if (currentIndex < 0)
-        {
-            LogWarning("CheckMelody() called but no notes have been played.");
-            return;
-        }
-
-        Log($"Comparing playedNotes[{currentIndex}]={playedNotes[currentIndex]} with targetMelody[{currentIndex}]={targetMelody[currentIndex]}");
-
         if (currentIndex >= targetMelody.Length)
         {
-            LogWarning("Played sequence is longer than target melody. Resetting.");
             playedNotes.Clear();
             UpdateHint("Wrong melody. Try again.");
             UpdatePlayedText();
@@ -302,7 +248,6 @@ public class PianoMinigameUI : MonoBehaviour
 
         if (playedNotes[currentIndex] != targetMelody[currentIndex])
         {
-            LogWarning($"Wrong note at position {currentIndex}. Expected {GetNoteName(targetMelody[currentIndex])}, got {GetNoteName(playedNotes[currentIndex])}. Resetting.");
             playedNotes.Clear();
             UpdateHint("Wrong melody. Try again.");
             UpdatePlayedText();
@@ -313,12 +258,38 @@ public class PianoMinigameUI : MonoBehaviour
         {
             isSolved = true;
             UpdateHint("Success!");
-            Log("Target melody solved successfully. Invoking onSolved event.");
+            Log("Melody solved.");
             onSolved?.Invoke();
         }
-        else
+    }
+
+    private IEnumerator FlashButton(Button button)
+    {
+        if (button == null) yield break;
+
+        RectTransform rect = button.transform as RectTransform;
+        if (rect == null) yield break;
+
+        Vector3 originalScale = rect.localScale;
+        rect.localScale = pressedScale;
+
+        Image img = button.targetGraphic as Image;
+        Color originalColor = Color.white;
+        bool hasImage = img != null;
+
+        if (hasImage)
         {
-            Log($"Melody progress OK: {playedNotes.Count}/{targetMelody.Length}");
+            originalColor = img.color;
+            img.color = new Color(originalColor.r * 0.85f, originalColor.g * 0.85f, originalColor.b * 0.85f, originalColor.a);
+        }
+
+        yield return new WaitForSeconds(keyFlashDuration);
+
+        rect.localScale = originalScale;
+
+        if (hasImage)
+        {
+            img.color = originalColor;
         }
     }
 
@@ -327,26 +298,16 @@ public class PianoMinigameUI : MonoBehaviour
         if (hintText != null)
         {
             hintText.text = message;
-            Log($"Hint updated: {message}");
-        }
-        else
-        {
-            LogWarning($"hintText is NULL. Cannot show hint: {message}");
         }
     }
 
     private void UpdatePlayedText()
     {
-        if (playedText == null)
-        {
-            LogWarning("playedText is NULL. Played sequence will not be displayed.");
-            return;
-        }
+        if (playedText == null) return;
 
         if (playedNotes.Count == 0)
         {
             playedText.text = "Played: (none)";
-            Log("Played text updated: Played: (none)");
             return;
         }
 
@@ -372,59 +333,6 @@ public class PianoMinigameUI : MonoBehaviour
         }
 
         playedText.text = result;
-        Log($"Played text updated: {result}");
-    }
-
-    private void ValidateReferences(string fromMethod)
-    {
-        Log($"ValidateReferences() from {fromMethod}");
-
-        if (panel == null)
-            LogWarning("panel is NULL.");
-        else
-            Log($"panel = {panel.name}");
-
-        if (noteButtons == null)
-            LogWarning("noteButtons is NULL.");
-        else
-            Log($"noteButtons length = {noteButtons.Length}");
-
-        if (hintText == null)
-            LogWarning("hintText is NULL.");
-        else
-            Log($"hintText = {hintText.name}");
-
-        if (playedText == null)
-            LogWarning("playedText is NULL.");
-        else
-            Log($"playedText = {playedText.name}");
-
-        if (audioSource == null)
-            LogWarning("audioSource is NULL.");
-        else
-            Log($"audioSource = {audioSource.name}");
-
-        if (noteClips == null)
-            LogWarning("noteClips is NULL.");
-        else
-            Log($"noteClips length = {noteClips.Length}");
-
-        if (playerMovementScript == null)
-            LogWarning("playerMovementScript is NULL.");
-        else
-            Log($"playerMovementScript = {playerMovementScript.GetType().Name} on {playerMovementScript.gameObject.name}");
-
-        if (useTargetMelody)
-        {
-            if (targetMelody == null)
-            {
-                LogWarning("useTargetMelody is ON, but targetMelody is NULL.");
-            }
-            else
-            {
-                Log($"targetMelody length = {targetMelody.Length}");
-            }
-        }
     }
 
     private string GetNoteName(int index)
@@ -437,19 +345,19 @@ public class PianoMinigameUI : MonoBehaviour
 
     private void Log(string message)
     {
-        if (!enableDebugLogs) return;
-        Debug.Log($"[PianoMinigameUI] {message}", this);
+        if (enableDebugLogs)
+            Debug.Log($"[PianoMinigameUI] {message}", this);
     }
 
     private void LogWarning(string message)
     {
-        if (!enableDebugLogs) return;
-        Debug.LogWarning($"[PianoMinigameUI] {message}", this);
+        if (enableDebugLogs)
+            Debug.LogWarning($"[PianoMinigameUI] {message}", this);
     }
 
     private void LogError(string message)
     {
-        if (!enableDebugLogs) return;
-        Debug.LogError($"[PianoMinigameUI] {message}", this);
+        if (enableDebugLogs)
+            Debug.LogError($"[PianoMinigameUI] {message}", this);
     }
 }

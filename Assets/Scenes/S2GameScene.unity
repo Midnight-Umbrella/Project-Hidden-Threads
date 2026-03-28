@@ -2360,7 +2360,7 @@ RectTransform:
   m_Father: {fileID: 1461643736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3592,7 +3592,7 @@ GameObject:
   - component: {fileID: 257791087}
   - component: {fileID: 257791086}
   m_Layer: 0
-  m_Name: HiddenItem
+  m_Name: HiddenMelodyClue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3671,7 +3671,7 @@ Transform:
   m_GameObject: {fileID: 257791085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.71, y: 1.59, z: 0}
+  m_LocalPosition: {x: 36.29, y: -2.96, z: 0}
   m_LocalScale: {x: 1.1869, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8825,7 +8825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1076412821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8858,9 +8858,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1076412820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53cf55db95b047d489e9e3a5f7ab1674, type: 3}
+  m_Script: {fileID: 11500000, guid: 480e6f3ffc2cd0d48b576c31ec7996e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 819288685}
+  trackerPanel: {fileID: 1076412820}
+  arrowUI: {fileID: 578121114}
+  targetNameText: {fileID: 1280600671}
+  signalText: {fileID: 1822716499}
+  signalSlider: {fileID: 1267017542}
+  maxDetectDistance: 12
+  strongDistance: 5
+  veryStrongDistance: 1.5
 --- !u!114 &1076412823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8932,7 +8941,7 @@ RectTransform:
   m_Father: {fileID: 497457125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19478,14 +19487,14 @@ MonoBehaviour:
   playedText: {fileID: 0}
   audioSource: {fileID: 2015038747}
   noteClips:
-  - {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 9a786522e66d2c14491013da299ea84f, type: 3}
+  - {fileID: 8300000, guid: 38f48c6f60d8371488e56406e5e928e1, type: 3}
+  - {fileID: 8300000, guid: 001815d3238a5bf4f88871b6260b0947, type: 3}
+  - {fileID: 8300000, guid: 273b2831eefc1e5418579544fcea6076, type: 3}
+  - {fileID: 8300000, guid: 4c22836909309fe44a4af91922a1662c, type: 3}
+  - {fileID: 8300000, guid: 303dbb97b05ac0b4b8a19b88c444184e, type: 3}
+  - {fileID: 8300000, guid: f5f5a59c7b18c104ebeb2d8c6414d197, type: 3}
+  - {fileID: 8300000, guid: 40539d61a9ab63c4788457c929d53769, type: 3}
   keyInputs: 3100000032000000330000003400000035000000360000003700000038000000
   closeKey: 27
   altCloseKey: 102
@@ -19495,6 +19504,8 @@ MonoBehaviour:
   onSolved:
     m_PersistentCalls:
       m_Calls: []
+  keyFlashDuration: 0.1
+  pressedScale: {x: 0.96, y: 0.96, z: 1}
 --- !u!82 &2015038747
 AudioSource:
   m_ObjectHideFlags: 0
