@@ -43,12 +43,12 @@ CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the ha
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
 CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera’s Phone
 CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera’s.,Sticky Note
-npc1,0,Harper/Bargoer,conversation,Harper:"(have you seen my friend?)"|Bargoer:"(no)"
-npc2,0,Harper/Bargoer,conversation,Harper:"(have you seen my friend?)"|Bargoer:"(no)"
-bartender,0,Harper/Bartender,conversation,Harper:"(have you seen my friend?)"|Bartender:"(yes with tall suit man. they left early. they might have left something in the lost and found)"
-lost_and_found,0,Harper,internal,"(people lose a lot of stuff here)"
-lost_and_found,1,Harper,internal,"(looks like veras jacket. theres a note inside)"
-locked_convo,0,Harper,Internal,"(Whos this she's texting? Whats this about a warehouse?)"
+npc1,0,Harper/Bargoer,conversation,Harper:"Hello. I'm looking for my friend Vera. Have you seen them?"|Bargoer:"No I haven't. Sorry"
+bartender,0,Harper/Bartender,conversation,Harper:"Hello. I'm looking for my friend Vera. Have you seen them?"|Bartender:"Yeah she was in here earlier. She left with a tall man in suit"|Harper:"Do you know where they went?"|Bartender:"No sorry. I think she left her jacket here though. You should check the lost and found"|Harper:"Thank you!"
+lost_and_found,0,Harper,internal,"Hmm... people lose lots of stuff here"
+lost_and_found,1,Harper,internal,"It sure looks like Veras coat. Is that a note in the pocket?"|"It looks like a password. I wonder if it could be for that locked text conversation"
+locked_convo,0,Harper,Internal,"Who's this 'Mr. Crocker' guy? And whats this about a warehouse?"
 strange_man,0,Harper/Strange Man,conversation,Harper:"Hello. Have you seen my friend Vera?"|Strange Man:"I think I saw her in here a little while ago"|Harper:"You did?! Do you know where she went?"|Strange Man:"No idea. She just kept talking about forgetting her phone at home"|Harper:"Yeah. I found it. I thought it would make finding her easier"|Harper:"It hasn't been very useful so far though"|Strange Man: "You might be able to use it to track her"|Harper:"What do you mean?"|Strange Man:"She might have had a tracker on her that you can access through the phone. I could show you how to use it"|Strange Man:"If you do something for me. I lost my favourite poster in this alleyway a while ago"|Strange Man:"Bring me the poster and I'll show you how to use the GPS"
 strange_man,1,Harper/Strange Man,conversation,Harper:"Here you go"|Strange Man:"Alright I'll set it up for you"
-louise,0,Harper/Louise,conversation,(conversation here)
+garbage_pile,0,Harper,internal,"Theres a poster in this garbage"
+louise,0,Harper/Louise,conversation,Harper:"Louise… Vera is missing."|Louise:"Missing? That doesn’t sound like her."|Harper:"Have you heard from her?"|Louise:"No… but she mentioned meeting someone recently."|Harper:"Who?"|Louise:"She didn’t say. Just that it was important."|Harper:"Something’s wrong. I can feel it."|Louise:"Then I’ll help you figure it out. Have you figured out where she might be?"|Harper:"Not exactly. I think she might be at a warehouse but I don't know where"|Louise:"Hmm... Sometimes she hangs out at the warehouse on 5th street. Lets look there"

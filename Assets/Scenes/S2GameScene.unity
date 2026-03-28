@@ -2446,6 +2446,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &152379228
 Rigidbody2D:
   serializedVersion: 4
@@ -3441,6 +3445,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &240290403
 Rigidbody2D:
   serializedVersion: 4
@@ -3745,6 +3753,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 1
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &319721178
 Rigidbody2D:
   serializedVersion: 4
@@ -3928,6 +3940,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &323479652
 Rigidbody2D:
   serializedVersion: 4
@@ -4269,6 +4285,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &456946363
 Rigidbody2D:
   serializedVersion: 4
@@ -4796,6 +4816,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &556572787
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8157,7 +8181,7 @@ Transform:
   m_GameObject: {fileID: 985275256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.13, y: -2.19, z: -10}
+  m_LocalPosition: {x: 29.2, y: -2.21, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9665,7 +9689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objID: strange_man
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  previousClue: {fileID: 0}
+  previousClue: {fileID: 11400000, guid: 484299540c37f204e902fef0eb08f53e, type: 2}
   preDialogueNum: 0
   clue: {fileID: 0}
   dialogueNum: 1
@@ -9674,7 +9698,11 @@ MonoBehaviour:
   inspectClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
   inspectVolume: 1
   isClue: 0
-  delayCluePrompt: 0
+  delayCluePrompt: 1
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1169803445
 Rigidbody2D:
   serializedVersion: 4
@@ -9858,6 +9886,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1173109316
 Rigidbody2D:
   serializedVersion: 4
@@ -10006,10 +10038,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1184565385}
-  - component: {fileID: 1184565384}
   - component: {fileID: 1184565383}
   - component: {fileID: 1184565386}
-  - component: {fileID: 1184565387}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -10029,32 +10059,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e55f3c4b5b774a4f93e271664c2f946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueUI: {fileID: 1184565384}
+  dialogueUI: {fileID: 1399965159}
   dialogueCSV: {fileID: 4900000, guid: 12d35cf18df00bb47901fd99bced32af, type: 3}
   ignoreNextKeyPress: 0
   isDialogueWaiting: 0
---- !u!114 &1184565384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184565382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8469d613b6e3c489cae308a9cedc0ff4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1399965155}
-  dialogueText: {fileID: 2102776531}
-  speakerName: {fileID: 1551716755}
-  typingSpeed: 0.03
-  garbleClips:
-  - {fileID: 8300000, guid: f5fad207355a6be4ba1167307b10f46c, type: 3}
-  dialogueAudioSource: {fileID: 819288686}
-  garbleVolume: 0.5
-  pitchVariation: 0.2
-  soundFrequency: 1
 --- !u!4 &1184565385
 Transform:
   m_ObjectHideFlags: 0
@@ -10082,24 +10090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b56eeac82143ec4faf0fd7f3004cf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1184565387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184565382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22bc63e3427c01e48bb6cc13a1cb551c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  musicGroup: {fileID: 0}
-  sfxGroup: {fileID: 0}
-  uiClickClip: {fileID: 0}
-  sceneMusics: []
 --- !u!1 &1185199315
 GameObject:
   m_ObjectHideFlags: 0
@@ -10468,6 +10458,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6049601328106699696, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10662,6 +10672,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1235795084
 Rigidbody2D:
   serializedVersion: 4
@@ -10904,7 +10918,7 @@ GameObject:
   - component: {fileID: 1275044313}
   - component: {fileID: 1275044312}
   - component: {fileID: 1275044311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GarbagePile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10926,15 +10940,19 @@ MonoBehaviour:
   objID: garbage_pile
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
   previousClue: {fileID: 0}
-  preDialogueNum: 0
+  preDialogueNum: 
   clue: {fileID: 0}
-  dialogueNum: 1
+  dialogueNum: 0
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 484299540c37f204e902fef0eb08f53e, type: 2}
   inspectClip: {fileID: 0}
   inspectVolume: 1
   isClue: 0
-  delayCluePrompt: 0
+  delayCluePrompt: 1
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1275044312
 Rigidbody2D:
   serializedVersion: 4
@@ -12512,6 +12530,7 @@ GameObject:
   - component: {fileID: 1399965156}
   - component: {fileID: 1399965158}
   - component: {fileID: 1399965157}
+  - component: {fileID: 1399965159}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -12578,6 +12597,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399965155}
   m_CullTransparentMesh: 1
+--- !u!114 &1399965159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399965155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8469d613b6e3c489cae308a9cedc0ff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1399965155}
+  dialogueText: {fileID: 2102776531}
+  speakerName: {fileID: 1551716755}
+  typingSpeed: 0.03
+  garbleClips:
+  - {fileID: 8300000, guid: f5fad207355a6be4ba1167307b10f46c, type: 3}
+  dialogueAudioSource: {fileID: 819288686}
+  garbleVolume: 0.5
+  pitchVariation: 0.2
+  soundFrequency: 1
 --- !u!114 &1408813744 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 814527753496406941, guid: a92ae9e056cde114f94457f893a62785, type: 3}
@@ -15551,6 +15592,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1528092243
 Rigidbody2D:
   serializedVersion: 4
@@ -17780,6 +17825,8 @@ GameObject:
   - component: {fileID: 1811216031}
   - component: {fileID: 1811216030}
   - component: {fileID: 1811216029}
+  - component: {fileID: 1811216034}
+  - component: {fileID: 1811216035}
   m_Layer: 3
   m_Name: Louise
   m_TagString: Untagged
@@ -17811,6 +17858,22 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 1
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1811216035}
+        m_TargetAssemblyTypeName: StageExitTrigger, Assembly-CSharp
+        m_MethodName: manualTransmission
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &1811216030
 Rigidbody2D:
   serializedVersion: 4
@@ -17870,18 +17933,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0073001683, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.44, y: 0.92}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48894042, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &1811216032
 SpriteRenderer:
@@ -17924,8 +17987,8 @@ SpriteRenderer:
   m_SortingLayerID: 806239857
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 1, a: 1}
+  m_Sprite: {fileID: 318201494, guid: 860e668fb4951ec4f99d989a68df0357, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17944,12 +18007,41 @@ Transform:
   m_GameObject: {fileID: 1811216028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.759998, y: -15.81, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
+  m_LocalPosition: {x: 34.19, y: -0.73, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811216034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811216028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1903af8ace3e82d4198f4a6cf50418e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+  requiredClue: {fileID: 11400000, guid: ec87fa6ef0bcc3c40b8cb1cd9253b58f, type: 2}
+--- !u!114 &1811216035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811216028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 978ec1deeaa242747800106a33b4e2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  nextSceneName: S3GameScene
+  transitionSceneName: TransitionScene
 --- !u!1 &1822716497
 GameObject:
   m_ObjectHideFlags: 0
@@ -18901,6 +18993,10 @@ MonoBehaviour:
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
+  isEventTrigger: 0
+  triggeredEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1908678013
 Rigidbody2D:
   serializedVersion: 4
@@ -19611,7 +19707,19 @@ MonoBehaviour:
   targetMelody: 
   onSolved:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811216034}
+        m_TargetAssemblyTypeName: appearsAfterCondition, Assembly-CSharp
+        m_MethodName: pianoDone
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   keyFlashDuration: 0.1
   pressedScale: {x: 0.96, y: 0.96, z: 1}
 --- !u!82 &2015038747
@@ -19877,7 +19985,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053970093}
-  - component: {fileID: 2053970092}
   - component: {fileID: 2053970091}
   m_Layer: 0
   m_Name: ClueJournal
@@ -19899,20 +20006,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpActive: 0
---- !u!114 &2053970092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053970090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99d83fe8314e2504bb2bc707972ff69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clueA: {fileID: 11400000, guid: 4cc68f2c5613d1b48ac794fc0718b64a, type: 2}
-  clueB: {fileID: 11400000, guid: dcf8be7bab6f2014188d8f713a5b8a68, type: 2}
 --- !u!4 &2053970093
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: gps
   title: GPS Tracking
-  description: (she has a tag in her purse, maybe I can track her)
+  description: the Strange Man explained the GPS tag could be used to track Vera.
   icon: {fileID: 0}
   category: 
+  clueAudioClip: {fileID: 0}

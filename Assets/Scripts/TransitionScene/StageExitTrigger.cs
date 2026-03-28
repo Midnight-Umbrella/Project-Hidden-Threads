@@ -18,5 +18,17 @@ public class StageExitTrigger : MonoBehaviour
 
         SceneTransitionData.NextSceneName = nextSceneName;
         SceneManager.LoadScene(transitionSceneName);
+        DialogueManager.Instance.Reset();
+    }
+
+    public void manualTransmission()
+    {Debug.Log("triggered");
+        if (triggered) return;
+
+        triggered = true;
+
+        SceneTransitionData.NextSceneName = nextSceneName;
+        SceneManager.LoadScene(transitionSceneName);
+        DialogueManager.Instance.Reset();
     }
 }

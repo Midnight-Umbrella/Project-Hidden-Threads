@@ -32,12 +32,6 @@ public class CluePickup : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (_inRange && !_picked && Input.GetKeyDown(interactKey))
-            TryPickup();
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (_picked) return;

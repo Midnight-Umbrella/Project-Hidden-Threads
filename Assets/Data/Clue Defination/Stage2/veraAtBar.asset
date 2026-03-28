@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: vera_at_bar
   title: Vera was here
-  description: (bartender saw vera, might be soemthing in the lost and found)
+  description: Bartender saw Vera that night with a tall man in a suit; mentions
+    lost and found.
   icon: {fileID: 0}
   category: 
+  clueAudioClip: {fileID: 0}

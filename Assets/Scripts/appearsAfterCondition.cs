@@ -5,25 +5,21 @@ using UnityEngine;
 public class appearsAfterCondition : MonoBehaviour
 {
     [SerializeField] Inventory inventory;
-    [SerializeField] List<ClueDefinition> requiredClues = new List<ClueDefinition>();
+    [SerializeField] ClueDefinition requiredClue;
+    private bool isPianoDone;
 
     void Awake()
     {
         gameObject.SetActive(false);
     }
+
+    public void pianoDone()
+    {
+        isPianoDone = true;
+    }
     void Update()
     {
-        bool hasClues = true;
-        foreach (ClueDefinition clue in requiredClues)
-        {
-            if (!inventory.Contains(clue))
-            {
-                hasClues = false;
-                break;
-            }
-        }
-
-        if (hasClues)
+        if (inventory.Contains(requiredClue) && isPianoDone)
         {
             gameObject.SetActive(true);
         }
