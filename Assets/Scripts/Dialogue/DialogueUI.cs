@@ -122,7 +122,7 @@ public class DialogueUI : MonoBehaviour
         foreach (char c in fullText)
         {
             dialogueText.text += c;
-            if (dialogueAudioSource != null && garbleClips.Length > 0 && char.IsWhiteSpace(c) && charIndex % soundFrequency == 0) // Play sound on every 2nd whitespace character for variation
+            if (dialogueAudioSource != null && garbleClips.Length > 0 && !char.IsWhiteSpace(c) && charIndex % soundFrequency == 0) // Play sound on every 2nd whitespace character for variation
             {
                 AudioClip clip = garbleClips[Random.Range(0, garbleClips.Length)];
                 dialogueAudioSource.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
