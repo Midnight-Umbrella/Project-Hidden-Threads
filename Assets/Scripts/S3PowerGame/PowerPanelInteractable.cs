@@ -21,6 +21,10 @@ public class PowerPanelInteractable : MonoBehaviour
 
         if (Input.GetKeyDown(interactKey))
         {
+
+            if (interactPrompt != null)
+                interactPrompt.SetActive(false);
+
             Stage3PowerManager.Instance.OpenMiniGame();
         }
     }
