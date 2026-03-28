@@ -15,5 +15,6 @@ MonoBehaviour:
   id: veras_fav_food
   title: Vera's Favourite Food
   description: Apples, of course! Shes always leaving them around.
-  icon: {fileID: 0}
+  icon: {fileID: 1602043671, guid: 3dd41bfa0a64f9b4dad094bad45a0c9b, type: 3}
   category: 
+  clueAudioClip: {fileID: 0}
