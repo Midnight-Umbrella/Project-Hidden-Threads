@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 69254445}
   - component: {fileID: 69254446}
   - component: {fileID: 69254448}
+  - component: {fileID: 69254449}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -374,8 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  playerSound: {fileID: 0}
-  playerFootstep: {fileID: 8300000, guid: e2a7d3156a773904b960a3d54c02fe0b, type: 3}
+  playerSound: {fileID: 69254449}
+  playerFootstep: {fileID: 8300000, guid: 14a81401bb70a634fb614d39260a7017, type: 3}
   footstepInterval: 0.4
   sr: {fileID: 69254442}
   walkRight:
@@ -499,6 +500,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+--- !u!82 &69254449
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69254439}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &93447426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1470,7 @@ GameObject:
   - component: {fileID: 298772083}
   - component: {fileID: 298772087}
   - component: {fileID: 298772088}
+  - component: {fileID: 298772089}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Untagged
@@ -1537,8 +1635,8 @@ MonoBehaviour:
   lockedDialogueNum: 0
   unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  doorOpenClip: {fileID: 0}
-  doorLockedClip: {fileID: 0}
+  doorOpenClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
+  doorLockedClip: {fileID: 8300000, guid: 59eb357dcd9eaf54c9283a48759e4849, type: 3}
   sfxVolume: 1
 --- !u!114 &298772088
 MonoBehaviour:
@@ -1553,6 +1651,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
+--- !u!82 &298772089
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298772082}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &392438091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,7 +2043,7 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
-  cluePickupClip: {fileID: 0}
+  cluePickupClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
   sfxVolume: 1
   cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
@@ -2746,7 +2940,7 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
-  cluePickupClip: {fileID: 0}
+  cluePickupClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
   sfxVolume: 1
   cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
@@ -3483,7 +3677,6 @@ GameObject:
   - component: {fileID: 636193856}
   - component: {fileID: 636193861}
   - component: {fileID: 636193860}
-  - component: {fileID: 636193862}
   m_Layer: 0
   m_Name: CoreSystems
   m_TagString: Untagged
@@ -3538,29 +3731,12 @@ MonoBehaviour:
   dialogueText: {fileID: 716451301}
   speakerName: {fileID: 706138817}
   typingSpeed: 0.03
-  garbleClips: []
-  dialogueAudioSource: {fileID: 0}
+  garbleClips:
+  - {fileID: 8300000, guid: f5fad207355a6be4ba1167307b10f46c, type: 3}
+  dialogueAudioSource: {fileID: 69254449}
   garbleVolume: 0.5
   pitchVariation: 0.2
-  soundFrequency: 1
---- !u!114 &636193862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636193855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22bc63e3427c01e48bb6cc13a1cb551c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  musicGroup: {fileID: 0}
-  sfxGroup: {fileID: 0}
-  uiClickClip: {fileID: 0}
-  sceneMusics: []
+  soundFrequency: 2
 --- !u!1 &703978166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,7 +4225,7 @@ MonoBehaviour:
   interactKey: 102
   playerTag: Player
   destroyOnPickup: 1
-  cluePickupClip: {fileID: 0}
+  cluePickupClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
   sfxVolume: 1
   cluePickupSource: {fileID: 0}
   floatingFPrompt: {fileID: 2444755768999228764, guid: 608e3b7e20b2526429047ac22a1b9a61, type: 3}
@@ -9165,7 +9341,7 @@ MonoBehaviour:
   dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
-  inspectClip: {fileID: 0}
+  inspectClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 0
