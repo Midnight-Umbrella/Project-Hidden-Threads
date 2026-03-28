@@ -27,7 +27,9 @@ public class CluePickup : MonoBehaviour
     private void Start()
     {
         if (floatingFPrompt != null)
-            floatingFPrompt.SetActive(false);
+        {
+            Destroy(floatingFPrompt); 
+        }
     }
 
     private void Update()
