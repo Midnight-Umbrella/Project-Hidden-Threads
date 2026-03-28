@@ -64,6 +64,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        if (!IsDialogueActive) return;
+        if (dialogueUI == null) return;
         if (!isDialogueWaiting && waitingID != null)
         {Debug.Log("restarting");
             StartDialogue(waitingID, waitingNum);
@@ -208,8 +210,10 @@ public class DialogueManager : MonoBehaviour
         ignoreNextKeyPress = true;
 
         if (dialogueUI != null)
+        {
             dialogueUI.Hide();
-
+            AudioController.Instance.StopAllSFX();
+        }
         dialogue = new string[0];
         dialogueLine = new string[0];
         currentLine = 0;
