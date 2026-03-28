@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cc562183e9557e34385bb6c410ea4894
+guid: 597671de5d6060f4bad773ad2e4a065d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Missing Piece - Calendar, crumpled note, garbage can, phone_0
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 171
-        width: 56
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5849bd81df7ccee41bd9a2aec7a8c4d6
-      internalID: 2071853541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Missing Piece - Calendar, crumpled note, garbage can, phone_1
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 147
-        width: 68
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99971024010af0443bfd69d6da3a725b
-      internalID: -1674583465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Missing Piece - Calendar, crumpled note, garbage can, phone_2
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 53
-        width: 110
-        height: 81
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d9f2eaed2c58d4488ffb080dfec65dc
-      internalID: -1625890563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Missing Piece - Calendar, crumpled note, garbage can, phone_3
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 58
-        width: 56
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e5df30f5cf53164b81234772335f480
-      internalID: -97992184
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Missing Piece - Calendar, crumpled note, garbage can, phone_0: 2071853541
-      Missing Piece - Calendar, crumpled note, garbage can, phone_1: -1674583465
-      Missing Piece - Calendar, crumpled note, garbage can, phone_2: -1625890563
-      Missing Piece - Calendar, crumpled note, garbage can, phone_3: -97992184
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

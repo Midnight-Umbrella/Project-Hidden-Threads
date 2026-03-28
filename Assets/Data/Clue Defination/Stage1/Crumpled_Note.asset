@@ -17,5 +17,6 @@ MonoBehaviour:
   description: 'A crumpled piece of paper, hastily crumpled and partially smoothed
     out. Some words are smudged, but it looks like Vera''s writing. It reads: ''Potential
     hiding spots: Toilet, Fridge, Oven''.'
-  icon: {fileID: 0}
+  icon: {fileID: -97992184, guid: cc562183e9557e34385bb6c410ea4894, type: 3}
   category: 
+  clueAudioClip: {fileID: 0}
