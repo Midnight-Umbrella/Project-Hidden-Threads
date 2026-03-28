@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff954a801d204e46aaf8b10815b3502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  darkOverlay: {fileID: 0}
+  darkOverlay: {fileID: 256341297}
   miniGamePanel: {fileID: 262443149}
   bulbGlowObjects:
   - {fileID: 1237347922}
