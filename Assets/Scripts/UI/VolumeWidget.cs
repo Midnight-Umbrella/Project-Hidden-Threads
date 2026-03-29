@@ -2,11 +2,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public enum VolumeType
+{
+    Master,
+    Music,
+    SFX
+}
+
 public class VolumeWidget : MonoBehaviour
 {
     [Header("UI Refs")]
     [SerializeField] private Slider slider;
     [SerializeField] private TMP_Text valueText; 
+    [SerializeField] private VolumeType volumeType;
 
     private bool _ignore;
 
@@ -17,8 +25,22 @@ public class VolumeWidget : MonoBehaviour
 
         if (slider == null) slider = GetComponentInChildren<Slider>();
 
-        // Initialize UI Display 
-        SetUI(VolumeBus.Get());
+        // Initialize UI Display
+        float initialValue = 1f;
+        switch (volumeType)
+        {
+            case VolumeType.Master:
+                initialValue = SoundMixerManager.Instance.GetMasterVolume();
+                break;
+            case VolumeType.Music:
+                initialValue = SoundMixerManager.Instance.GetMusicVolume();
+                break;
+            case VolumeType.SFX:
+                initialValue = SoundMixerManager.Instance.GetSFXVolume();
+                break;
+        }
+
+        SetUI(initialValue);
 
         if (slider != null)
             slider.onValueChanged.AddListener(OnSliderChanged);
@@ -29,13 +51,28 @@ public class VolumeWidget : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (slider != null)
+            slider.onValueChanged.RemoveListener(OnSliderChanged);
         VolumeBus.OnChanged -= SetUI;
     }
 
     private void OnSliderChanged(float v)
     {
         if (_ignore) return;
-        VolumeBus.Set(v);
+        switch (volumeType)
+        {
+            case VolumeType.Master:
+                SoundMixerManager.Instance.SetMasterVolume(v);
+                break;
+            case VolumeType.Music:
+                SoundMixerManager.Instance.SetMusicVolume(v);
+                break;
+            case VolumeType.SFX:
+                SoundMixerManager.Instance.SetSFXVolume(v);
+                break;
+        }
+
+        SetUI(v);
     }
 
     private void SetUI(float v)
