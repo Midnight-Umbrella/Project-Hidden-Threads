@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: hidden_melody
   title: Hidden Melody
-  description: 
+  description: This looks like some sort of musical pattern. It reads "1-1-5-5-6-6-5-4-4-3-3-2-2-1".
   icon: {fileID: 0}
   category: 
   clueAudioClip: {fileID: 0}
