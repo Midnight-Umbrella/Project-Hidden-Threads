@@ -4737,8 +4737,8 @@ MonoBehaviour:
   dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: c03f87cd559947744b44b9d20d1892c9, type: 2}
-  inspectClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
-  inspectVolume: 1
+  inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0

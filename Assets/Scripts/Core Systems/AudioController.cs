@@ -150,7 +150,11 @@ public class AudioController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         activeSFX.Remove(source);
-        Destroy(source.gameObject);
+        if (source != null)
+        {
+            source.Stop();
+            Destroy(source.gameObject);
+        }
     }
 
     public IEnumerator FadeOutAllSFX(float duration)

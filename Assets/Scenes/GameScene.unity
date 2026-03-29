@@ -1307,7 +1307,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -2655,7 +2655,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: a402f3e08d5332c47b9bb78613a70a65, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.6
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: fd777aa472b913a4a94084f4a2aabe9c, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -4993,7 +4993,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: a402f3e08d5332c47b9bb78613a70a65, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -6293,7 +6293,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -6754,7 +6754,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -9588,8 +9588,8 @@ MonoBehaviour:
   dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 4a420f20d317a6442a851cb3f8ac08da, type: 2}
-  inspectClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
-  inspectVolume: 1
+  inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -10994,7 +10994,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -11180,8 +11180,8 @@ MonoBehaviour:
   dialogueNum: 1
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 6afc3af596787e045861ae4fe7f0424d, type: 2}
-  inspectClip: {fileID: 0}
-  inspectVolume: 1
+  inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -12336,7 +12336,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: a402f3e08d5332c47b9bb78613a70a65, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.6
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
@@ -14928,7 +14928,7 @@ MonoBehaviour:
   lockedDialogueNum: 0
   unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
-  doorOpenClip: {fileID: 0}
+  doorOpenClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
   doorLockedClip: {fileID: 0}
   sfxVolume: 1
 --- !u!61 &2080494063
@@ -15298,7 +15298,7 @@ MonoBehaviour:
   isNotPhysicalClue: 0
   nonPhysicalClue: {fileID: 0}
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
-  inspectVolume: 1
+  inspectVolume: 0.7
   isClue: 0
   delayCluePrompt: 0
   isEventTrigger: 0
