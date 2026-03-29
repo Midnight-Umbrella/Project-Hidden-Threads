@@ -100,18 +100,18 @@ public class Interactable : MonoBehaviour
 
             if (dialogueNum != null)
             {
-                if (objectAudioSource != null)
+                if (objectAudioSource != null && AudioController.Instance != null)
                     AudioController.Instance.PlaySFXOnSource(objectAudioSource, inspectClip, inspectVolume);
-                else
+                else if (AudioController.Instance != null)
                     AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
                 DialogueManager.Instance.StartDialogue(objID,dialogueNum);
             }
         }
         else if(preDialogueNum != null)
         {
-            if (objectAudioSource != null)
+            if (objectAudioSource != null && AudioController.Instance != null)
                     AudioController.Instance.PlaySFXOnSource(objectAudioSource, inspectClip, inspectVolume);
-                else
+                else if (AudioController.Instance != null)
                     AudioController.Instance.PlaySFXAtPosition(inspectClip, transform.position, inspectVolume);
             DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
         }

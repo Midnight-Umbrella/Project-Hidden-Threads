@@ -35,10 +35,6 @@ public class Door : MonoBehaviour
             {
                 // Unlocked door, just open
                 OpenDoor();
-                if (doorAudioSource != null)
-                    AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorOpenClip, sfxVolume);
-                else
-                    AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);
             }
             else if (inventory.Contains(clue))
             {
@@ -46,17 +42,13 @@ public class Door : MonoBehaviour
                 if (unlockedDialogueNum != null)
                     DialogueManager.Instance.StartDialogue(objID, unlockedDialogueNum);
                 OpenDoor();
-                if (doorAudioSource != null)
-                    AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorLockedClip, sfxVolume);
-                else
-                    AudioController.Instance.PlaySFXAtPosition(doorLockedClip, transform.position, sfxVolume);
             }
             else
             {
                 // Locked, no key
                 if (lockedDialogueNum != null)
                     DialogueManager.Instance.StartDialogue(objID, lockedDialogueNum);
-                if (doorAudioSource != null)
+                if (doorAudioSource != null && AudioController.Instance != null)
                     AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorLockedClip, sfxVolume);
                 else
                     AudioController.Instance.PlaySFXAtPosition(doorLockedClip, transform.position, sfxVolume);
@@ -68,7 +60,7 @@ public class Door : MonoBehaviour
     {
         sr.enabled = false;
         cd.enabled = false;
-        if (doorAudioSource != null)
+        if (doorAudioSource != null && AudioController.Instance != null)
             AudioController.Instance.PlaySFXOnSource(doorAudioSource, doorOpenClip, sfxVolume);
         else
             AudioController.Instance.PlaySFXAtPosition(doorOpenClip, transform.position, sfxVolume);

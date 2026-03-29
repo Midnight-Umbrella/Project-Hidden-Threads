@@ -21,8 +21,11 @@ public class PauseMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if ((Input.GetKeyDown(KeyCode.Escape)) || (Input.GetKeyDown(KeyCode.O)))
+        {
             TogglePause();
+            Debug.Log($"Pause Toggle Pressed, _isPaused = {_isPaused}");
+        }
     }
 
     public void TogglePause()
