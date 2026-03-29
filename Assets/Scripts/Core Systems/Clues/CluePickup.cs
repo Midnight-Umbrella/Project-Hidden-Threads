@@ -78,9 +78,9 @@ public class CluePickup : MonoBehaviour
         if (floatingFPrompt != null)
             floatingFPrompt.SetActive(false);
 
-        if (cluePickupSource != null)
+        if (cluePickupSource != null && AudioController.Instance != null)
             AudioController.Instance.PlaySFXOnSource(cluePickupSource, cluePickupClip, sfxVolume);
-        else
+        else if (AudioController.Instance != null)
             AudioController.Instance.PlaySFXAtPosition(cluePickupClip, transform.position, sfxVolume);
 
         if (destroyOnPickup) Destroy(gameObject);

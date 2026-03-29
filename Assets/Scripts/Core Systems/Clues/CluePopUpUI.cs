@@ -19,6 +19,7 @@ public class CluePopUpUI : MonoBehaviour
     [SerializeField] private float clueAudioVolume = 1f;
     private ClueDefinition waitingClue;
     private Coroutine _hideCoroutine;
+    private Interactable interactable;
 
     private void Awake()
     {
@@ -31,6 +32,10 @@ public class CluePopUpUI : MonoBehaviour
         Debug.Log("PopUp exists");
         if (popUpPanel != null)
             popUpPanel.SetActive(false);
+        if (interactable != null)
+        {
+            interactable = GetComponent<Interactable>();
+        }
     }
 
     void Update()
@@ -68,9 +73,24 @@ public class CluePopUpUI : MonoBehaviour
 
         popUpPanel.SetActive(true);
 
-        if (clueAudioSource != null && clue.clueAudioClip != null)
+        AudioClip clipToPlay = clue?.clueAudioClip;
+
+        if (clipToPlay == null && interactable != null)
+            clipToPlay = interactable.GetInspectClip();
+
+        if (clipToPlay == null)
+            clipToPlay = clueAudioClip;
+
+        if (clipToPlay != null && AudioController.Instance != null)
         {
-            AudioController.Instance.PlaySFXOnSource(clueAudioSource, clueAudioClip, clueAudioVolume);
+            if (clueAudioSource != null)
+                AudioController.Instance.PlaySFXOnSource(clueAudioSource, clipToPlay, clueAudioVolume);
+            else
+                AudioController.Instance.PlaySFXAtPosition(clipToPlay, transform.position, clueAudioVolume);
+        }
+        else
+        {
+            Debug.LogWarning("CluePopUpUI: No audio clip assigned for clue and no AudioController instance found.");
         }
 
         if (_hideCoroutine != null) StopCoroutine(_hideCoroutine);
@@ -79,7 +99,10 @@ public class CluePopUpUI : MonoBehaviour
     private void Hide()
     {
         popUpPanel.SetActive(false);
-        AudioController.Instance.StopAllSFX();
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.StopAllSFX();
+        }
         DialogueManager.Instance.isDialogueWaiting = false;
     }
 

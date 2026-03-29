@@ -79,12 +79,12 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    public void PlayMusic(AudioClip clip, bool loop = true)
+    public void PlayMusic(AudioClip clip, bool loop = true, float volume = 1f)
     {
         if (musicSource == null || clip == null) return;
         musicSource.clip = clip;
         musicSource.loop = loop;
-        musicSource.volume = 1f; // Volume controlled by mixer
+        musicSource.volume = volume; // Volume controlled by mixer
         musicSource.Play();
     }
 
@@ -192,4 +192,5 @@ public class SceneMusic
 {
     public string sceneName;
     public AudioClip musicClip;
+    [Range(0f, 1f)] public float volume = 1f;
 }

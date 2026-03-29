@@ -118,4 +118,8 @@ public class Interactable : MonoBehaviour
 
         
     }
+    public AudioClip GetInspectClip()
+    {
+        return inspectClip;
+    }
 }
