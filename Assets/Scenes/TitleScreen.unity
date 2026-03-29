@@ -1039,6 +1039,12 @@ MonoBehaviour:
   - sceneName: S3GameScene
     musicClip: {fileID: 8300000, guid: 74a535200a0868e468453ecac1ef0830, type: 3}
     volume: 1
+  - sceneName: Credits Scene
+    musicClip: {fileID: 8300000, guid: 74a535200a0868e468453ecac1ef0830, type: 3}
+    volume: 1
+  - sceneName: Transition Scene
+    musicClip: {fileID: 8300000, guid: c50b5d4969b0cb245a6cfc8c3464efc9, type: 3}
+    volume: 0.8
 --- !u!4 &619784098
 Transform:
   m_ObjectHideFlags: 0
