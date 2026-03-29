@@ -1026,14 +1026,19 @@ MonoBehaviour:
   sceneMusics:
   - sceneName: TitleScreen
     musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
+    volume: 1
   - sceneName: OpenCutscene
     musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
+    volume: 1
   - sceneName: GameScene
     musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
+    volume: 1
   - sceneName: S2GameScene
     musicClip: {fileID: 8300000, guid: 5325b61d8f429d448b6c90cb94a14aee, type: 3}
+    volume: 0.6
   - sceneName: S3GameScene
     musicClip: {fileID: 8300000, guid: 74a535200a0868e468453ecac1ef0830, type: 3}
+    volume: 1
 --- !u!4 &619784098
 Transform:
   m_ObjectHideFlags: 0
