@@ -1644,7 +1644,7 @@ MonoBehaviour:
   unlockedDialogueNum: 1
   inventory: {fileID: 11400000, guid: 421b0243d73da3b4da62904ccc3a8a1b, type: 2}
   doorOpenClip: {fileID: 8300000, guid: 5d7661ab3fb1fbf4daccc5fc005ea4b0, type: 3}
-  doorLockedClip: {fileID: 8300000, guid: 59eb357dcd9eaf54c9283a48759e4849, type: 3}
+  doorLockedClip: {fileID: 8300000, guid: bcd8501af31e31340bab4163675ee99d, type: 3}
   sfxVolume: 1
 --- !u!114 &298772088
 MonoBehaviour:
