@@ -5379,8 +5379,8 @@ MonoBehaviour:
   descriptionText: {fileID: 1848933252}
   clueImage: {fileID: 1408813744}
   displayDuration: 2.5
-  clueAudioClip: {fileID: 0}
-  clueAudioSource: {fileID: 0}
+  clueAudioClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
+  clueAudioSource: {fileID: 819288686}
   clueAudioVolume: 1
 --- !u!1 &630530976
 GameObject:

@@ -10797,6 +10797,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937446800899688056, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6049601328106699696, guid: 0e98076c65890bc41aa45a87a93547c9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11000,8 +11020,8 @@ MonoBehaviour:
   descriptionText: {fileID: 2112143911}
   clueImage: {fileID: 2112143913}
   displayDuration: 2.5
-  clueAudioClip: {fileID: 0}
-  clueAudioSource: {fileID: 0}
+  clueAudioClip: {fileID: 8300000, guid: 97bfd6d473c104e45b529e6618ad5073, type: 3}
+  clueAudioSource: {fileID: 3373209}
   clueAudioVolume: 1
 --- !u!1 &1889946065
 GameObject:
