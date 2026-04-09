@@ -6228,15 +6228,15 @@ RectTransform:
   m_Children:
   - {fileID: 1530276175}
   - {fileID: 1399965156}
-  - {fileID: 1012746401}
+  - {fileID: 297325541}
   - {fileID: 238605925}
   - {fileID: 615032079}
-  - {fileID: 297325541}
   - {fileID: 1298109584}
   - {fileID: 1076412821}
   - {fileID: 659212302}
   - {fileID: 2015038743}
   - {fileID: 863079130}
+  - {fileID: 1012746401}
   - {fileID: 457916980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9116,11 +9116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1576848720690057388, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1576848720690057388, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1576848720690057388, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchorMin.y
@@ -9128,6 +9128,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2828810743246400191, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932499636356262674, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4350282359482887600, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
@@ -9152,15 +9156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4757051758609440376, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4757051758609440376, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4757051758609440376, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 4874471249327769430, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9249,6 +9253,26 @@ PrefabInstance:
     - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2077422017}
+    - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ClueJournalUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911885163676422925, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8974272408963570018, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
       propertyPath: m_Enabled
@@ -20826,6 +20850,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2077422017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8072638654267987646, guid: f0162b8b9284f6840abc1979e4ce3b5a, type: 3}
+  m_PrefabInstance: {fileID: 1012746400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7c330b8b7b21f45bd3c5123d095542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2102776529
 GameObject:
   m_ObjectHideFlags: 0
