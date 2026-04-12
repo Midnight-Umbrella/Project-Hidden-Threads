@@ -19,10 +19,10 @@ STAGE1_14,Harper,internal,Looks like the garbage can has already been taken out.
 STAGE1_15,Harper,internal,The counter is clear. Maybe Vera left something behind?,Counter
 STAGE1_16,Harper,internal,The lamp is still on. Kinda odd that it's still lit.,lamp
 STAGE1_17,Harper,internal,Her desk is a mess  but I don't see anything useful right now.,Desk
-STAGE1_18,Harper,internal,The shelf holds some books¡­ nothing that seems important.,Shelf
+STAGE1_18,Harper,internal,The shelf holds some books but nothing that seems important.,Shelf
 STAGE1_19,Harper,internal,The exit door is locked. I can't go through here yet.,Door2
 STAGE1_20,Harper,internal,There's a framed photo on the wall. Vera looks happy in this.,frame
-STAGE1_21,Harper,internal,Vera's computer is still on¡­ maybe I can find a clue there.,Vera's Computer
+STAGE1_21,Harper,internal,Vera's computer is still on. Maybe I can find a clue there.,Vera's Computer
 STAGE1_22,Harper,internal,The carpet is clean - nothing unusual to notice here.,carpet
 fridge,0,Harper,internal,Just a fridge. Our milk is close to expiring
 fridge,1,Harper,internal,Here it is|"What a weird place to hide a key"
