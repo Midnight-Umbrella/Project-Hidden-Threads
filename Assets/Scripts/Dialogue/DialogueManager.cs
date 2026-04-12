@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
         Instance = this;
         currentScene = SceneManager.GetActiveScene();
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         if (dialogueUI != null)
             dialogueUI.Hide();
