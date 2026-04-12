@@ -14,6 +14,17 @@ public class WireMatchMinigame : MonoBehaviour
     [SerializeField] private int totalPairs = 4;
     [SerializeField] private float completeDelay = 0.4f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource uiAudioSource;
+
+    [SerializeField] private AudioClip clickClip;
+    [SerializeField] private AudioClip matchClip;
+    [SerializeField] private AudioClip wrongClip;
+
+    [SerializeField] private float clickVolume = 1f;
+    [SerializeField] private float matchVolume = 1f;
+    [SerializeField] private float wrongVolume = 1f;
+
     private WireNodeButton selectedLeftNode;
     private int matchedPairs = 0;
     private bool completed = false;
@@ -42,6 +53,7 @@ public class WireMatchMinigame : MonoBehaviour
                 selectedLeftNode.SetSelected(false);
                 selectedLeftNode = null;
                 SetStatus("Selection cleared.");
+                PlaySFX(wrongClip, wrongVolume);
                 return;
             }
 
@@ -51,6 +63,7 @@ public class WireMatchMinigame : MonoBehaviour
             selectedLeftNode = clickedNode;
             selectedLeftNode.SetSelected(true);
             SetStatus($"Selected {clickedNode.NodeColor}. Now click the matching color on the right.");
+            PlaySFX(clickClip, clickVolume);
             return;
         }
 
@@ -58,6 +71,7 @@ public class WireMatchMinigame : MonoBehaviour
         if (selectedLeftNode == null)
         {
             SetStatus("Select a color on the left first.");
+            PlaySFX(wrongClip, wrongVolume);
             return;
         }
 
@@ -72,6 +86,7 @@ public class WireMatchMinigame : MonoBehaviour
             matchedPairs++;
 
             SetStatus($"Matched {matchedPairs}/{totalPairs}");
+            PlaySFX(matchClip, matchVolume);
 
             if (matchedPairs >= totalPairs)
             {
@@ -84,6 +99,7 @@ public class WireMatchMinigame : MonoBehaviour
             selectedLeftNode.SetSelected(false);
             selectedLeftNode = null;
             SetStatus("Wrong match. Try again.");
+            PlaySFX(wrongClip, wrongVolume);
         }
     }
 
@@ -118,5 +134,15 @@ public class WireMatchMinigame : MonoBehaviour
     {
         if (statusText != null)
             statusText.text = message;
+    }
+
+    private void PlaySFX(AudioClip clip, float volume)
+    {
+        if (clip == null || AudioController.Instance == null) return;
+
+        if (uiAudioSource != null)
+            AudioController.Instance.PlaySFXOnSource(uiAudioSource, clip, volume);
+        else
+            AudioController.Instance.PlaySFXAtPosition(clip, transform.position, volume);
     }
 }
