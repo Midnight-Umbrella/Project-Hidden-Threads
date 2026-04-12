@@ -19,6 +19,16 @@ public class GPSTrackerController : MonoBehaviour
     [SerializeField] private float strongDistance = 5f;
     [SerializeField] private float veryStrongDistance = 1.5f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource beepSource;
+    [SerializeField] private AudioClip beepClip;
+
+    [SerializeField] private float maxBeepInterval = 1.0f; // far = slow
+    [SerializeField] private float minBeepInterval = 0.1f; // close = fast
+
+    [SerializeField] private float minPitch = 0.8f;
+    [SerializeField] private float maxPitch = 2.0f;
+
     private GPSClueTarget currentTarget;
     private bool trackingActive;
 
@@ -85,6 +95,13 @@ public class GPSTrackerController : MonoBehaviour
             trackerPanel.SetActive(true);
 
         UpdateTrackerUI();
+
+        if (beepSource != null && beepClip != null)
+        {
+            if (beepRoutine != null)
+                StopCoroutine(beepRoutine);
+            beepRoutine = StartCoroutine(BeepLoop());
+        }
     }
 
     public void StopTracking()
@@ -93,6 +110,10 @@ public class GPSTrackerController : MonoBehaviour
 
         if (trackerPanel != null)
             trackerPanel.SetActive(false);
+        
+        if (beepRoutine != null)
+            StopCoroutine(beepRoutine);
+        beepRoutine = null;
     }
 
     public GPSClueTarget GetCurrentTarget()
@@ -103,5 +124,26 @@ public class GPSTrackerController : MonoBehaviour
     public bool IsTrackingActive()
     {
         return trackingActive;
+    }
+
+    private IEnumerator BeepLoop()
+    {
+        while (trackingActive && currentTarget != null)
+        {
+            float distance = Vector3.Distance(player.position, currentTarget.transform.position);
+
+            float t = Mathf.Clamp01(1f - (distance / maxDetectDistance));
+
+            float interval = Mathf.Lerp(maxBeepInterval, minBeepInterval, t);
+            float pitch = Mathf.Lerp(minPitch, maxPitch, t);
+
+            if (beepSource != null && beepClip != null)
+            {
+                beepSource.pitch = Mathf.Lerp(beepSource.pitch, pitch, 0.1f);
+                beepSource.PlayOneShot(beepClip);
+            }
+
+            yield return new WaitForSeconds(interval);
+        }
     }
 }
