@@ -15,10 +15,9 @@ public class GPSUnlockWatcher : MonoBehaviour
     private bool hasTriggered = false;
     private Coroutine watchRoutine;
 
-    private void Awake()
+    private void Start()
     {
-        if (clueJournal == null)
-            clueJournal = ClueJournal.Instance;
+        clueJournal = ClueJournal.Instance;
     }
 
     private void OnEnable()
