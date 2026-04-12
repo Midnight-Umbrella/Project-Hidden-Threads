@@ -1,6 +1,5 @@
 ObjID,DialogueNum,Character(s),Type,Text
-Intro,0,Harper,internal,Hmm... I don't think Vera came home last night|"She left all my messages on read. That's not normal for her."|"I'm starting to get worried."
-verasDoor,0,Harper,internal,That means Vera left. But where did she go?
+Intro,0,Harper,internal,"Hmm... I don't think Vera came home last night|She left all my messages on read. That's not normal for her.|I'm starting to get worried."verasDoor,0,Harper,internal,That means Vera left. But where did she go?
 verasDoor,1,Harper,internal,There we go. Finally!
 verasDesk,0,Harper,internal,Is this her phone?|"Why would she leave without her phone?"
 nothing,0,Harper,internal,There's nothing useful here. I really need to focus.
