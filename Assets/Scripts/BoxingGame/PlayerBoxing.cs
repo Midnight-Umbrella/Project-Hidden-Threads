@@ -7,26 +7,18 @@ using UnityEngine.UI;
 
 public class PlayerBoxing : MonoBehaviour
 {
-    public float speed;  //     ƶ  ٶ 
+    public float speed;  //主角移动速度
     [SerializeField]
-    private float maxLife;  //          ֵ
-    public float currentLife;  //   ǵ ǰ    ֵ
+    private float maxLife;  //玩家最大生命值
+    public float currentLife;  //主角当前生命值
     [SerializeField]
     private Animator ani;
     [SerializeField]
-    private GameObject enemy;  //        
-    private float boxingHitDistance=1.2f;  // ж    еľ   
-    private float damage;  //  ҵĹ     
+    private GameObject enemy;  //敌人物体
+    private float boxingHitDistance=1.2f;  //判定击中的距离
+    private float damage;  //玩家的攻击力
     [SerializeField]
-    private Slider playerLifeSlider;  //         
-    [Header("Audio")]
-    [SerializeField] private AudioSource HarperAudioSource;
-    [SerializeField] private AudioClip PunchHitClip;
-    [SerializeField] private float HitVolume = 1f;
-    [SerializeField] private AudioClip PunchMissClip;
-    [SerializeField] private float MissVolume = 1f;
-
-
+    private Slider playerLifeSlider;  //玩家生命条
 
 
     private void Awake()
@@ -36,12 +28,12 @@ public class PlayerBoxing : MonoBehaviour
     }
     void Update()
     {
-        //AD       ƶ 
+        //AD键左右移动
         if (Input.GetKey(KeyCode.A))
         {
-            //     ƶ 
+            //向左移动
             transform.Translate(Vector3.left * speed * Time.deltaTime);
-            //   ö   
+            //设置动画
             if (!ani.GetBool("isRight"))
             {
                 ani.SetBool("isRight", true);
@@ -53,9 +45,9 @@ public class PlayerBoxing : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            //     ƶ 
+            //向右移动
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-            //   ö   
+            //设置动画
             if (ani.GetBool("isRight"))
             {
                 ani.SetBool("isRight", false);
@@ -69,28 +61,17 @@ public class PlayerBoxing : MonoBehaviour
             ani.SetBool("isWalking",false);
         }
 
-        //J    ȭ
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.F)) && !ani.GetCurrentAnimatorStateInfo(0).IsName("PlayerBoxing"))
+        //J键出拳
+        if (Input.GetMouseButtonDown(0))
         {
             ani.SetTrigger("Boxing");
-            //      ж    о    ڲ  ҳ     ȷ   ж     
+            //如果在判定击中距离内并且朝向正确则判定击中
             if (Vector3.Magnitude(enemy.transform.position - transform.position) < boxingHitDistance && (((enemy.transform.position.x - transform.position.x < 0) && ani.GetBool("isRight")) || ((enemy.transform.position.x - transform.position.x >= 0) && (!ani.GetBool("isRight")))))
             {
                 enemy.GetComponent<EnemyBoxing>().currentLife -= damage;
-                if (HarperAudioSource != null && AudioController.Instance != null)
-                    AudioController.Instance.PlaySFXOnSource(HarperAudioSource, PunchHitClip, HitVolume);
-                else if (AudioController.Instance != null)
-                    AudioController.Instance.PlaySFXAtPosition(PunchMissClip, transform.position, MissVolume);
-            }
-            else
-            {
-                if (HarperAudioSource != null && AudioController.Instance != null)
-                    AudioController.Instance.PlaySFXOnSource(HarperAudioSource, PunchMissClip, MissVolume);
-                else if (AudioController.Instance != null)
-                    AudioController.Instance.PlaySFXAtPosition(PunchMissClip, transform.position, MissVolume);
             }
         }
-        //    Ѫ  
+        //更新血条
         playerLifeSlider.value = currentLife / maxLife;
     }
 }
