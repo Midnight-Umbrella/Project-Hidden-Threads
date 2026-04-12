@@ -4940,7 +4940,7 @@ MonoBehaviour:
   inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
   inspectVolume: 0.7
   isClue: 0
-  delayCluePrompt: 0
+  delayCluePrompt: 1
   isEventTrigger: 0
   triggeredEvent:
     m_PersistentCalls:
