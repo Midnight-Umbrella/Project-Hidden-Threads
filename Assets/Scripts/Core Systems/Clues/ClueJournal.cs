@@ -25,6 +25,7 @@ public class ClueJournal : MonoBehaviour
             return;
         }
         Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public bool AddClue(ClueDefinition clue)
@@ -58,7 +59,7 @@ public class ClueJournal : MonoBehaviour
         OnChanged?.Invoke();
     }
 
-    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
-    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => ClearAll();
+    //private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
+    //private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => ClearAll();
 }
