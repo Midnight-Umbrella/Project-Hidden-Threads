@@ -4,7 +4,7 @@ verasDoor,0,Harper,internal,Locked… that means she left. But where did she go?
 verasDoor,1,Harper,internal,There we go
 verasDesk,0,Harper,internal,"Is this her phone?|""Why would she leave without her phone?"""
 STAGE1_03,Harper,internal,Wait! This has to be it!  Please let this be her room key.,Key
-nothing,0,Harper,internal,Nothing useful here… I need to focus
+nothing,0,Harper,internal,Nothing useful here... I need to focus
 garbageCan,0,Harper,internal,That looks out of place ... why would she throw this away?
 calendar,0, Harper,internal,"According to my calendar|""Vera's birthday is coming up"""
 calendar,1,Harper,internal,Her birthday’s circled! June 7th
