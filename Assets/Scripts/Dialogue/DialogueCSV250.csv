@@ -1,12 +1,12 @@
 ObjID,DialogueNum,Character(s),Type,Text
 Intro,0,Harper,internal,Hmm... I don't think Vera came home last night|"She left all my messages on read. That's not normal for her."|"I'm starting to get worried."
-verasDoor,0,Harper,internal,It's locked­. That means she left. But where did she go?
+verasDoor,0,Harper,internal,That means Vera left. But where she go?
 verasDoor,1,Harper,internal,There we go. Finally!
 verasDesk,0,Harper,internal,Is this her phone?|"Why would she leave without her phone?"
-nothing,0,Harper,internal,There is nothing useful here. I really­ need to focus c'mon...
+nothing,0,Harper,internal,There's nothing useful here. I really need to focus.
 garbageCan,0,Harper,internal,That looks out of place. Why would she throw this away?
-calendar,0, Harper,internal,According to my calendar|"Vera's birthday is coming up"
-calendar,1,Harper,internal,Her birthday ¡s circled July 7th
+calendar,0,Harper,internal,According to my calendar|"Vera's birthday is coming up"
+calendar,1,Harper,internal,Her birthday ¡s circled here - July 7th.
 kitchenCounter,0,Harper,internal,Vera sure loves her apples
 kitchenCounter,1,Harper,internal,Of course. Vera and her obsession with apples|"She would devour an entire bag in an afternoon"
 exit,0,Harper,internal,I can't leave yet. Not until I figure out what happened
@@ -46,7 +46,7 @@ CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the ba
 npc1,0,Harper/Bargoer,conversation,Harper:"Hi! I'm looking for my friend Vera. Have you seen them?"|Bargoer:"No I haven't. Sorry"
 bartender,0,Harper/Bartender,conversation,Harper:"Hey, I'm looking for my friend Vera. Any chance you've seen them?"|Bartender:"Yeah she was in here earlier. She left with a tall man wearing a suit"|Harper:"Do you know where they went?"|Bartender:"No, sorry. I think she left her jacket here though. You should check the lost and found"|Harper:"Thank you!"
 lost_and_found,0,Harper,internal,Hmm... it appears that people lose lots of stuff here
-lost_and_found,1,Harper,internal, This sure looks like Vera's coat. Wait a minute, Is that a note in the pocket?|"It looks like a password. I wonder if it could be for that locked text conversation"
+lost_and_found,1,Harper,internal,This sure looks like Vera's coat. Wait a minute, Is that a note in the pocket?|"It looks like a password. I wonder if it could be for that locked text conversation"
 locked_convo,0,Harper,Internal,Who's this 'Mr. Crocker' guy? And what is this about a warehouse?
 strange_man,0,Harper/Strange Man,conversation,Harper:"Hello. Have you seen my friend Vera?"|Strange Man:"I think I saw her in here a little while ago"|Harper:"You did?! Do you know where she went?"|Strange Man:"No idea. She just kept talking about forgetting her phone at home"|Harper:"Yeah. I found it. I thought it would make finding her easier"|Harper:"It hasn't been very useful so far though"|Strange Man: "You might be able to use it to track her"|Harper:"What do you mean?"|Strange Man:"She might have had a tracker on her that you can access through the phone. I could show you how to use it"|Strange Man:"If you do something for me. I lost my favourite poster in this alleyway a while ago"|Strange Man:"Bring me the poster and I'll show you how to use the GPS"
 strange_man,1,Harper/Strange Man,conversation,Harper:"Here you go"|Strange Man:"Alright I'll set it up for you"
