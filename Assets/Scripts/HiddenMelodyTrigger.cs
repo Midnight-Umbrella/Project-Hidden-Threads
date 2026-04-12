@@ -1,23 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class HiddenMelodyTrigger : MonoBehaviour
 {
-    private bool hasStarted = false;
+    public GameObject hiddenMelodyPopUp;
 
-    public void ShowPopUp()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!hasStarted)
+        if (other.CompareTag("Player"))
         {
-            hasStarted = true;
-            gameObject.SetActive(true);
-            StartCoroutine(CloseAfterDelay());
+            hiddenMelodyPopUp.SetActive(true);
         }
-    }
-
-    private IEnumerator CloseAfterDelay()
-    {
-        yield return new WaitForSecondsRealtime(5f);
-        gameObject.SetActive(false);
     }
 }
