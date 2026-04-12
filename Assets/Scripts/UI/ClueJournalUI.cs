@@ -59,6 +59,7 @@ public class ClueJournalUI : MonoBehaviour
 
     public void Toggle()
     {
+        Debug.Log("Toggle called");
         if (panel == null) return;
 
         bool next = !panel.activeSelf;
