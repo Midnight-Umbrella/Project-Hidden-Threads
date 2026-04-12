@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/S3GameScene.unity
     guid: 7f5a09faa9a4d0344965e6dd730521e5
   - enabled: 1
-    path: Assets/Scenes/BoxingScene.unity
-    guid: 7f83b9ad67aac59489be48c89f3939ee
-  - enabled: 1
     path: Assets/Scenes/Credits Scene.unity
     guid: 3769ed0f81bf395459453afa03b5fbd6
   m_configObjects: {}

@@ -1,56 +1,54 @@
-ObjID,DialogueNum,Character(s),Type,Text
-Intro,0,Harper,internal,Hmm... I don't think Vera came home last night|"She left all my messages on read. That¡¯s not normal for her."|"Im starting to get worried"
-verasDoor,0,Harper,internal,Locked¡­ that means she left. But where did she go?
-verasDoor,1,Harper,internal,There we go
-verasDesk,0,Harper,internal,Is this her phone?|"Why would she leave without her phone?"
-nothing,0,Harper,internal,Nothing useful here¡­ I need to focus
-garbageCan,0,Harper,internal,That looks out of place¡­ why would she throw this away?
-calendar,0, Harper,internal,According to my calendar|"Vera's birthday is coming up"
-calendar,1,Harper,internal,Her birthday¡¯s circled! June 7th
-kitchenCounter,0,Harper,internal,Vera sure loves her apples
-kitchenCounter,1,Harper,internal,Of course. Vera and her obsession with apples|"She would devour an entire bag in an afternoon"
-exit,0,Harper,internal,I can¡¯t leave yet. Not until I figure out what happened
-STAGE1_09,Harper,internal,Her birthday is circled on the calendar¡­ and she loves TartPops. That has to be the password.,Sticky Note
-STAGE1_10,Harper,internal,Yes! It worked. Let¡¯s see what she¡¯s been up to.,Vera¡¯s Phone
-STAGE1_11,Harper,internal,"Something isn¡¯t right. I have to follow this. First, the bar.",Vera¡¯s Phone
-STAGE1_12,Harper,aloud,Let¡¯s go. I need to find Vera and figure out what happened.,Vera¡¯s Phone
-cupboard,0,Harper,internal,Nothing inside the cupboard¡­ just the usual dishes
+ï»¿ObjID,DialogueNum,Character(s),Type,Text
+Intro,0,Harper,internal,"Hmm... I don't think Vera came home last night"|"She left all my messages on read. Thatâ€™s not normal for her."|"Im starting to get worried"
+verasDoor,0,Harper,internal,"Lockedâ€¦ that means she left. But where did she go?"
+verasDoor,1,Harper,internal,"There we go"
+verasDesk,0,Harper,internal,"Is this her phone?"|"Why would she leave without her phone?"
+nothing,0,Harper,internal,"Nothing useful hereâ€¦ I need to focus"
+garbageCan,0,Harper,internal,"That looks out of placeâ€¦ why would she throw this away?"
+calendar,0, Harper,internal,"According to my calendar"|"Vera's birthday is coming up"
+calendar,1,Harper,internal,"Her birthdayâ€™s circled! June 7th"
+kitchenCounter,0,Harper,internal,"Vera sure loves her apples"
+kitchenCounter,1,Harper,internal,"Of course. Vera and her obsession with apples"|"She would devour an entire bag in an afternoon"
+exit,0,Harper,internal,"I canâ€™t leave yet. Not until I figure out what happened"
+STAGE1_09,Harper,internal,Her birthday is circled on the calendarâ€¦ and she loves TartPops. That has to be the password.,Sticky Note
+STAGE1_10,Harper,internal,Yes! It worked. Letâ€™s see what sheâ€™s been up to.,Veraâ€™s Phone
+STAGE1_11,Harper,internal,"Something isnâ€™t right. I have to follow this. First, the bar.",Veraâ€™s Phone
+STAGE1_12,Harper,aloud,Letâ€™s go. I need to find Vera and figure out what happened.,Veraâ€™s Phone
+cupboard,0,Harper,internal,"Nothing inside the cupboardâ€¦ just the usual dishes"
 STAGE1_14,Harper,internal,Looks like the garbage can has already been taken out.,garbage can
-STAGE1_15,Harper,internal,The counter is clear¡­ maybe Vera left something behind?,Counter
-STAGE1_16,Harper,internal,The lamp is on¡­ odd that it's still lit.,lamp
+STAGE1_15,Harper,internal,The counter is clearâ€¦ maybe Vera left something behind?,Counter
+STAGE1_16,Harper,internal,The lamp is onâ€¦ odd that it's still lit.,lamp
 STAGE1_17,Harper,internal,Her desk is a mess  but I don't see anything useful right now.,Desk
-STAGE1_18,Harper,internal,The shelf holds some books¡­ nothing that seems important.,Shelf
-STAGE1_19,Harper,internal,The exit door is locked¡­ I can't go through here yet.,Door2
-STAGE1_20,Harper,internal,There's a framed photo on the wall¡­ Vera looks happy in this.,frame
-STAGE1_21,Harper,internal,Vera's computer is still on¡­ maybe I can find a clue there.,Vera's Computer
-STAGE1_22,Harper,internal,The carpet is clean¡­ nothing unusual to notice here.,carpet
-fridge,0,Harper,internal,Just a fridge. Our milk is close to expiring
-fridge,1,Harper,internal,Here it is|"What a weird place to hid a key"
-crumpledNote,0,Harper,internal,Hmm... 'Secret hiding places: toilet. fridge. couch'
-toilet,0,Harper,internal,I really should clean this thing more often
-toilet,1,Harper,internal,Hmm. The key isn't here|"Must be in one of the other two places"
-couch,0,Harper,internal,Im surprised Vera isn't on this couch right now arguing with someone online|"This isn't like her. I'm getting worried"
-couch,1,Harper,internal,Nothing under the cushions but crumbs|"The key must be in one of the other two places"
-phone,1,Harper,internal,I can't open Vera's phone without her password
-wallNote,0,Harper,internal,Some notes about passwords or something
-wallNote,1,Harper,internal,Hmm... 'password idea: birthday + fav food'
-verasTable,0,Harper,internal,Vera's plants haven't been watered|"I'm starting to get worried"
-kitchenTable,0,Harper,internal,Looks like she left some food out
-exitDoor,0,Harper,internal,I can't leave yet|"I'd have no idea where to go"
-exitDoor,1,Harper,internal,I'm coming to find you Vera!
-location,0,Harper,internal,Huh. She went to the bar a few days ago|"I better go over there and ask if anyones seen her"
-CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Vera¡¯s Room Key
+STAGE1_18,Harper,internal,The shelf holds some booksâ€¦ nothing that seems important.,Shelf
+STAGE1_19,Harper,internal,The exit door is lockedâ€¦ I can't go through here yet.,Door2
+STAGE1_20,Harper,internal,There's a framed photo on the wallâ€¦ Vera looks happy in this.,frame
+STAGE1_21,Harper,internal,Vera's computer is still onâ€¦ maybe I can find a clue there.,Vera's Computer
+STAGE1_22,Harper,internal,The carpet is cleanâ€¦ nothing unusual to notice here.,carpet
+fridge,0,Harper,internal,"Just a fridge. Our milk is close to expiring"
+fridge,1,Harper,internal,"Here it is"|"What a weird place to hid a key"
+crumpledNote,0,Harper,internal,"Hmm... 'Secret hiding places: toilet. fridge. couch'"
+toilet,0,Harper,internal,"I really should clean this thing more often"
+toilet,1,Harper,internal,"Hmm. The key isn't here"|"Must be in one of the other two places"
+couch,0,Harper,internal,"Im surprised Vera isn't on this couch right now arguing with someone online"|"This isn't like her. I'm getting worried"
+couch,1,Harper,internal,"Nothing under the cushions but crumbs"|"The key must be in one of the other two places"
+phone,1,Harper,internal,"I can't open Vera's phone without her password"
+wallNote,0,Harper,internal,"Some notes about passwords or something"
+wallNote,1,Harper,internal,"Hmm... 'password idea: birthday + fav food'"
+verasTable,0,Harper,internal,"Vera's plants haven't been watered"|"I'm starting to get worried"
+kitchenTable,0,Harper,internal,"Looks like she left some food out"
+exitDoor,0,Harper,internal,"I can't leave yet"|"I'd have no idea where to go"
+exitDoor,1,Harper,internal,"I'm coming to find you Vera!"
+location,0,Harper,internal,"Huh. She went to the bar a few days ago"|"I better go over there and ask if anyones seen her"
+CLUE_KEY_01,System,ClueDescription,A small brass key with faded enamel on the handle. A tag attached to it reads 'V' in messy handwriting. It looks worn from daily use.,Veraâ€™s Room Key
 CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and partially smoothed out. Some words are smudged, but it looks like Vera was writing something important before throwing it away.",Crumpled Note
-CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera¡¯s Phone
-CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera¡¯s.,Sticky Note
+CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 16 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Veraâ€™s Phone
+CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Veraâ€™s.,Sticky Note
 npc1,0,Harper/Bargoer,conversation,Harper:"Hello. I'm looking for my friend Vera. Have you seen them?"|Bargoer:"No I haven't. Sorry"
 bartender,0,Harper/Bartender,conversation,Harper:"Hello. I'm looking for my friend Vera. Have you seen them?"|Bartender:"Yeah she was in here earlier. She left with a tall man in suit"|Harper:"Do you know where they went?"|Bartender:"No sorry. I think she left her jacket here though. You should check the lost and found"|Harper:"Thank you!"
-lost_and_found,0,Harper,internal,Hmm... people lose lots of stuff here
-lost_and_found,1,Harper,internal,It sure looks like Veras coat. Is that a note in the pocket?|"It looks like a password. I wonder if it could be for that locked text conversation"
-locked_convo,0,Harper,Internal,Who's this 'Mr. Crocker' guy? And whats this about a warehouse?
+lost_and_found,0,Harper,internal,"Hmm... people lose lots of stuff here"
+lost_and_found,1,Harper,internal,"It sure looks like Veras coat. Is that a note in the pocket?"|"It looks like a password. I wonder if it could be for that locked text conversation"
+locked_convo,0,Harper,Internal,"Who's this 'Mr. Crocker' guy? And whats this about a warehouse?"
 strange_man,0,Harper/Strange Man,conversation,Harper:"Hello. Have you seen my friend Vera?"|Strange Man:"I think I saw her in here a little while ago"|Harper:"You did?! Do you know where she went?"|Strange Man:"No idea. She just kept talking about forgetting her phone at home"|Harper:"Yeah. I found it. I thought it would make finding her easier"|Harper:"It hasn't been very useful so far though"|Strange Man: "You might be able to use it to track her"|Harper:"What do you mean?"|Strange Man:"She might have had a tracker on her that you can access through the phone. I could show you how to use it"|Strange Man:"If you do something for me. I lost my favourite poster in this alleyway a while ago"|Strange Man:"Bring me the poster and I'll show you how to use the GPS"
 strange_man,1,Harper/Strange Man,conversation,Harper:"Here you go"|Strange Man:"Alright I'll set it up for you"
-garbage_pile,0,Harper,internal,Theres a poster in this garbage
-louise,0,Harper/Louise,conversation,Harper:"Louise¡­ Vera is missing."|Louise:"Missing? That doesn¡¯t sound like her."|Harper:"Have you heard from her?"|Louise:"No¡­ but she mentioned meeting someone recently."|Harper:"Who?"|Louise:"She didn¡¯t say. Just that it was important."|Harper:"Something¡¯s wrong. I can feel it."|Louise:"Then I¡¯ll help you figure it out. Have you figured out where she might be?"|Harper:"Not exactly. I think she might be at a warehouse but I don't know where"|Louise:"Hmm... Sometimes she hangs out at the warehouse on 5th street. Lets look there"
-STAGE3_1,MrCrocker,MrCrocker/Harper,conversation,MrCrocker:"place holder place holder..."|MrCrocker:"place holder place holder place holder..."|Harper:"place holder place holder..."|MrCrocker:"place holder place holder place holder..."
-STAGE3_2,MrCrocker,MrCrocker/Harper,conversation,MrCrocker:"place holder place holder..."|MrCrocker:"place holder place holder place holder..."|Harper:"place holder place holder..."|MrCrocker:"place holder place holder place holder..."|Harper:"place holder place holder place holder..."
+garbage_pile,0,Harper,internal,"Theres a poster in this garbage"
+louise,0,Harper/Louise,conversation,Harper:"Louiseâ€¦ Vera is missing."|Louise:"Missing? That doesnâ€™t sound like her."|Harper:"Have you heard from her?"|Louise:"Noâ€¦ but she mentioned meeting someone recently."|Harper:"Who?"|Louise:"She didnâ€™t say. Just that it was important."|Harper:"Somethingâ€™s wrong. I can feel it."|Louise:"Then Iâ€™ll help you figure it out. Have you figured out where she might be?"|Harper:"Not exactly. I think she might be at a warehouse but I don't know where"|Louise:"Hmm... Sometimes she hangs out at the warehouse on 5th street. Lets look there"
