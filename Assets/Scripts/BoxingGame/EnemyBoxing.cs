@@ -6,20 +6,26 @@ using UnityEngine.UI;
 public class EnemyBoxing : MonoBehaviour
 {
     [SerializeField]
-    private float maxLife;  //µÐÈË×î´óÉúÃüÖµ
-    public float currentLife;  //µÐÈËµÄµ±Ç°ÉúÃüÖµ
-    public float speed;  //µÐÈËµÄÒÆ¶¯ËÙ¶È
+    private float maxLife;  //           Öµ
+    public float currentLife;  //   ËµÄµ Ç°    Öµ
+    public float speed;  //   Ëµ  Æ¶  Ù¶ 
     [SerializeField]
-    private Animator ani;  //µÐÈËµÄ¶¯»­×é¼þ
+    private Animator ani;  //   ËµÄ¶      
     [SerializeField]
-    private GameObject player;  //Ö÷½ÇÍæ¼ÒµÄÎïÌå
-    private float controlDistance=1.0f;  //Ä¿±ê´ïµ½µÄÓëÍæ¼ÒµÄ¾àÀë
-    private float boxingHitDistance = 1.2f;  //ÅÐ¶¨»÷ÖÐµÄ¾àÀë
-    private float minBoxingInterval = 1.0f;  //³öÈ­µÄ×îÐ¡Ê±¼ä¼ä¸ô
-    private float maxBoxingInterval = 4.0f;  //³öÈ­µÄ×î´óÊ±¼ä¼ä¸ô
-    private float damage;  //µÐÈËµÄ¹¥»÷Á¦
+    private GameObject player;  //      Òµ     
+    private float controlDistance=1.0f;  //Ä¿  ïµ½      ÒµÄ¾   
+    private float boxingHitDistance = 1.2f;  // Ð¶    ÐµÄ¾   
+    private float minBoxingInterval = 1.0f;  //  È­    Ð¡Ê±    
+    private float maxBoxingInterval = 4.0f;  //  È­     Ê±    
+    private float damage;  //   ËµÄ¹     
     [SerializeField]
-    private Slider enemyLifeSlider;  //µÐÈËÉúÃüÌõ
+    private Slider enemyLifeSlider;  //          
+    [Header("Audio")]
+    [SerializeField] private AudioSource CrockerAudioSource;
+    [SerializeField] private AudioClip PunchHitClip;
+    [SerializeField] private float HitVolume = 1f;
+    [SerializeField] private AudioClip PunchMissClip;
+    [SerializeField] private float MissVolume = 1f;
     
 
 
@@ -34,14 +40,14 @@ public class EnemyBoxing : MonoBehaviour
     }
     void Update()
     {
-        //Èç¹û¾àÀë¹ý´óÔòÏòÍæ¼ÒÒÆ¶¯
+        //                  Æ¶ 
         if (Vector3.Magnitude(player.transform.position - transform.position) > controlDistance)
         {
-            //ÅÐ¶ÏÒÆ¶¯·½Ïò
+            // Ð¶  Æ¶     
             Vector3 dir = (player.transform.position.x - transform.position.x) >= 0 ? Vector3.right : Vector3.left;
-            //Ö´ÐÐÒÆ¶¯
+            //Ö´   Æ¶ 
             transform.Translate(dir * speed * Time.deltaTime);
-            //ÉèÖÃ¶¯»­
+            //   Ã¶   
             if (dir == Vector3.right)
             {
                 if (ani.GetBool("isRight"))
@@ -69,19 +75,19 @@ public class EnemyBoxing : MonoBehaviour
         else {
             ani.SetBool("isWalking",false);
         }
-            //¸üÐÂÉúÃüÌõ
+            //          
             enemyLifeSlider.value = currentLife / maxLife;
     }
 
     IEnumerator CheckAndBoxing()
     {
         while (true) {
-            //Èç¹ûÓëÍæ¼Ò¾àÀëÔÚÅÐ¶¨»÷ÖÐ¾àÀë·¶Î§ÄÚÔò³öÈ­
+            //       Ò¾      Ð¶    Ð¾  ë·¶Î§     È­
             if (Vector3.Magnitude(player.transform.position-transform.position)<boxingHitDistance)
             {
-                //ÅÐ¶ÏÃæ¶Ô·½Ïò
+                // Ð¶   Ô·   
                 Vector3 dir = (player.transform.position.x - transform.position.x) >= 0 ? Vector3.right : Vector3.left;
-                //ÉèÖÃ¶¯»­·½Ïò
+                //   Ã¶       
                 if (dir == Vector3.right && ani.GetBool("isRight"))
                 {
                     ani.SetBool("isRight", false);
@@ -90,13 +96,23 @@ public class EnemyBoxing : MonoBehaviour
                 {
                     ani.SetBool("isRight", true);
                 }
-                //²¥·Å³öÈ­¶¯»­
+                //   Å³ È­    
                 ani.SetTrigger("Boxing");
-                //Èç¹ûÔÚÅÐ¶¨»÷ÖÐ¾àÀëÄÚ²¢ÇÒ³¯ÏòÕýÈ·ÔòÅÐ¶¨»÷ÖÐ
+                //      Ð¶    Ð¾    Ú²  Ò³     È·   Ð¶     
                 if (Vector3.Magnitude(transform.position - player.transform.position) < boxingHitDistance && (((player.transform.position.x - transform.position.x < 0) && ani.GetBool("isRight")) || ((player.transform.position.x - transform.position.x >= 0) && (!ani.GetBool("isRight")))))
                 {
                     player.GetComponent<PlayerBoxing>().currentLife -= damage;
-                }
+                    if (CrockerAudioSource != null && AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXOnSource(CrockerAudioSource, PunchHitClip, HitVolume);
+                    else if (AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXAtPosition(PunchHitClip, transform.position, HitVolume);
+                } else
+                {
+                    if (CrockerAudioSource != null && AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXOnSource(CrockerAudioSource, PunchMissClip, MissVolume);
+                    else if (AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXAtPosition(PunchMissClip, transform.position, MissVolume);
+                }           
             }
             yield return new WaitForSeconds(Random.Range(minBoxingInterval,maxBoxingInterval));
         }

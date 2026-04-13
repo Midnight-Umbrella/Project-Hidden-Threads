@@ -17,6 +17,7 @@ public class Interactable : MonoBehaviour
     [Header("Non Physical Clue (if applicable)")]
     [SerializeField] private bool isNotPhysicalClue;
     [SerializeField] private ClueDefinition nonPhysicalClue;
+    [SerializeField] private List<ClueDefinition> additionalClues;
     [Header("Audio")]
     [SerializeField] private AudioClip inspectClip;
     [SerializeField] private float inspectVolume = 1f;
@@ -69,23 +70,27 @@ public class Interactable : MonoBehaviour
 
         if (isNotPhysicalClue)
         {
-            if (!previousClue || inventory.Contains(previousClue)) 
+            if (!previousClue || inventory.Contains(previousClue))
             {
                 if (delayCluePrompt)
                 {
                     DialogueManager.Instance.StartDialogue(objID, dialogueNum);
                     inventory.AddClue(nonPhysicalClue);
+                    foreach (var c in additionalClues)
+                        inventory.AddClue(c);
                     return;
                 }
                 inventory.AddClue(nonPhysicalClue);
+                foreach (var c in additionalClues)
+                    inventory.AddClue(c);
                 DialogueManager.Instance.StartDialogue(objID, dialogueNum);
             }
-            else if(preDialogueNum != null)
+            else if (preDialogueNum != null)
             {
                 DialogueManager.Instance.StartDialogue(objID, preDialogueNum);
             }
-                
         }
+
         else if (!previousClue || inventory.Contains(previousClue)) 
         {
             if (col)

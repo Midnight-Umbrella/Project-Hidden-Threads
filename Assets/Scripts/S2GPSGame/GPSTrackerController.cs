@@ -100,6 +100,11 @@ public class GPSTrackerController : MonoBehaviour
         return currentTarget;
     }
 
+    public GameObject GetTrackerPanel()
+    {
+        return trackerPanel;
+    }
+
     public bool IsTrackingActive()
     {
         return trackingActive;
