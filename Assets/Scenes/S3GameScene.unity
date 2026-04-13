@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  playerSound: {fileID: 0}
+  playerSound: {fileID: 3373209}
   playerFootstep: {fileID: 8300000, guid: 14a81401bb70a634fb614d39260a7017, type: 3}
   footstepInterval: 0.4
   sr: {fileID: 3373207}
