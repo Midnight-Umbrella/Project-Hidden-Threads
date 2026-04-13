@@ -2706,7 +2706,10 @@ MonoBehaviour:
   musicGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
   sfxGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
   uiClickClip: {fileID: 0}
-  sceneMusics: []
+  sceneMusics:
+  - sceneName: S2GameScene
+    musicClip: {fileID: 8300000, guid: 240b7eea95b08c841913a4afd708b979, type: 3}
+    volume: 0.4
 --- !u!4 &160108276
 Transform:
   m_ObjectHideFlags: 0

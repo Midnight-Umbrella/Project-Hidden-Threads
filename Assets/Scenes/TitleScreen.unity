@@ -1035,7 +1035,7 @@ MonoBehaviour:
     volume: 0.6
   - sceneName: S2GameScene
     musicClip: {fileID: 8300000, guid: 240b7eea95b08c841913a4afd708b979, type: 3}
-    volume: 0.8
+    volume: 0.4
   - sceneName: S3GameScene
     musicClip: {fileID: 8300000, guid: e00eec5d6fb28214e91878172e65fab5, type: 3}
     volume: 1
@@ -1047,7 +1047,7 @@ MonoBehaviour:
     volume: 0.8
   - sceneName: BoxingScene
     musicClip: {fileID: 8300000, guid: 9274af395ddfd63438bc67accb601a92, type: 3}
-    volume: 0.8
+    volume: 0.6
 --- !u!4 &619784098
 Transform:
   m_ObjectHideFlags: 0
