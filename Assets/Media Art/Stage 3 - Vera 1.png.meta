@@ -1,0 +1,1359 @@
+fileFormatVersion: 2
+guid: e13bac195e9edc9419d185caa7d8d7fc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 466
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2a2f499893d234291f4fcd6727dd15
+      internalID: 274573938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 465
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba6ff4ece6045443951a758903fc271
+      internalID: -1964252173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_2
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 304
+        width: 128
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30dd6dc18c1fc7a478565e0413789629
+      internalID: -205127579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_3
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 465
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce81382d2c3b074a9a53512bdd1739d
+      internalID: -600152032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 310
+        width: 73
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b577d247b9133a419e2d3e6ea8c18b3
+      internalID: 936114490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_5
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 309
+        width: 75
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fc100ad310d794282f9825c395211d
+      internalID: -508830456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 188
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8701e21b5681ff44685445d318ccb6e5
+      internalID: -2029132334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_7
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 151
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0a362a1b8533e48a29c03bbcc7848b
+      internalID: 1616092406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_8
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 151
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50e2338485a1214da7b8b5c4dcd86e9
+      internalID: 740198046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_9
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 168
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd0d44ad3b6ccf47925e4af370e1a81
+      internalID: 141224551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_10
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 151
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855d1972c6f5cc5418055d1492dd842a
+      internalID: -1545848216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_11
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 151
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f127f90325202044ab8e5a2b4e55335b
+      internalID: -808130193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_12
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 168
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86108e418c08a148b77b4de4c8ecca0
+      internalID: -636739437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_13
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 151
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdba2959ec03dfb428404436ce77bc4b
+      internalID: -1823655564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_14
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 151
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51402b64a03bd947a616ddec5fde455
+      internalID: -1647426012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_15
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 151
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e55ddc52f186b54890b148529f5c6d2
+      internalID: 1220102421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_16
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 151
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f140cd25b17ef49a65f67203cce8d5
+      internalID: -1277500728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_17
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 151
+        width: 4
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52abce387360912498031f592cad1a1c
+      internalID: -1573459543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_18
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 151
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ecffdd7dbb8c349b6953e01dc7a710
+      internalID: -1164577500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_19
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 151
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c52b325bcb9504faf5b76d68e4010d
+      internalID: -506591048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_20
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 151
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feb3c36ecaf2da44be5af0ed60f47ff
+      internalID: 949995545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_21
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 151
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dba09381a088ed44a4fafdbdd516c85
+      internalID: 1276226332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_22
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 151
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81440a1cf69d6a54fb737f3734976f4d
+      internalID: -788183545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_23
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 151
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81a4f2e776bdbe4fb831d899da5ca6f
+      internalID: -1622683140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_24
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 107
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e504f31a1351af448f1916f0a2e3f4d
+      internalID: 1276691702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_25
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 107
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ddaffce66f9e74894db7bc3e5eedb0
+      internalID: -1849617497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_26
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 121
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52674f1d205165040846f98cb9d0482c
+      internalID: 1046894656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_27
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 107
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278ee8fcaf995b44ca0e966865b9364d
+      internalID: -141796486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_28
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 101
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdde4a7d83e5b214cac93ff7d5d84e39
+      internalID: -1271716139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_29
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 124
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371278f2b70f3b741962d09e22f88e01
+      internalID: -1907550613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_30
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 107
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b27c3f55b41404787cdfdd85dfd15a
+      internalID: 220388132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_31
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 107
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7efb764b566bb4a9cdad3b9482713d
+      internalID: -1768153930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_32
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 107
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f6952905ae05642ac769edfcc503ae
+      internalID: 1383007101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_33
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 108
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e45bb3671199a44acb5228bb192600
+      internalID: -1187099271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_34
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 107
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82547e927e016cb47a3f8530c3814c72
+      internalID: 1477405704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_35
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 108
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dec859a4b6d34c4aa5755ecbd8732dd
+      internalID: -1660209538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_36
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 107
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51641919d2fdc534ea6cab8571069690
+      internalID: 1227473581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_37
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 108
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5969d7e2752bb94b8b2e9272a915912
+      internalID: -166889023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_38
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 107
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e717290d8c55b4593cf3fd166b4c13
+      internalID: 1765783625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_39
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 107
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489464fefca296a4b991aea696a29e08
+      internalID: 1243034045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_40
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 108
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa5f9b942357f14db5fa28e2b8c1481
+      internalID: 201124433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_41
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 107
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0778c2387a486974eafade2cd11f8597
+      internalID: -1082939684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_42
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 107
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ad74ca176e1ce46a6d841f47d6dafb
+      internalID: 897647285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_43
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 108
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2a3e2023fce0644bfb579e82985b5e
+      internalID: -1721551818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_44
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 107
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4be63e89a511148a809dcbcac5fd06
+      internalID: 2029672198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_45
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 108
+        width: 4
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f31476d8c6f234498d051651d9cf8e
+      internalID: 673675102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_46
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 108
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9046e473142724c4a86ef7ab51906e8e
+      internalID: -1388569405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_47
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 108
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6255c6ad87fd80946a52c69b6e251528
+      internalID: 316447038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_48
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 107
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49800b2de4126a8449452eaa8c990f69
+      internalID: -2058378986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_49
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 108
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f087f8faacb0d714eaf37969aa2689e9
+      internalID: 819338293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_50
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 107
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5553e807ffba340429b7b2dca30c8602
+      internalID: 1200659662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_51
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 107
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf775e6a61a9414c972d1dcb3abece4
+      internalID: 1083788385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_52
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 107
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d92b903a860ce41b858243143cb1e9
+      internalID: 531411206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_53
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 101
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43832e2697fe0e541a829b7f8388a312
+      internalID: 1961173504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_54
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 107
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a644006e57294f045961005f06dee87d
+      internalID: -319448506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 3 - Vera 1_55
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 107
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee850949949c864e9302cd4445de2c6
+      internalID: 477406863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Stage 3 - Vera 1_0: 274573938
+      Stage 3 - Vera 1_1: -1964252173
+      Stage 3 - Vera 1_10: -1545848216
+      Stage 3 - Vera 1_11: -808130193
+      Stage 3 - Vera 1_12: -636739437
+      Stage 3 - Vera 1_13: -1823655564
+      Stage 3 - Vera 1_14: -1647426012
+      Stage 3 - Vera 1_15: 1220102421
+      Stage 3 - Vera 1_16: -1277500728
+      Stage 3 - Vera 1_17: -1573459543
+      Stage 3 - Vera 1_18: -1164577500
+      Stage 3 - Vera 1_19: -506591048
+      Stage 3 - Vera 1_2: -205127579
+      Stage 3 - Vera 1_20: 949995545
+      Stage 3 - Vera 1_21: 1276226332
+      Stage 3 - Vera 1_22: -788183545
+      Stage 3 - Vera 1_23: -1622683140
+      Stage 3 - Vera 1_24: 1276691702
+      Stage 3 - Vera 1_25: -1849617497
+      Stage 3 - Vera 1_26: 1046894656
+      Stage 3 - Vera 1_27: -141796486
+      Stage 3 - Vera 1_28: -1271716139
+      Stage 3 - Vera 1_29: -1907550613
+      Stage 3 - Vera 1_3: -600152032
+      Stage 3 - Vera 1_30: 220388132
+      Stage 3 - Vera 1_31: -1768153930
+      Stage 3 - Vera 1_32: 1383007101
+      Stage 3 - Vera 1_33: -1187099271
+      Stage 3 - Vera 1_34: 1477405704
+      Stage 3 - Vera 1_35: -1660209538
+      Stage 3 - Vera 1_36: 1227473581
+      Stage 3 - Vera 1_37: -166889023
+      Stage 3 - Vera 1_38: 1765783625
+      Stage 3 - Vera 1_39: 1243034045
+      Stage 3 - Vera 1_4: 936114490
+      Stage 3 - Vera 1_40: 201124433
+      Stage 3 - Vera 1_41: -1082939684
+      Stage 3 - Vera 1_42: 897647285
+      Stage 3 - Vera 1_43: -1721551818
+      Stage 3 - Vera 1_44: 2029672198
+      Stage 3 - Vera 1_45: 673675102
+      Stage 3 - Vera 1_46: -1388569405
+      Stage 3 - Vera 1_47: 316447038
+      Stage 3 - Vera 1_48: -2058378986
+      Stage 3 - Vera 1_49: 819338293
+      Stage 3 - Vera 1_5: -508830456
+      Stage 3 - Vera 1_50: 1200659662
+      Stage 3 - Vera 1_51: 1083788385
+      Stage 3 - Vera 1_52: 531411206
+      Stage 3 - Vera 1_53: 1961173504
+      Stage 3 - Vera 1_54: -319448506
+      Stage 3 - Vera 1_55: 477406863
+      Stage 3 - Vera 1_6: -2029132334
+      Stage 3 - Vera 1_7: 1616092406
+      Stage 3 - Vera 1_8: 740198046
+      Stage 3 - Vera 1_9: 141224551
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

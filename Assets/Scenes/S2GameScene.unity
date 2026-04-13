@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10789,7 +10790,7 @@ MonoBehaviour:
   isNotPhysicalClue: 1
   nonPhysicalClue: {fileID: 11400000, guid: 484299540c37f204e902fef0eb08f53e, type: 2}
   additionalClues: []
-  inspectClip: {fileID: 0}
+  inspectClip: {fileID: 8300000, guid: 829d1bb14cab1bc40ab5455f3cd15087, type: 3}
   inspectVolume: 1
   isClue: 0
   delayCluePrompt: 1
