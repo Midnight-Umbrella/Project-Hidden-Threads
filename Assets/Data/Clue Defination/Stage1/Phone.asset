@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: veras_phone
   title: Vera's Phone
-  description: She must have left it behind. The screen lights up but requires a
-    password. Several unread notifications are visible.
+  description: Vera's phone. Left behind, password locked, notifications piling up.
+    She didn't leave willingly. The password... there has to be a hint somewhere
+    in this room.
   icon: {fileID: -1674583465, guid: cc562183e9557e34385bb6c410ea4894, type: 3}
   category: 
   clueAudioClip: {fileID: 0}

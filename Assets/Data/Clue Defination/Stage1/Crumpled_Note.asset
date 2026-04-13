@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: crumpled_note
   title: Crumpled Note
-  description: 'A crumpled piece of paper, hastily crumpled and partially smoothed
-    out. Some words are smudged, but it looks like Vera''s writing. It reads: ''Potential
-    hiding spots: Toilet, Fridge, Oven''.'
+  description: 'Vera''s handwriting. She must have written this in a hurry; half
+    the ink is smudged beyond reading. But three words are clear enough: ''Toilet,
+    Fridge, Couch''. Looks like a list of hiding spots.'
   icon: {fileID: -97992184, guid: cc562183e9557e34385bb6c410ea4894, type: 3}
   category: 
   clueAudioClip: {fileID: 0}
