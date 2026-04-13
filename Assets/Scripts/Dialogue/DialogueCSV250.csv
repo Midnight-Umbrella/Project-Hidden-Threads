@@ -43,7 +43,7 @@ CLUE_NOTE_01,System,ClueDescription,"A torn piece of paper, hastily crumpled and
 CLUE_PHONE_01,System,ClueDescription,An Apple iPhone 5 resting on the desk. The screen lights up but requires a word password. Several unread notifications are visible.,Vera's Phone
 CLUE_STICKY_01,System,ClueDescription,A small yellow sticky note stuck to the back of a drawer. It reads: 'Password = birthday + fav food.' The handwriting is unmistakably Vera's.,Sticky Note
 npc1,0,Harper/Bargoer,conversation,Harper:"Hi! I'm looking for my friend Vera. Have you seen her?"|Bargoer:"No I haven't. Sorry"
-bartender,0,Harper/Bartender,conversation,Harper:"Hey I'm looking for my friend Vera. Any chance you've seen them?"|Bartender:"Yeah she was in here earlier. She left with a tall man wearing a suit"|Harper:"Do you know where they went?"|Bartender:"No sorry. I think she left her jacket here though. You should check the lost and found and possibly check out the alleyway."|Harper:"Thank you!"
+bartender,0,Harper/Bartender,conversation,Harper:"Hey I'm looking for my friend Vera. Any chance you've seen them?"|Bartender:"Yeah she was in here earlier. She left with a tall man wearing a suit"|Harper:"Do you know where they went?"|Bartender:"No sorry. I think she left her jacket here though. Maybe check out the alleyway."|Harper:"Thank you!"
 lost_and_found,0,Harper,internal,Hmm... it appears that people lose lots of stuff here
 lost_and_found,1,Harper,internal,This sure looks like Vera's coat. Wait a minute, Is that a note in the pocket?|"It looks like sheet music. Maybe I should check out the piano."
 locked_convo,0,Harper,Internal,Who's this 'Mr. Crocker' guy? And what is this about a warehouse?
