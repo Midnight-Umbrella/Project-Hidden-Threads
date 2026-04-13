@@ -53,7 +53,7 @@ public class AudioController : MonoBehaviour
             // Only play if it's a different clip
             if (musicSource.clip != musicEntry.musicClip)
             {
-                PlayMusic(musicEntry.musicClip);
+                PlayMusic(musicEntry.musicClip, true, musicEntry.volume);
             }
             // If same clip, continue playing without restart
         }

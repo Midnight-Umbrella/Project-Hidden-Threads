@@ -6,20 +6,26 @@ using UnityEngine.UI;
 public class EnemyBoxing : MonoBehaviour
 {
     [SerializeField]
-    private float maxLife;  //敌人最大生命值
-    public float currentLife;  //敌人的当前生命值
-    public float speed;  //敌人的移动速度
+    private float maxLife;  //           ֵ
+    public float currentLife;  //   ˵ĵ ǰ    ֵ
+    public float speed;  //   ˵  ƶ  ٶ 
     [SerializeField]
-    private Animator ani;  //敌人的动画组件
+    private Animator ani;  //   ˵Ķ      
     [SerializeField]
-    private GameObject player;  //主角玩家的物体
-    private float controlDistance=1.0f;  //目标达到的与玩家的距离
-    private float boxingHitDistance = 1.2f;  //判定击中的距离
-    private float minBoxingInterval = 1.0f;  //出拳的最小时间间隔
-    private float maxBoxingInterval = 4.0f;  //出拳的最大时间间隔
-    private float damage;  //敌人的攻击力
+    private GameObject player;  //      ҵ     
+    private float controlDistance=1.0f;  //Ŀ  ﵽ      ҵľ   
+    private float boxingHitDistance = 1.2f;  // ж    еľ   
+    private float minBoxingInterval = 1.0f;  //  ȭ    Сʱ    
+    private float maxBoxingInterval = 4.0f;  //  ȭ     ʱ    
+    private float damage;  //   ˵Ĺ     
     [SerializeField]
-    private Slider enemyLifeSlider;  //敌人生命条
+    private Slider enemyLifeSlider;  //          
+    [Header("Audio")]
+    [SerializeField] private AudioSource CrockerAudioSource;
+    [SerializeField] private AudioClip PunchHitClip;
+    [SerializeField] private float HitVolume = 1f;
+    [SerializeField] private AudioClip PunchMissClip;
+    [SerializeField] private float MissVolume = 1f;
     
 
 
@@ -34,14 +40,14 @@ public class EnemyBoxing : MonoBehaviour
     }
     void Update()
     {
-        //如果距离过大则向玩家移动
+        //                  ƶ 
         if (Vector3.Magnitude(player.transform.position - transform.position) > controlDistance)
         {
-            //判断移动方向
+            // ж  ƶ     
             Vector3 dir = (player.transform.position.x - transform.position.x) >= 0 ? Vector3.right : Vector3.left;
-            //执行移动
+            //ִ   ƶ 
             transform.Translate(dir * speed * Time.deltaTime);
-            //设置动画
+            //   ö   
             if (dir == Vector3.right)
             {
                 if (ani.GetBool("isRight"))
@@ -69,19 +75,19 @@ public class EnemyBoxing : MonoBehaviour
         else {
             ani.SetBool("isWalking",false);
         }
-            //更新生命条
+            //          
             enemyLifeSlider.value = currentLife / maxLife;
     }
 
     IEnumerator CheckAndBoxing()
     {
         while (true) {
-            //如果与玩家距离在判定击中距离范围内则出拳
+            //       Ҿ      ж    о  뷶Χ     ȭ
             if (Vector3.Magnitude(player.transform.position-transform.position)<boxingHitDistance)
             {
-                //判断面对方向
+                // ж   Է   
                 Vector3 dir = (player.transform.position.x - transform.position.x) >= 0 ? Vector3.right : Vector3.left;
-                //设置动画方向
+                //   ö       
                 if (dir == Vector3.right && ani.GetBool("isRight"))
                 {
                     ani.SetBool("isRight", false);
@@ -90,13 +96,23 @@ public class EnemyBoxing : MonoBehaviour
                 {
                     ani.SetBool("isRight", true);
                 }
-                //播放出拳动画
+                //   ų ȭ    
                 ani.SetTrigger("Boxing");
-                //如果在判定击中距离内并且朝向正确则判定击中
+                //      ж    о    ڲ  ҳ     ȷ   ж     
                 if (Vector3.Magnitude(transform.position - player.transform.position) < boxingHitDistance && (((player.transform.position.x - transform.position.x < 0) && ani.GetBool("isRight")) || ((player.transform.position.x - transform.position.x >= 0) && (!ani.GetBool("isRight")))))
                 {
                     player.GetComponent<PlayerBoxing>().currentLife -= damage;
-                }
+                    if (CrockerAudioSource != null && AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXOnSource(CrockerAudioSource, PunchHitClip, HitVolume);
+                    else if (AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXAtPosition(PunchHitClip, transform.position, HitVolume);
+                } else
+                {
+                    if (CrockerAudioSource != null && AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXOnSource(CrockerAudioSource, PunchMissClip, MissVolume);
+                    else if (AudioController.Instance != null)
+                        AudioController.Instance.PlaySFXAtPosition(PunchMissClip, transform.position, MissVolume);
+                }           
             }
             yield return new WaitForSeconds(Random.Range(minBoxingInterval,maxBoxingInterval));
         }

@@ -922,7 +922,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1020,22 +1020,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 619784096}
   sfxSource: {fileID: 0}
-  musicGroup: {fileID: 0}
-  sfxGroup: {fileID: 0}
+  musicGroup: {fileID: -53228181923277193, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
+  sfxGroup: {fileID: 4614722102627222633, guid: 80ce1616b0b07984aa69419c6597e697, type: 2}
   uiClickClip: {fileID: 0}
   sceneMusics:
   - sceneName: TitleScreen
     musicClip: {fileID: 8300000, guid: 6bca628d851243d4eac53f8aafd5c5d5, type: 3}
     volume: 1
   - sceneName: OpenCutscene
-    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
-    volume: 1
-  - sceneName: GameScene
-    musicClip: {fileID: 8300000, guid: 16ae8ed6b1e60874787b5f5269cc7219, type: 3}
-    volume: 1
-  - sceneName: S2GameScene
-    musicClip: {fileID: 8300000, guid: 5325b61d8f429d448b6c90cb94a14aee, type: 3}
+    musicClip: {fileID: 8300000, guid: 6e0cd1c63ccd19b429e5da49dc2c2108, type: 3}
     volume: 0.6
+  - sceneName: GameScene
+    musicClip: {fileID: 8300000, guid: 6e0cd1c63ccd19b429e5da49dc2c2108, type: 3}
+    volume: 0.6
+  - sceneName: S2GameScene
+    musicClip: {fileID: 8300000, guid: 240b7eea95b08c841913a4afd708b979, type: 3}
+    volume: 0.8
   - sceneName: S3GameScene
     musicClip: {fileID: 8300000, guid: e00eec5d6fb28214e91878172e65fab5, type: 3}
     volume: 1
@@ -1044,6 +1044,9 @@ MonoBehaviour:
     volume: 1
   - sceneName: Transition Scene
     musicClip: {fileID: 8300000, guid: c50b5d4969b0cb245a6cfc8c3464efc9, type: 3}
+    volume: 0.8
+  - sceneName: BoxingScene
+    musicClip: {fileID: 8300000, guid: 9274af395ddfd63438bc67accb601a92, type: 3}
     volume: 0.8
 --- !u!4 &619784098
 Transform:

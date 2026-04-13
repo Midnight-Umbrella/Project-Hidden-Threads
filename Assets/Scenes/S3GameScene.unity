@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9436,6 +9437,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7838825240259707074, guid: 86983d4eb395abe4b9068c1bedd2335b, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f4851bce4178c84eac4068755f81788, type: 3}
+    - target: {fileID: 7838825240259707074, guid: 86983d4eb395abe4b9068c1bedd2335b, type: 3}
+      propertyPath: matchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0bd30a52d4565745a1f6411f5cacd85, type: 3}
+    - target: {fileID: 7838825240259707074, guid: 86983d4eb395abe4b9068c1bedd2335b, type: 3}
+      propertyPath: wrongClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 723e5bb0bdbdb394a95e1b64e41ec1d7, type: 3}
+    - target: {fileID: 7838825240259707074, guid: 86983d4eb395abe4b9068c1bedd2335b, type: 3}
+      propertyPath: uiAudioSource
+      value: 
+      objectReference: {fileID: 3373209}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
