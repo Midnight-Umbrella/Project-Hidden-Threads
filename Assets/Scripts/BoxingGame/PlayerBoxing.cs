@@ -25,7 +25,7 @@ public class PlayerBoxing : MonoBehaviour
     [SerializeField] private float HitVolume = 1f;
     [SerializeField] private AudioClip PunchMissClip;
     [SerializeField] private float MissVolume = 1f;
-
+    [SerializeField] private GameObject punchPrompt;
 
 
 
@@ -72,6 +72,7 @@ public class PlayerBoxing : MonoBehaviour
         //J    ȭ
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.F)) && !ani.GetCurrentAnimatorStateInfo(0).IsName("PlayerBoxing"))
         {
+            punchPrompt.SetActive(false);
             ani.SetTrigger("Boxing");
             //      ж    о    ڲ  ҳ     ȷ   ж     
             if (Vector3.Magnitude(enemy.transform.position - transform.position) < boxingHitDistance && (((enemy.transform.position.x - transform.position.x < 0) && ani.GetBool("isRight")) || ((enemy.transform.position.x - transform.position.x >= 0) && (!ani.GetBool("isRight")))))

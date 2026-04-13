@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: veras_birthday
   title: Vera's Birthday
-  description: June 7th, it's coming up.
+  description: july 7th, it's coming up.
   icon: {fileID: -1625890563, guid: cc562183e9557e34385bb6c410ea4894, type: 3}
   category: 
   clueAudioClip: {fileID: 0}
